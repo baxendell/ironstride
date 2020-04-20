@@ -40,14 +40,14 @@
 
         <div class="row">
 
-            <div class="col-12">
+            <div class="col-12 d-flex">
 
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <a class="navbar-brand site-logo" href="/" itemprop="url">
-                    <img itemprop="logo" class="logo img-fluid" src="<?php echo esc_url( get_stylesheet_directory_uri() ) ?>/assets/images/logo.svg" alt="logo">
+                    <img itemprop="logo" class="logo img-fluid" src="<?php echo esc_url( get_stylesheet_directory_uri() ) ?>/assets/images/ironstride-marketing-logo.png" alt="ironstride marketing">
                 </a>
 
             </div>
