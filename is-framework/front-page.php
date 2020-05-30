@@ -27,7 +27,7 @@ get_header();
 
         		<p><?php the_field('top_content_text_1') ?></p>
 
-        		<a class="learn-more" href="<?php the_field('top_content_link_1') ?>">Learn More</a>
+        		<a class="arrow-link" href="<?php the_field('top_content_link_1') ?>"><span>Learn More</span></a>
 
     		</div>
 
@@ -41,7 +41,7 @@ get_header();
 
         		<p><?php the_field('top_content_text_2') ?></p>
 
-        		<a class="learn-more" href="<?php the_field('top_content_link_2') ?>">Learn More</a>
+        		<a class="arrow-link" href="<?php the_field('top_content_link_2') ?>"><span>Learn More</span></a>
 
     		</div>
 
