@@ -2,6 +2,8 @@
 
 <div class="footer">
 
+    <?php if(is_front_page()): ?>
+
     <div class="footer-top">
 
         <div class="container">
@@ -19,6 +21,8 @@
         </div>
 
     </div>
+
+    <?php endif ?>
 
     <div class="footer-blue">
 

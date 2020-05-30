@@ -15,9 +15,7 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700,800" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,600,700,700i,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
 
     <?php wp_head(); ?>
 
@@ -34,7 +32,7 @@
 <a href="#main-wrapper" class="skiplink" tabindex="-1">Skip Navigation</a>
 <!-- Google Tag Manager (noscript) -->
 
-<nav id="nav-mobile" class="navbar">
+<nav id="nav-mobile" class="navbar d-none">
 
     <div class="container-fluid">
 

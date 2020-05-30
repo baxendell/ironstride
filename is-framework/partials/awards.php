@@ -15,30 +15,34 @@ if ( $awards_query->have_posts() ) : ?>
 
         <div class="container">
 
-            <div class="section-title">Awards & Memberships</div>
-
             <div class="row">
 
-                <div class="awards-wrap col-12 sameHeight">
+                <div class="col-lg-5 pl-lg-5 pr-lg-4">
 
-					<?php while ( $awards_query->have_posts() ): $awards_query->the_post(); ?>
+                    <h2 class="section-title">Awards &amp; Recognition</h2>
 
-                        <div class="slide item">
-                            <div class="img-holder">
-	                            <?php if ( get_field( 'script' ) ): the_field( 'script' ); else: ?>
-                                    <a href="<?php the_field( 'award_link' ) ?>" target="_blank">
-			                            <?php the_post_thumbnail( 'full' ); ?>
-                                    </a>
-	                            <?php endif; ?>
-                            </div>
-                        </div>
-
-					<?php endwhile;
-					wp_reset_postdata(); ?>
+                    <?php the_field('awards_text') ?>
 
                 </div>
 
-                <div class="custom-nav-awards sameHeight"></div>
+                <div class="col-lg-7 d-flex">
+
+                    <?php while ( $awards_query->have_posts() ): $awards_query->the_post(); ?>
+
+                    <div class="col-lg-4 pl-lg-0">
+
+                        <?php if ( get_field( 'script' ) ): the_field( 'script' ); else: ?>
+                        <a href="<?php the_field( 'award_link' ) ?>" target="_blank">
+                            <?php the_post_thumbnail( 'full' ); ?>
+                        </a>
+                        <?php endif; ?>
+
+                    </div>
+
+                    <?php endwhile; wp_reset_postdata(); ?>
+
+                </div>
+
 
             </div>
 
@@ -46,5 +50,4 @@ if ( $awards_query->have_posts() ) : ?>
 
     </section>
 
-<?php endif;
-wp_reset_postdata(); ?>
+<?php endif;  ?>

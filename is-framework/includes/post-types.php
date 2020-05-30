@@ -146,23 +146,23 @@ function cws_testimonial() {
 add_action( 'init', 'cws_testimonial' );
 
 /**
- * Custom Post Type: Attorney
+ * Custom Post Type: Staff
  */
-function cws_attorney() {
+function is_staff() {
 	$labels = array(
-		'name'               => 'Attorney',
-		'singular_name'      => 'Attorney',
+		'name'               => 'Staff',
+		'singular_name'      => 'Staff',
 		'add_new'            => 'Add New',
-		'add_new_item'       => 'Add New Attorney',
-		'edit_item'          => 'Edit Attorney',
-		'new_item'           => 'New Attorney',
-		'all_items'          => 'All Attorneys',
-		'view_item'          => 'View Attorney',
-		'search_items'       => 'Search Attorney',
+		'add_new_item'       => 'Add New Staff',
+		'edit_item'          => 'Edit Staff',
+		'new_item'           => 'New Staff',
+		'all_items'          => 'All Staff',
+		'view_item'          => 'View Staff',
+		'search_items'       => 'Search Staff',
 		'not_found'          => 'No event found',
 		'not_found_in_trash' => 'No event found in Trash',
 		'parent_item_colon'  => '',
-		'menu_name'          => 'Attorneys',
+		'menu_name'          => 'Staff',
 	);
 
 	$args = array(
@@ -173,7 +173,7 @@ function cws_attorney() {
 		'show_in_menu'       => true,
 		'query_var'          => true,
 		'capability_type'    => 'post',
-		'rewrite'            => array( 'slug' => 'attorneys', 'with_front' => false, ),
+		'rewrite'            => array( 'slug' => 'team', 'with_front' => false, ),
 		'taxonomies'         => array( 'category', 'post_tag' ),
 		'has_archive'        => true,
 		'hierarchical'       => false,
@@ -181,30 +181,30 @@ function cws_attorney() {
 		'supports'           => array( 'title', 'editor', 'thumbnail' ),
 	);
 
-	register_post_type( 'attorney', $args );
+	register_post_type( 'staff', $args );
 }
 
-add_action( 'init', 'cws_attorney' );
+add_action( 'init', 'is_staff' );
 
 /**
- * Custom Post Type: Result
+ * Custom Post Type: Portfolio
  */
 
-function cws_result() {
+function is_portfolio() {
 	$labels = array(
-		'name'               => 'Result',
-		'singular_name'      => 'Result',
+		'name'               => 'Portfolio',
+		'singular_name'      => 'Portfolio',
 		'add_new'            => 'Add New',
-		'add_new_item'       => 'Add New Result',
-		'edit_item'          => 'Edit Result',
-		'new_item'           => 'New Result',
-		'all_items'          => 'All Results',
-		'view_item'          => 'View Result',
-		'search_items'       => 'Search Result',
+		'add_new_item'       => 'Add New Item',
+		'edit_item'          => 'Edit Item',
+		'new_item'           => 'New Item',
+		'all_items'          => 'All Items',
+		'view_item'          => 'View Items',
+		'search_items'       => 'Search Items',
 		'not_found'          => 'No event found',
 		'not_found_in_trash' => 'No event found in Trash',
 		'parent_item_colon'  => '',
-		'menu_name'          => 'Results',
+		'menu_name'          => 'Portfolio',
 	);
 
 	$args = array(
@@ -215,7 +215,7 @@ function cws_result() {
 		'show_in_menu'       => true,
 		'query_var'          => true,
 		'capability_type'    => 'post',
-		'rewrite'            => array( 'slug' => 'case-results', 'with_front' => false, ),
+		'rewrite'            => array( 'slug' => 'portfolio', 'with_front' => false, ),
 		'taxonomies'         => array( 'practice_area_category' ),
 		'has_archive'        => true,
 		'hierarchical'       => false,
@@ -223,10 +223,10 @@ function cws_result() {
 		'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
 	);
 
-	register_post_type( 'result', $args );
+	register_post_type( 'portfolio', $args );
 }
 
-add_action( 'init', 'cws_result' );
+add_action( 'init', 'is_portfolio' );
 
 
 /**
@@ -235,17 +235,17 @@ add_action( 'init', 'cws_result' );
 function practice_area_taxonomy() {
 
 	$labels = array(
-		'name'              => _x( 'Practice Area Category', 'taxonomy general name' ),
-		'singular_name'     => _x( 'Practice Area Category', 'taxonomy singular name' ),
-		'search_items'      => __( 'Search Practice Area Categories' ),
-		'all_items'         => __( 'All Practice Area Categories' ),
-		'parent_item'       => __( 'Parent Practice Area Category' ),
-		'parent_item_colon' => __( 'Parent Practice Area Category:' ),
-		'edit_item'         => __( 'Edit Practice Area Category' ),
-		'update_item'       => __( 'Update Practice Area Category' ),
-		'add_new_item'      => __( 'Add New Practice Area Category' ),
-		'new_item_name'     => __( 'New Practice Area Category' ),
-		'menu_name'         => __( 'Practice Area Categories' ),
+		'name'              => _x( 'Portfolio Category', 'taxonomy general name' ),
+		'singular_name'     => _x( 'Portfolio Category', 'taxonomy singular name' ),
+		'search_items'      => __( 'Search Portfolio Categories' ),
+		'all_items'         => __( 'All Portfolio Categories' ),
+		'parent_item'       => __( 'Parent Portfolio Category' ),
+		'parent_item_colon' => __( 'Parent Portfolio Category:' ),
+		'edit_item'         => __( 'Edit Portfolio Category' ),
+		'update_item'       => __( 'Update Portfolio Category' ),
+		'add_new_item'      => __( 'Add New Portfolio Category' ),
+		'new_item_name'     => __( 'New Portfolio Category' ),
+		'menu_name'         => __( 'Portfolio Categories' ),
 	);
 
 	$args = array(
@@ -257,7 +257,7 @@ function practice_area_taxonomy() {
 		'rewrite'           => array( 'slug' => 'practice-area-category' ),
 	);
 
-	register_taxonomy( 'practice_area_category', array( 'result' ), $args );
+	register_taxonomy( 'practice_area_category', array( 'portfolio' ), $args );
 }
 
 add_action( 'init', 'practice_area_taxonomy' );

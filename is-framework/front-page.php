@@ -15,7 +15,7 @@ get_header();
 
             <div class="col-md-6 text-right">
 
-            	<? $img1 = get_field('top_content_image_1') ?>
+            	<?php $img1 = get_field('top_content_image_1') ?>
 
             	<img src="<?php echo $img1['url'] ?>" alt="<?php echo $img1['alt'] ?>"/>
 
@@ -48,7 +48,7 @@ get_header();
 
             <div class="col-md-6">
 
-            	<? $img2 = get_field('top_content_image_2') ?>
+            	<?php $img2 = get_field('top_content_image_2') ?>
 
             	<img src="<?php echo $img2['url'] ?>" alt="<?php echo $img2['alt'] ?>"/>
 
