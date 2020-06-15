@@ -1,0 +1,722 @@
+
+.location-intro {
+  background: $bg-location;
+  padding: 59px 0 0;
+
+  .col-left {
+
+    .inner-col {
+      max-width: 530px;
+
+      @include media('<desktop') {
+        margin: 0 auto 30px;
+      }
+
+      .testimonial-wrap {
+        padding: 35px 0 17px;
+        margin: 30px auto 28px;
+        position: relative;
+
+        span.stars {
+          position: absolute;
+          top: -17px;
+          background-color: $bg-location;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 1;
+          padding: 0 10px;
+        }
+
+        @include media('<desktop') {
+          transform: none;
+          top: 0;
+          max-width: 350px;
+          margin: 0 auto 30px;
+        }
+
+        blockquote {
+
+          q {
+            color: #323049;
+            font-size: 18px;
+            font-style: italic;
+            line-height: 33px;
+            margin: 0 auto;
+            display: block;
+            text-align: center;
+          }
+
+          cite {
+            padding-top: 0;
+            color: $navy;
+            font-size: 15px;
+            letter-spacing: 1.5px;
+            line-height: 40px;
+            text-transform: uppercase;
+            display: block;
+            text-align: center;
+          }
+
+        }
+
+      }
+
+      .location-details {
+        padding: 23px 40px 25px;
+        background-color: $alt-bg;
+
+        @include media('<desktop') {
+          margin: 0 auto;
+        }
+
+        h4 {
+          color: #000000;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 26px;
+          letter-spacing: 0.9px;
+          text-align: center;
+          padding-bottom: 23px;
+        }
+
+        .inner-col-left {
+          width: 210px;
+          float: left;
+          border: 5px solid $white;
+
+          @include media('<tablet') {
+            width: 100%;
+            float: none;
+            padding-bottom: 25px;
+          }
+
+          #map_temp {
+            width: 200px;
+            height: 200px;
+            left: 0;
+            top: 0;
+            position: relative;
+            //box-shadow: 10px 17px 20px rgba(0, 0, 0, 0.15);
+
+            @include media('<tablet') {
+              margin: 0 auto;
+              position: static;
+              left: 0;
+              top: 0;
+            }
+
+          }
+
+        }
+
+        .inner-col-right {
+          width: calc(100% - 210px);
+          float: left;
+          padding-left: 27px;
+
+          @include media('<tablet') {
+            width: 100%;
+            float: none;
+            text-align: center;
+            padding: 0;
+          }
+
+          .client-name {
+            color: $location-name;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 26px;
+          }
+
+          .address {
+            padding: 7px 0 20px;
+            padding-right: 5px;
+
+            @include media('<widescreen') {
+              padding-bottom: 5px;
+            }
+
+            p {
+              color: #535353;
+              font-size: 15px;
+              font-weight: 400;
+              line-height: 20px;
+              letter-spacing: 0.3px;
+              padding-bottom: 0;
+              margin-bottom: 0;
+            }
+
+            .phone {
+              display: block;
+              color: #535353;
+              font-size: 15px;
+              line-height: 20px;
+              letter-spacing: 0.3px;
+              font-weight: 700;
+              letter-spacing: 0.3px;
+              padding: 12px 0 12px;
+            }
+
+          }
+
+          ul {
+            margin: 0;
+            padding: 0;
+
+            li {
+              display: inline-block;
+              line-height: normal;
+
+              a {
+                color: $location-link;
+                display: block;
+                font-size: 16px;
+                font-weight: 600;
+                background-repeat: no-repeat;
+                background-position: left 4px;
+                padding-left: 26px;
+
+                &:hover {
+                  color: $light-blue;
+                }
+
+              }
+
+              &.location-direction{
+                a {
+                  background-image: url("../../images/arrows/direction-link.svg");
+                  background-size: 18px 18px;
+                  margin-bottom: 10px;
+                }
+              }
+
+              .modal-hours-btn {
+                background-image: url("../../images/icons/icon-clock.svg");
+                background-size: 20px 20px;
+                padding-top: 4px;
+              }
+
+            }
+
+          }
+
+        }
+
+        @extend %clearfix;
+
+      }
+
+      .grid-location-awards {
+        padding: 35px 0 0;
+        max-width: 430px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .item {
+
+          @include media('<widescreen') {
+            padding: 0 10px;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .col-right {
+
+    h1 {
+      color: #323049;
+      font-family: $default-font;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 53px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 33px;
+    }
+
+  }
+
+}
+
+.location-contact {
+  background: url("../../images/bg-location-contact.png") no-repeat scroll right top $purple;
+  min-height: 255px;
+
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 0 40px;
+
+    .location-contact-wrap {
+      max-width: 1170px;
+      width: 100%;
+      margin: 0 auto;
+
+      @include media('>=desktop', '<widescreen') {
+        padding: 0 10px;
+      }
+
+      @include media('>=tablet', '<desktop') {
+        padding: 0 10px;
+      }
+
+      @include media('<tablet') {
+        padding: 0 10px;
+      }
+
+      .location-contact-top {
+
+        @include media('>=tablet', '<desktop') {
+          padding-bottom: 25px;
+        }
+
+        h2 {
+          float: left;
+          width: 450px;
+          margin: 0;
+          padding: 0;
+          text-align: left;
+          color: #ffffff;
+          font-size: 40px;
+          font-weight: 700;
+          line-height: 53px;
+          text-transform: uppercase;
+          font-family: $default-font;
+
+
+          @include media('>=tablet', '<desktop') {
+            float: none;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+          }
+
+          @include media('<tablet') {
+            float: none;
+            width: 100%;
+            font-size: 37px;
+            text-align: center;
+            padding-bottom: 30px;
+          }
+
+        }
+
+        p {
+          float: left;
+          width: calc(100% - 450px);
+          padding-top: 10px;
+          color: #ffffff;
+          font-family: $default-font;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 22px;
+          letter-spacing: 0.32px;
+          padding-left: 35px;
+          padding-right: 70px;
+
+          @include media('>=tablet', '<desktop') {
+            float: none;
+            width: 100%;
+            padding: 0;
+          }
+
+          @include media('<tablet') {
+            float: none;
+            width: 100%;
+            padding: 0;
+          }
+
+        }
+
+        @extend %clearfix;
+
+      }
+
+      .location-contact-bottom {
+        padding-top: 45px;
+
+        form {
+          background: none;
+        }
+
+        @include media('<tablet') {
+          padding-top: 20px;
+        }
+
+        @include media('>=tablet', '<desktop') {
+          padding-top: 0px;
+        }
+
+        .input-text {
+          max-width: 468px;
+          width: 100%;
+          border-radius: 0;
+          border: 0;
+          width: percentage(468/1170);
+          line-height: 60px;
+          color: #ffffff;
+          font-size: 16px;
+          font-weight: 400;
+          letter-spacing: 0.32px;
+          padding-left: 25px;
+          display: inline-block;
+          height: 60px;
+          @include background-opacity(#FFFFFF, 0.1);
+
+          @include placeholder {
+            color: white;
+            opacity: 1;
+          }
+
+          margin-right: percentage(21/1100);
+
+          @include media('<tablet') {
+            float: none;
+            width: 100%;
+            margin: 0;
+            margin-bottom: 15px;
+            max-width: none;
+          }
+
+        }
+
+        .btn-submit {
+          width: percentage(160/1170);
+          height: 60px;
+          padding: 0;
+          margin-bottom: 2px;
+          line-height: 26px;
+          @extend %transition;
+          display: inline-block;
+          color: $white;
+          font-family: $default-font;
+          font-size: 16px;
+          font-weight: 600;
+          letter-spacing: 1.6px;
+          border-radius: 5px;
+          border: 0;
+          background-color: $orange;
+          cursor: pointer;
+
+          &:hover {
+            background-color: darken($orange, 15%);
+            color: white;
+            border: 0;
+          }
+
+          @include media('<tablet') {
+            float: none;
+            width: 100%;
+            margin: 0;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.location-second-main-content {
+  background: $bg-location;
+  padding: 89px 0 77px;
+
+  .social-contact-wrap {
+    display: flex;
+    padding: 70px 0 0;
+
+    @include media('<tablet') {
+      display: block;
+      text-align: center;
+    }
+
+    .btn-std {
+      background-color: $blue;
+      color: $white;
+      font-size: 16px;
+      text-transform: capitalize;
+      padding: 18px 38px 17px;
+
+      &:hover {
+        color: $white;
+      }
+
+    }
+
+    .social-icons-wrap {
+      display: flex;
+      align-items: center;
+
+      @include media('<tablet') {
+        display: block;
+      }
+
+      p {
+        color: $location-name;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 53px;
+        padding-left: 43px;
+        padding-right: 20px;
+
+        @include media('<tablet') {
+          text-align: center;
+          padding: 0;
+          padding-top: 20px;
+        }
+
+      }
+
+      ul {
+
+        @include media('<tablet') {
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+        }
+
+        li {
+          display: inline-block;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.location-practice-areas {
+  background-color: #f7f2f0;
+  padding: 79px 0 59px;
+
+  .heading {
+
+
+  }
+
+  .grid-practice-areas {
+    padding-top: 70px;
+
+    .item {
+      @include imagegrid(3, 2.5%);
+      max-width: 359px;
+      height: 227px;
+      position: relative;
+      cursor: pointer;
+      background-size: cover !important;
+
+      @include media('<desktop') {
+        @include imagegrid(2, 2.5%);
+      }
+
+      @include media('<tablet') {
+        @include imagegrid(1, 2.5%);
+        float: none;
+        margin: 0 auto!important;
+        margin-bottom: 35px!important;
+      }
+
+      span.services-border {
+        width: calc(100% - 40px);
+        height: calc(100% - 40px);
+        display: block;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        position: absolute;
+        margin-left: 20px;
+        margin-top: 20px;
+        transition: all 0.2s ease;
+      }
+
+      a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      p {
+        color: #ffffff;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 36px;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        padding-left: 44px;
+
+        @include media('<desktop') {
+          font-size: 21px;
+          line-height: 27px;
+        }
+
+      }
+
+      span.arrow {
+        padding-left: 44px;
+        padding-top: 18px;
+        display: block;
+
+
+      }
+
+      &:hover {
+
+        span.services-border {
+          border: 2px solid $bg-brick;
+        }
+
+        svg {
+          * {
+            fill: $bg-brick;
+          }
+        }
+      }
+
+    }
+
+  }
+
+}
+
+.location-third-main-content {
+  background-color: $light-grey;
+  padding: 70px 0 45px;
+}
+
+.review-part {
+  padding: 17px 0 10px;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include media('<tablet') {
+      flex-direction: column;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    h5 {
+      color: #323049;
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding-right: 35px;
+
+      @include media('<desktop') {
+        padding-right: 10px;
+        min-width: 293px;
+        font-size: 19px;
+      }
+
+      @include media('<tablet') {
+        padding: 0;
+        text-align: center;
+        padding-bottom: 20px;
+      }
+
+    }
+
+    .item {
+      padding: 0 20px;
+
+      @include media('<desktop') {
+        padding: 0 10px;
+      }
+
+    }
+
+  }
+
+}
+
+.squares-grid {
+
+  > br {
+    display: none !important;
+  }
+
+  .item {
+    min-height: 198px;
+    text-align: center;
+    padding: 30px 18px;
+    float: left;
+    @include imagegrid(2, 4.5%);
+    background-color: $white;
+    border: 3px solid #ebeeea;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 324px;
+
+    @include media('<tablet') {
+      @include imagegrid(1, 0);
+      float: none;
+      margin: 0 auto !important;
+      margin-bottom: 25px !important;
+    }
+
+    .item-title {
+      color: $blue;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.46px;
+      line-height: 26px;
+      margin-bottom: 15px;
+
+      a {
+        color: $blue;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 0.46px;
+        line-height: 26px;
+        text-decoration: underline;
+
+        &:hover {
+          color: $blue;
+        }
+
+      }
+
+    }
+
+    p.details {
+      text-align: center;
+      padding-bottom: 0;
+      margin-bottom: 0;
+      color: #000000;
+      font-family: "Proxima Nova";
+      font-size: 19px;
+      font-weight: 400;
+
+      span {
+        color: #000000;
+        font-family: $default-font;
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 29px;
+        display: block;
+      }
+
+    }
+
+  }
+
+  @extend %clearfix;
+
+}

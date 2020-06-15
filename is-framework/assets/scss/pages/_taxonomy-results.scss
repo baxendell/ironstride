@@ -1,0 +1,53 @@
+.tax-practice_area_category {
+
+  .post-excerpt {
+
+    .blog-post {
+
+      .excerpt-title {
+
+        .title-wrap {
+
+          h2.post-title {
+            text-align: center;
+            color: $text;
+            font-size: 27px;
+            line-height: normal;
+            font-weight: 700;
+
+            a {
+              color: $text;
+            }
+
+          }
+
+        }
+
+        .post-meta {
+          display: none;
+        }
+
+      }
+
+      .post-wrap {
+
+        .blog-excerpt {
+
+          .excerpt-content {
+            text-align: center;
+          }
+
+          .btn-read-more-wrap {
+            display: none;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+
+}

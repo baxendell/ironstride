@@ -1,0 +1,22 @@
+.grid {
+	&-services {
+		a {
+			position: relative;
+			display: block;
+			text-align: center;
+
+			span {
+				position: absolute;
+				top: 50%;
+				color: #f3f3ef;
+				font-family: $second-font;
+				font-size: 40px;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+				display: block;
+				transform: translateY(-50%);
+				width: 100%;
+			}
+		}
+	}
+}

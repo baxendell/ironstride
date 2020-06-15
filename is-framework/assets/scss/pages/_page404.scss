@@ -1,0 +1,63 @@
+.four-o-four {
+
+  .search-form {
+    border-radius: 0;
+    overflow: hidden;
+    max-width: 444px;
+
+    .input-std {
+      height: 50px;
+      border: 1px solid #d8d9d9;
+      background-color: #ffffff;
+      width: calc(100% - 60px);
+      float: left;
+      color: #000000;
+      font-family: $default-font;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 58px;
+      padding: 0 20px;
+      border: 1px solid #d8d9d9;
+
+      @include media('<tablet') {
+        font-size: 18px;
+      }
+
+      @include placeholder {
+        color: $text;
+        opacity: 1;
+      }
+
+      &:focus {
+        border: 1px solid #d8d9d9;
+      }
+
+    }
+
+    .submit {
+      float: left;
+      width: 57px;
+      height: 50px;
+      border: none;
+      background: $black;
+      color: $white;
+      font-family: $default-font;
+      font-size: 21px;
+      font-weight: 600;
+      line-height: 50px;
+      text-align: center;
+      transition: all 0.2s linear;
+      cursor: pointer;
+
+      &:hover {
+        color: $white;
+        background: lighten($black, 10%);
+      }
+
+    }
+
+    @extend %clearfix;
+
+  }
+
+}

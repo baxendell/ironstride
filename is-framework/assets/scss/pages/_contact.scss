@@ -1,0 +1,53 @@
+.contact {
+
+  &-social-call {
+
+    p {
+      font-family: $second-font;
+      color: $blue;
+      font-size: 32px;
+
+      @media screen and (min-width: 768px) {
+        margin: 0;
+      }
+
+      @media screen and (min-width: 992px) {
+        font-size: 36px;
+      }
+
+      a {
+        color: $orange;
+        font-size: 32px;
+        font-weight: 700;
+
+        @media screen and (min-width: 768px) {
+          font-size: 36px;
+        }
+
+        @media screen and (min-width: 992px) {
+          font-size: 40px;
+        }
+      }
+
+    }
+
+  }
+
+  &-sidebar {
+    margin-top: 40px;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 90px;
+    }
+
+    @include media('>=desktop') {
+
+      .sidebar-widget {
+        height: 100%;
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,85 @@
+.page-template-practice-area {
+
+  .results-part {
+    padding-top: 70px;
+  }
+
+}
+
+.toc {
+  margin: 0 36px 20px 0;
+
+  @media screen and (min-width: 992px) {
+    width: 345px;
+  }
+
+  @include media('<widescreen') {
+    margin: 0 auto 30px;
+    float: none;
+  }
+
+  &-table {
+
+    li {
+
+      a {
+        display: block;
+        border-bottom: 1px solid $sidebar-title-border;
+        padding: 10px 8px 10px;
+      }
+
+      &:first-of-type {
+
+        a {
+          border-top: 1px solid $sidebar-title-border;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.practice-area-part {
+
+  &-2 {
+    background: $alt-bg;
+  }
+
+  &-2,
+  &-3 {
+    padding: 75px 0 55px;
+
+    img.alignleft,
+    img.alignright {
+
+      @include media('<widescreen') {
+        float: none;
+        margin: 0 auto 25px;
+        display: block;
+      }
+
+    }
+
+  }
+
+  &-3 {
+    padding-top: 15px;
+
+    @include media('<widescreen') {
+       padding-bottom: 0;
+    }
+
+    .sidebar-widgets {
+
+      @include media('<widescreen') {
+        margin: 0 auto;
+      }
+
+    }
+
+  }
+
+}
