@@ -1,0 +1,39 @@
+ul.social-icon-list {
+  @include reset-pm;
+  display: flex;
+
+  li {
+    @include reset-pm;
+    margin-left: 10px;
+    display: inline-block;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    a {
+      width: 37px;
+      height: 37px;
+      background-color: $purple;
+      display: block;
+      text-align: center;
+      border-radius: 50%;
+
+      svg {
+        display: inline-block;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%) scale(0.7);
+        display: inline-block;
+
+        * {
+          fill: $bg-location;
+        }
+
+      }
+
+    }
+
+  }
+
+}

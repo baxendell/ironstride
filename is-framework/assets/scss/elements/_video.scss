@@ -1,0 +1,41 @@
+#video_play {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .cw_video_description {
+    display: none;
+  }
+
+}
+
+.cw_video_gallery.cw_video_type_matrix {
+
+  .cw_video_size_small {
+    margin: 10px;
+    padding: 10px;
+    width: 142px;
+
+    .cw_video_item_title {
+      padding-top: 10px!important;
+    }
+
+  }
+
+}
+
+.cw_video_open_popup_customized {
+  margin-bottom: 30px;
+  display: inline-block;
+}

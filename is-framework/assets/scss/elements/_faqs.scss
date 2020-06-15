@@ -1,0 +1,110 @@
+.faq-catname {
+  display: none;
+}
+
+.qa-faqs {
+  padding-top: 10px;
+  margin-bottom: 30px;
+
+  .page-template-default & {
+
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      margin-bottom: 50px;
+    }
+
+  }
+
+  #qaplus_searchform {
+    display: none;
+  }
+
+  .qa-faq {
+    margin-bottom: 0;
+
+    &:last-of-type {
+      border-bottom: 1px solid $border-color;
+
+      h3 {
+        border-bottom: none;
+      }
+
+    }
+
+    > h3 {
+      margin: 0 !important;
+      padding: 0;
+      background-color: transparent;
+      border-top: 1px solid $border-color;
+    }
+
+    .qa-faq-anchor {
+      background-color: #f0f2f4;
+      display: block;
+      padding: 17px 50px 17px 0;
+      text-decoration: none;
+      color: $black;
+      font-family: $default-font;
+      font-size: 19px;
+      font-weight: 600;
+      line-height: 31px;
+
+      @media screen and (max-width: 1199px) {
+        font-size: 20px;
+        line-height: 30px;
+      }
+
+      background: url("../../images/icon-accordion-plus.svg") no-repeat scroll right 15px top 27px transparent;
+      background-size: 13px 8px;
+
+      &.active {
+        background: url("../../images/icon-accordion-minus.svg") no-repeat scroll right 15px top 27px transparent;
+        background-size: 13px 8px;
+      }
+
+      @include media('<tablet') {
+        text-transform: none;
+        padding: 17px 50px 17px 0;
+        background: url("../../images/icon-accordion-plus.svg") no-repeat scroll right 15px top 27px transparent;
+        background-size: 13px 8px;
+        font-size: 17px;
+        line-height: 27px;
+
+        &.active {
+          background: url("../../images/icon-accordion-minus.svg") no-repeat scroll right 15px top 27px transparent;
+          background-size: 13px 8px;
+        }
+
+      }
+
+    }
+
+    .qa-faq-answer {
+      padding: 0;
+      padding-top: 0;
+      padding-bottom: 25px;
+      background: white;
+      padding-right: 0;
+
+      p:last-of-type {
+        margin-bottom: 0;
+      }
+
+      p {
+        padding-left: 0;
+        margin-bottom: 15px;
+
+        @media screen and (max-width: 1199px) {
+          padding-left: 0;
+        }
+
+      }
+
+    }
+
+    .qa-faq-title.open + .qa-faq-answer {
+      display: block !important;
+    }
+
+  }
+
+}

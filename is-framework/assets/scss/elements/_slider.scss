@@ -1,0 +1,23 @@
+.results-slider__sidebar {
+	position: relative;
+
+	.grid-results {
+		margin: 0;
+
+		.item .value {
+			padding-top: 0;
+		}
+	}
+
+	.custom-nav-results {
+		top: 32%;
+
+		button.slick-prev {
+			left: 0;
+		}
+
+		button.slick-next {
+			right: 0;
+		}
+	}
+}

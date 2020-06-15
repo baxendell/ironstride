@@ -1,0 +1,161 @@
+.blog-pagination {
+  text-align: center;
+  padding: 20px 0;
+
+  .blog-navigation {
+
+    @include media('<tablet') {
+      padding-bottom: 35px;
+    }
+
+  }
+
+  ul {
+    display: inline-block;
+    max-width: none;
+    width: auto;
+    text-align: center;
+    overflow: hidden;
+
+    li {
+      float: left;
+      margin: 0 4px;
+      border-radius: 4px;
+      background: #f8f9f9;
+      border: 1px solid #d8d9d9;
+      overflow: hidden;
+
+      &.page-li {
+        display: none;
+      }
+
+      a, span {
+        color: black;
+        display: inline-block;
+        float: left;
+        height: 33px;
+        min-width: 33px;
+        padding: 0;
+        padding-left: 12px;
+        padding-right: 12px;
+        transition: all 0.1s linear;
+        text-shadow: 0 1px 0 #ffffff;
+        color: $text;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 35px;
+        background: #f8f9f9;
+
+        &:hover {
+          text-shadow: 0 1px 0 #ffffff;
+          color: $text;
+          font-size: 16px;
+          font-weight: 600;
+          box-shadow: none;
+          background: #e9eaea;
+        }
+
+      }
+
+      &.active {
+        border-color: $black;
+
+        a {
+          text-shadow: 0 1px 0 rgba(0, 0, 0, 0.13);
+          color: $white;
+          font-size: 16px;
+          font-weight: 600;
+          box-shadow: 0 1px 0 #ffffff, inset 0 1px 5px rgba(0, 0, 0, 0.4);
+          background: $black;
+          pointer-events: none;
+        }
+
+      }
+
+      &:last-of-type {
+        a {
+          border-right: none !important;
+        }
+      }
+
+    }
+
+    li.dots {
+      line-height: 35px;
+      min-width: 33px;
+      box-shadow: none;
+      background: none;
+      border: none;
+      text-shadow: 0 1px 0 #ffffff;
+      color: $text;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    li.prev-link,
+    li.next-link {
+      display: inline-block;
+
+      a {
+
+        svg {
+          width: 8px;
+          position: relative;
+          top: -2px;
+        }
+
+      }
+
+    }
+
+    &::after {
+      clear: both;
+      content: "";
+      display: table;
+    }
+
+  }
+
+  &.blog-vue {
+
+    ul {
+
+      li {
+
+        svg {
+          width: 8px;
+          position: relative;
+          top: -2px;
+        }
+
+        &.disabled {
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        &.disabled.page-item {
+          opacity: 1;
+          visibility: visible;
+          border: 0;
+          background: none;
+          margin: 0;
+          cursor: default;
+
+          a {
+            border: 0;
+            background: none;
+            padding-left: 9px;
+            padding-right: 9px;
+            min-width: auto;
+            cursor: default;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

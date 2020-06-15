@@ -1,0 +1,21 @@
+.btn {
+  display: inline-block;
+  border: 0;
+  box-shadow: none;
+  @extend %transition;
+  font-family: $headings-font;
+  letter-spacing: 1.6px;
+  cursor: pointer;
+  line-height: normal;
+  text-align: center;
+
+  &-1 {
+    background-color: $light-blue;
+    color: $white;
+    letter-spacing: 2px;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    padding: 20px 56px;
+  }
+}

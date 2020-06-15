@@ -1,0 +1,61 @@
+.share-wrap {
+  margin-top: 25px;
+  padding-top: 30px;
+  border-top: 1px solid $border-color;
+
+  .social-icons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    span {
+      background: $black;
+      color: $white;
+      padding: 11px 27px;
+      display: inline-block;
+      margin-right: 7px;
+      font-weight: 600;
+    }
+
+    a {
+      color: $black;
+      margin-left: 15px;
+
+      &:hover {
+        color: $blue;
+      }
+
+      svg {
+        margin-right: 5px;
+      }
+
+      &.e-url {
+        svg {
+          transform: scale(0.9);
+        }
+      }
+
+      &.f-url {
+        svg {
+          transform: scale(0.8);
+        }
+      }
+
+      &.t-url {
+        svg {
+          transform: scale(0.8);
+        }
+      }
+
+      &.p-url {
+        svg {
+          transform: scale(0.9);
+          margin-right: 3px;
+        }
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,56 @@
+#hoursModal {
+
+  .modal-content {
+    border: 3px solid $bg-location;
+
+    .modal-header {
+
+      h5 {
+        color: $purple;
+        font-family: $headings-font;
+        font-size: 23px;
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+
+    }
+
+    .modal-body {
+      padding: 40px;
+
+      .opening-hours {
+
+        table {
+          margin: 0 auto;
+
+          tr {
+            border-bottom: 1px solid $text;
+
+            &:first-of-type {
+              border-top: 1px solid $text;
+            }
+
+            th, td {
+              border: 0;
+              padding: 0.5em;
+              color: $black;
+
+              &:nth-child(2) {
+                padding-left: 30px;
+              }
+
+            }
+
+          }
+
+
+        }
+
+      }
+
+    }
+
+  }
+
+
+}

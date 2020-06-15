@@ -1,0 +1,36 @@
+.breadcrumb-container {
+  background-color: $light-grey;
+
+  .breadcrumb {
+    font-size: 14px;
+    line-height: 22px;
+    padding: 14px 0; //custom
+    list-style: none;
+    border-radius: 0;
+    color: $text;
+    letter-spacing: 0;
+    background-color: $light-grey;
+    margin: 0;
+
+    a {
+      text-decoration: none;
+      color: $blue;
+
+      &:after {
+        content: '/';
+        positon: relative;
+        margin: 0 10px 0 12px;
+        display: inline-block;
+        color: $text;
+      }
+
+      &:hover {
+        text-decoration: underline;
+        color: $blue;
+      }
+
+    }
+
+  }
+
+}
