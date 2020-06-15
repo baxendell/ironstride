@@ -98,7 +98,7 @@ get_header();
 
 				<div class="row">
 
-					<div class="col-md-6 p-0">
+					<div class="col-md-6 p-0 grid-services">
 
 						<a href="/services/">
 							<figure>
