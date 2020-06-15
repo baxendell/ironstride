@@ -1,0 +1,36 @@
+.testimonials-section {
+	background-color: $light-grey;
+	background-image: url('../../images/big-qoute.svg');
+	background-size: 260px 171px;
+	background-position: center top;
+	background-repeat: no-repeat;
+	padding: 78px 0 58px;
+
+	&-wrap {
+		position: relative;
+	}
+	
+	&-title {
+		color: #787878;
+		font-size: 24px;
+		font-weight: 700;
+		letter-spacing: 1.25px;
+		margin-bottom: 32px;
+	}
+
+	p {
+		color: $blue;
+		font-size: 21px;
+		line-height: 40px;
+		margin-bottom: 14px;
+	}
+
+	cite {
+		color: #9a9b9b;
+		font-size: 20px;
+		letter-spacing: 2.5px;
+		line-height: 29px;
+		display: block;
+		margin-bottom: 20px;
+	}
+}
