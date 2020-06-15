@@ -1,0 +1,79 @@
+$white: #fff;
+$black: #000;
+
+$green: #bccc5e;
+$light-green: #2c9e72;
+$dark-green: #344942;
+
+$text: #454545;
+$text-input: #505050;
+$text-btn-green: #286f53;
+$required-text: #9f9f9f;
+
+$border-color: #d8d9d9;
+
+$blue: #003d53;
+$light-blue: #1aa8b5;
+$dark-blue: #202e3e;
+$navy: #1b496c;
+
+$orange: #fa8817;
+
+$grey: #7e8384;
+$border-grey: #cfcfcf;
+$light-grey: #f4f4f4;
+$lighter-grey: #b7b7b7;
+$dark-grey: #707070;
+$darker-grey: #3d3d3d;
+
+
+$alt-bg: $light-grey;
+
+/*************************
+  Fonts
+**************************/
+
+$default-font: 'Merriweather', serif;
+$second-font: 'Oswald', sans-serif;
+$third-font: $second-font;
+$form-font: $default-font;
+$headings-font: $second-font;
+
+/*************************
+  Button colours
+**************************/
+
+$std-bg: $orange;
+$std-sm-bg: $darker-grey;
+
+/*************************
+  Location page colours
+**************************/
+
+$bg-location: $white;
+$bg-brick: #cb8b6d;
+$purple: #323049;
+
+/*************************
+  Form colours
+**************************/
+
+$form-bg: $navy;
+$form-border: #b4c5d1;
+$placeholder: #9a9b9b;
+
+/*************************
+  Sidebar variables
+**************************/
+
+$sidebar-bg: $light-grey;
+$sidebar-bg-alt: $navy;
+$sidebar-title: $navy;
+$sidebar-alt-title: $white;
+$sidebar-title-border: #c9c9c9;
+$sidebar-alt-border: #5f8098;
+$sidebar-alt-border2: $blue;
+$location-name: #3485c3;
+$location-link: $orange;
+
+$attorney-name: #3485c3;

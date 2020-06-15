@@ -1,0 +1,122 @@
+.wf-active,
+.wf-inactive {
+  -webkit-transition: opacity 1s ease-out;
+  -moz-transition: opacity 1s ease-out;
+  -o-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  color: #606060;
+  font-size: 16px;
+  line-height: normal;
+  width: 100%;
+  font-weight: 400;
+  font-family: $default-font;
+}
+
+svg {
+
+  * {
+    @extend %transition;
+  }
+
+  &:not(:root) {
+    overflow: visible !important;
+  }
+
+}
+
+h1,
+h2,
+h3 {
+  &:empty {
+    display: none;
+  }
+}
+
+.indention {
+  display: block;
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+a {
+  transition: all 0.2s linear;
+  text-decoration: none;
+  color: $blue;
+
+  &:hover {
+    color: $light-blue;
+  }
+
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+ul {
+  li {
+    list-style: none;
+  }
+}
+
+.grid {
+
+  .item {
+    float: left;
+  }
+
+  @extend %clearfix;
+
+}
+
+.cols-wrap {
+
+  .cols {
+    float: left;
+    position: relative;
+  }
+
+  @extend %clearfix;
+}
+
+.skiplink {
+  position: absolute;
+  left: -99999px;
+}
+
+.visible-print-block {
+  display: none;
+
+  @media print {
+    display: block;
+  }
+}
+
+ul.slick-dots {
+
+  li {
+
+    button {
+
+      &:focus {
+        outline: none;
+      }
+
+    }
+
+  }
+
+}
