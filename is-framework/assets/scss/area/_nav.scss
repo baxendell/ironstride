@@ -1,0 +1,109 @@
+.menu-container {
+  max-width: 1170px;
+  padding: 0 15px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#nav-desktop {
+  border-bottom: 3px solid $black;
+  padding: 25px 0;
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0;
+    font-size: 1rem;
+    color: $text;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid $border-color;
+    border-radius: 3px;
+  }
+
+  ul#menu-main-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    li {
+
+      a {
+
+      }
+
+    }
+
+  }
+
+
+
+}
+
+.navbar-expand-md {
+
+  .navbar-nav {
+
+    .nav-link {
+
+      @include media('<desktop') {
+        padding-right: 0;
+        padding-left: 0;
+      }
+
+    }
+
+  }
+
+}
+
+#nav-mobile {
+
+  .navbar-brand {
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+    max-width: 180px;
+    width: 100%;
+  }
+}
+
+.navbar-toggler {
+  margin-right: 50px;
+  
+  &.collapsed {
+
+    .navbar-toggler-icon {
+      display: inline-block;
+      width: 33px;
+      height: 23px;
+      vertical-align: middle;
+      content: "";
+      background: url("../../images/bgBurger.svg") no-repeat scroll center center $white;
+      background-size: 33px 23px;
+    }
+
+  }
+
+  .navbar-toggler-icon {
+    display: inline-block;
+    width: 33px;
+    height: 23px;
+    vertical-align: middle;
+    content: "";
+    background: url("../../images/bgBurgerClose.svg") no-repeat scroll center center $black;
+    background-size: 33px 23px;
+  }
+
+}
