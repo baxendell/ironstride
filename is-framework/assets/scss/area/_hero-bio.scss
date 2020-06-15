@@ -1,0 +1,101 @@
+.hero-bio {
+  background-size: cover !important;
+  min-height: 660px;
+  padding: 80px 0;
+
+  @include media('<desktop') {
+    min-height: 520px;
+    padding: 40px 0;
+  }
+
+  .col-left {
+    align-items: center;
+    display: flex;
+
+    @include media('<tablet') {
+       margin-bottom: 45px;
+    }
+
+    .text-wrap {
+      width: 100%;
+
+      .banner-title {
+        color: #ffffff;
+        font-size: 54px;
+        font-weight: 400;
+        letter-spacing: 1.96px;
+        line-height: 60px;
+        margin-bottom: 5px;
+      }
+
+      .position {
+        color: #7dbeef;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: 1.83px;
+        line-height: 44px;
+        text-transform: uppercase;
+        letter-spacing: 1.75px;
+      }
+
+      ul {
+        margin-top: 17px;
+        margin-bottom: 26px;
+
+        li {
+          font-size: 20px;
+          font-weight: 400;
+          line-height: normal;
+          color: #ffffff;
+          padding: 12px 0;
+          padding-left: 39px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+          &:first-of-type {
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+          }
+
+          a {
+            color: #ffffff;
+            display: inline-block;
+          }
+
+          &.phone {
+            background: url("../../images/icon-phone.svg") no-repeat scroll 5px center transparent;
+            background-size: 20px 20px;
+          }
+
+          &.fax {
+            background: url("../../images/icon-fax.svg") no-repeat scroll 5px center transparent;
+            background-size: 25px 25px;
+          }
+
+          &.email {
+            background: url("../../images/icon-email.svg") no-repeat scroll 5px center transparent;
+            background-size: 20px 15px;
+          }
+
+        }
+
+      }
+
+      .btn-std {
+
+        @include media('<desktop') {
+          padding-left: 0;
+          padding-right: 0;
+          width: 100%;
+          max-width: 370px;
+        }
+
+      }
+
+    }
+
+  }
+
+  .attorney-thumbnail {
+    box-shadow: 0 2px 35px #0e334f;
+  }
+
+}

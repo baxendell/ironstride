@@ -1,0 +1,49 @@
+.main-wrapper {
+  border-top: 3px solid $black;
+  overflow: hidden;
+}
+
+.main-content {
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+
+
+
+
+[v-cloak] > * {
+  display: none;
+}
+
+.bubble-block {
+  align-items: center;
+
+  h2 {
+    strong {
+      display: block;
+    }
+  }
+}
+
+.arrow-link {
+  color: $light-blue;
+  font-family: $headings-font;
+  font-size: 13px;
+  font-weight: 400;
+  background-image: url('../../images/arrows/arrow-right.svg');
+  background-repeat: no-repeat;
+  background-size: 17px 17px;
+  padding-right: 33px;
+  background-position: right center;
+
+
+  span {
+    text-decoration: underline;
+    text-transform: uppercase;
+  }
+
+  &__alt {
+    color: $white;
+  background-image: url('../../images/arrows/arrow-alt-right.svg');
+  }
+}
