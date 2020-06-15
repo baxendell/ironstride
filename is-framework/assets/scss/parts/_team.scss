@@ -1,0 +1,51 @@
+.team-part {
+  background-color: $alt-bg;
+  padding: 70px 0 100px;
+
+  .heading {
+    margin-bottom: 55px;
+  }
+
+  .grid-team {
+
+    .item {
+      @include imagegrid(6, 2%);
+
+      @include media('<desktop') {
+        @include imagegrid(4, 3%);
+      }
+
+      @include media('<tablet') {
+        @include imagegrid(2, 2%);
+      }
+
+      img {
+        box-shadow: 0 7px 20px rgba(0, 0, 0, 0.19);
+      }
+
+      h5 {
+        padding-top: 15px;
+        color: #595959;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 18px;
+        text-align: center;
+      }
+
+      a {
+
+        &:hover {
+
+          h5 {
+            color: $blue;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
