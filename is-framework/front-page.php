@@ -200,16 +200,7 @@ get_header();
 
 </section>
 
-<?php $args = array (
-	'post_type' => 'post',
-	'posts_per_page' => 3,
-	);
-
-$post_query = new WP_Query($args);
-
-?>
-
-<section class="news">
+<section> 
 
 	<div class="container">
 
@@ -234,45 +225,10 @@ $post_query = new WP_Query($args);
 
 		</div>
 
-		<?php if($post_query->have_posts()): ?>
-
-		<div class="row">
-
-			<h2 class="text-center">The Latest</h2>
-
-			<?php while($post_query->have_posts()): $post_query->the_post(); 
-					$category      = get_the_category( $post->ID );
-					$category_name = $category[0]->name;
-					$category_id   = $category[0]->term_id;
-					$link          = get_category_link( $category_id );
-			?>
-
-			<div class="offset-md-1 col-md-3">
-
-				<div class="news-block">
-
-					<a class="news-category" href="<?php echo $link ?>"><?php echo $category_name ?></div>
-
-					<a class="news-title" href="<?php the_permalink() ?>"><?php the_title() ?></a>
-
-				</div>
-
-			</div>
-
-			<?php endwhile; ?>
-
-			<div class="text-center">
-
-				<a class="btn btn-1" href="/news/">See All News</a>
-
-			</div>
-
-		</div>
-
-		<?php wp_reset_postdata(); endif; ?>
-
 	</div>
 
 </section>
+
+<?php get_template_part( 'partials/news' ); ?>
 
 <?php get_footer(); ?>

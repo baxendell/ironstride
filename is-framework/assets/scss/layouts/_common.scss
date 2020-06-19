@@ -47,3 +47,63 @@
   background-image: url('../../images/arrows/arrow-alt-right.svg');
   }
 }
+
+// Negative margin top
+.cta-neg {
+  margin-top: -191px;
+}
+
+// Bubble 
+.cta-bubble {
+  display: flex;
+  height: 327px;
+  align-items: center;
+  justify-content:space-between;
+  padding-left: 94px;
+  padding-right: 117px;
+  background-image: url("../../images/bubble-bg.png");
+
+  &-content {
+    font-family: $default-font;
+    font-size: 29px;
+    line-height: 35px;
+  }
+
+  &-title {
+    color: $white;
+    font-family: $second-font;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 13px;
+  }
+}
+
+// News Block
+#news {
+  padding: 95px 0;
+
+  .home &  { // no padding-top on home
+    padding-top: 0;
+  }
+  
+  .news-block {
+    border-top: 1px solid $grey;
+    border-bottom: 1px solid $grey;
+    padding: 35px 0 50px;
+
+    .news {
+      &-category {
+
+      }
+
+      &-title {
+        color: $black;
+        font-family: $second-font;
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 40px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
