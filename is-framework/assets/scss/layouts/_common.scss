@@ -56,12 +56,15 @@
 // Bubble 
 .cta-bubble {
   display: flex;
-  height: 327px;
   align-items: center;
   justify-content:space-between;
   padding-left: 94px;
   padding-right: 117px;
-  background-image: url("../../images/bubble-bg.png");
+  background-image: url("../../images/backgrounds/bubble-bg.png");
+  padding-top: 106px;
+  padding-bottom: 111px;
+  background-position: top center;
+  background-size: cover;
 
   &-content {
     font-family: $default-font;
@@ -75,6 +78,11 @@
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 13px;
+    text-transform: uppercase;
+  }
+
+  .btn {
+    margin-top: 52px;
   }
 }
 
@@ -85,7 +93,7 @@
   .home &  { // no padding-top on home
     padding-top: 0;
   }
-  
+
   .news-block {
     border-top: 1px solid $grey;
     border-bottom: 1px solid $grey;

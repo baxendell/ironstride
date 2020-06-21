@@ -1,7 +1,6 @@
 <?php 
 	// Lates News Query
 	$post_objects = get_field('latest_news');
-	$string = "";
 
 	if( $post_objects ): 
 
@@ -9,21 +8,23 @@
 
 	        $post_id = $post_object->ID;
 
-	        $string .= $post_id.',';
+	        $post_ids[] = $post_id;
 
 	    endforeach; 
 
-    wp_reset_postdata(); 
-    endif;
+    wp_reset_postdata();
 
-    $string =  rtrim($string, ','); 
+    endif;    
 
-    $args = array (
+    // Query Args
+	$args = array (
 	'post_type' => 'post',
 	'posts_per_page' => 3,
-	'post__in' => array( $string )
+	'post__in' => ((empty($post_ids)) ? array() : $post_ids),
+	'orderby' => ((empty($post_ids)) ? 'ID' : 'post__in'),
+	'order' => 'DESC'
 	);
-
+	
 	$post_query = new WP_Query($args);
 
 ?>
