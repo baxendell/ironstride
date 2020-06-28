@@ -43,6 +43,10 @@
 
 		<div class="row">
 
+			<div class="col-lg-11">
+
+				<div class="row">
+
 			<?php while($post_query->have_posts()): $post_query->the_post(); 
 					$category      = get_the_category( $post->ID );
 					$category_name = $category[0]->name;
@@ -64,11 +68,15 @@
 
 			<?php endwhile; ?>
 
+				</div> <!-- /.col -->
+
+			</div> <!-- /.row -->
+
 		</div>
 
 		<div class="row">
 
-			<div class="col pt-7 text-center">
+			<div class="col text-center">
 
 				<a class="btn btn-1" href="/news/">See All News</a>
 

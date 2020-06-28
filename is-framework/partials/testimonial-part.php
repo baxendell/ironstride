@@ -6,13 +6,18 @@ if( $post_objects ): ?>
 
 <section class="testimonials-section">
 
-    <div class="testimonials-section-item">
+	<?php foreach ( $post_objects as $post ): ?>
+		<?php setup_postdata( $post ); ?>
 
-       <?php the_content() ?>
+	    <div class="testimonials-section-item">
 
-        <cite><?php the_title() ?></cite>
+	       <?php the_content() ?>
 
-    </div>
+	        <cite><?php the_title() ?></cite>
+
+	    </div>
+
+	<?php endforeach; ?>
 
 </section>
 

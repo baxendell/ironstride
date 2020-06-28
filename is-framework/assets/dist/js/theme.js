@@ -403,8 +403,8 @@ jQuery(document).ready(function ($) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\wamp64\www\ironstride\is-framework\assets\js\custom\theme.js */"./assets/js/custom/theme.js");
-module.exports = __webpack_require__(/*! C:\wamp64\www\ironstride\is-framework\assets\scss\theme.scss */"./assets/scss/theme.scss");
+__webpack_require__(/*! C:\wamp64\www\ironstride\wp-content\themes\is-framework\assets\js\custom\theme.js */"./assets/js/custom/theme.js");
+module.exports = __webpack_require__(/*! C:\wamp64\www\ironstride\wp-content\themes\is-framework\assets\scss\theme.scss */"./assets/scss/theme.scss");
 
 
 /***/ })
