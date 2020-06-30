@@ -1,3 +1,21 @@
+// Summer Loving
+@font-face {
+    font-family: 'summer_loving_sansregular';
+    src: url('../../fonts/nicky_laatz__-_summer_loving_sans_regular-webfont.woff2') format('woff2'),
+         url('../../fonts/nicky_laatz__-_summer_loving_sans_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'summer_loving_solidregular';
+    src: url('../../fonts/nicky_laatz__-_summer_loving_solid_regular-webfont.woff2') format('woff2'),
+         url('../../fonts/nicky_laatz__-_summer_loving_solid_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 $white: #fff;
 $black: #000;
 
@@ -15,6 +33,7 @@ $border-color: #d8d9d9;
 $blue: #003d53;
 $light-blue: #1aa8b5;
 $dark-blue: #202e3e;
+$alt-blue: #00a8b6;
 $navy: #1b496c;
 
 $orange: #fa8817;
@@ -36,9 +55,12 @@ $alt-bg: $light-grey;
 
 $default-font: 'Merriweather', serif;
 $second-font: 'Oswald', sans-serif;
+$third-font-sans: 'summer_loving_sansregular';
+$third-font-solid: 'summer_loving_solidregular';
 $third-font: $second-font;
-$form-font: $default-font;
 $headings-font: $second-font;
+
+
 
 /*************************
   Button colours

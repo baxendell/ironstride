@@ -1,53 +1,6 @@
 .footer {
-  padding: 25px 0;
-  border-top: 3px solid $black;
 
-  .logo {
-    max-width: 250px;
-  }
-
-  .footer-top {
-
-    .footer-logo-wrap {
-
-      @include media('<tablet') {
-        text-align: center;
-      }
-
-    }
-
-    ul.social-icon-list {
-      text-align: center;
-      justify-content: flex-end;
-
-      @include media('<tablet') {
-        padding-top: 20px;
-        align-items: center;
-        justify-content: center;
-      }
-
-      li {
-
-        a {
-          background-color: $black;
-
-          svg {
-
-            * {
-              fill: $white;
-            }
-
-          }
-
-        }
-
-      }
-
-    }
-
-  }
-
-  .footer-bottom {
+  /*.footer-bottom {
     position: relative;
     padding-bottom: 75px;
 
@@ -127,6 +80,6 @@
 
     }
 
-  }
+  }*/
 
 }

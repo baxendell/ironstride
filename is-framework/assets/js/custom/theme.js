@@ -215,7 +215,7 @@ jQuery(document).ready(function ($) {
 
         var carousels = function () {
 
-            var awards = $(".awards-wrap");
+            /*var awards = $(".awards-wrap");
 
             awards.slick({
                 dots: false,
@@ -254,17 +254,18 @@ jQuery(document).ready(function ($) {
             });
 
             $('.awards-part .item').matchHeight();
-            $('.awards-part .sameHeight').matchHeight();
+            $('.awards-part .sameHeight').matchHeight();*/
 
             var testimonials = $('.testimonials-section-slider');
 
             testimonials.slick({
-                dots: false,
+                dots: true,
+                arrows: false,
                 infinite: false,
                 appendArrows: '.custom-nav-test',
             });
 
-            var sidebar_results = $('.results-slider__sidebar .grid-results');
+            /*var sidebar_results = $('.results-slider__sidebar .grid-results');
 
             sidebar_results.slick({
                 dots: false,
@@ -340,7 +341,7 @@ jQuery(document).ready(function ($) {
 
                 }
 
-            });
+            }); */
 
         };
 

@@ -4,14 +4,16 @@ $post_objects = get_field('testimonials');
 
 if( $post_objects ): ?>
 
-<section class="testimonials-section">
+<div class="testimonials-section"> 
+
+	<div class="testimonials-section-slider">
 
 	<?php foreach ( $post_objects as $post ): ?>
 		<?php setup_postdata( $post ); ?>
 
-	    <div class="testimonials-section-item">
+	    <div class="testimonials-section__item">
 
-	       <?php the_content() ?>
+	       <?php echo get_the_excerpt() ?>
 
 	        <cite><?php the_title() ?></cite>
 
@@ -19,6 +21,10 @@ if( $post_objects ): ?>
 
 	<?php endforeach; ?>
 
-</section>
+	</div>
+
+	<div class="custom-nav-test"></div>
+
+</div>
 
 <?php wp_reset_postdata(); endif; ?>

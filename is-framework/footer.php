@@ -1,16 +1,14 @@
-
-
 <div class="footer">
 
     <?php if(is_front_page()): ?>
 
-    <div class="footer-top">
+    <div class="footer-top alt-grey">
 
         <div class="container">
 
             <div class="row justify-content-center">
 
-                <div class="col-md-8">
+                <div class="col-md-9">
 
                     <?php get_template_part( 'partials/testimonial-part' ); ?>  
 

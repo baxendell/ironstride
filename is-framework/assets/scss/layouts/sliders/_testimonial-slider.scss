@@ -1,36 +1,29 @@
 .testimonials-section {
-	background-color: $light-grey;
-	background-image: url('../../images/big-qoute.svg');
-	background-size: 260px 171px;
-	background-position: center top;
-	background-repeat: no-repeat;
-	padding: 78px 0 58px;
+	padding: 60px 0;
 
-	&-wrap {
-		position: relative;
-	}
-	
-	&-title {
-		color: #787878;
-		font-size: 24px;
-		font-weight: 700;
-		letter-spacing: 1.25px;
-		margin-bottom: 32px;
-	}
+	&__item {
+		background-image: url('../../images/icons/quote.jpg');
+		background-position: top left;
+		background-repeat: no-repeat;
+		padding-left: 125px;
+		color: $grey;
+		font-family: $default-font;
+		font-size: 28px;
+		letter-spacing: -0.28px;
+		line-height: 43px;
+		font-style: italic;
 
-	p {
-		color: $blue;
-		font-size: 21px;
-		line-height: 40px;
-		margin-bottom: 14px;
-	}
-
-	cite {
-		color: #9a9b9b;
-		font-size: 20px;
-		letter-spacing: 2.5px;
-		line-height: 29px;
-		display: block;
-		margin-bottom: 20px;
+		cite {
+			display: block;
+			margin-top: 19px;
+			text-align: right;
+			color: $alt-blue;
+			font-family: $second-font;
+			font-size: 20px;
+			font-weight: 400;
+			letter-spacing: 2px;
+			line-height: 44px;
+			text-transform: uppercase;
+		}
 	}
 }

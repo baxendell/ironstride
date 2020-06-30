@@ -1,0 +1,39 @@
+// News Block
+.news {
+  padding: 95px 0;
+
+  .home &  { // no padding-top on home
+    padding-top: 0;
+  }
+
+  .news-block {
+    border-top: 1px solid $grey;
+    border-bottom: 1px solid $grey;
+    padding: 22px 0 50px;
+
+    .news {
+      &-category {
+        color: $orange;
+        font-family: $third-font-solid;
+        font-size: 40px;
+        font-weight: 400;
+        letter-spacing: 0.8px;
+      }
+
+      &-title {
+        display:block;
+        color: $black;
+        font-family: $second-font;
+        font-size: 35px;
+        margin-top: 20px;
+        font-weight: 700;
+        line-height: 40px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .btn {
+    margin-top: 84px;
+  }
+}
