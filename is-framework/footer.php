@@ -32,13 +32,13 @@
 
                     <div class="footer-logo-wrap">
                         <a href="/" itemprop="url">
-                            <img itemprop="logo" class="logo img-fluid" src="<?php bloginfo( 'template_url' ) ?>/assets/images/logo.svg" alt="Client Name">
+                            <img itemprop="logo" class="logo img-fluid" src="<?php bloginfo( 'template_url' ) ?>/assets/images/footer-logo.png" alt="Ironstride Marketing">
                         </a>
                     </div>
 
                 </div>
 
-                <div class="offset-md-1 col-md-5">
+                <div class="offset-md-1 col-md-5 text-right">
 
                     <nav class="footer-nav-wrap">
                         <?php wp_nav_menu( array(
@@ -50,8 +50,35 @@
 
                     <address>
 
-                        <!--address--><br/>
-                        <!--phone--> <a class="#"><!--email--></a>
+                        <?php 
+
+                        $post_objects = get_field( 'location', 'option' );
+
+                        if ( $post_objects ): ?>
+
+                            <div class="wpseo-address">
+                                    
+                                <div class="wpseo-address__top">
+                                        
+                                    <span class="location-street"><?php echo get_field('location_address_1', $post_objects->ID); ?></span>  |  
+
+                                    <span class="locality"> <?php echo get_field('location_city', $post_objects->ID); ?></span>, <span class="region"><?php echo get_field('location_state', $post_objects->ID); ?></span><span class="postal-code"><?php echo get_field('location_zipcode', $post_objects->ID); ?></span>
+                                
+                                </div>
+                                
+                                <div class="wpseo-address__bottom">   
+
+                                    <span><?php echo get_field('location_phone', $post_objects->ID); ?></span>
+
+                                    <span><a href="mailto:support@ironstridemarketing.com">SUPPORT@IRONSTRIDEMARKETING.COM</a></span>
+
+                                </div>
+
+                            </div>
+
+                            <?php wp_reset_postdata(); 
+
+                        endif;?>
 
                     </address>
 
@@ -69,13 +96,13 @@
 
             <div class="row">
 
-                <div class="col-md-5 col-lg-3">
+                <div class="col-lg-4">
 
                     <p>&copy; <?php echo date( 'Y' ); ?> IRONSTRIDE Marketing. All Rights Reserved.</p>
 
                 </div>
 
-                <div class="align-content-end col-lg-3 col-md-4">
+                <div class="col-lg-4 offset-lg-4">
 
                     <ul class="social-icon-list">
 
@@ -109,23 +136,7 @@
 									<?php cws_get_svg( 'social-icons/icon-linkedin.svg' ); ?>
                                 </a>
                             </li>
-						<?php endif; ?>
-
-						<?php if ( get_field( 'youtube_link', 'option' ) ): ?>
-                            <li>
-                                <a href="<?php the_field( 'youtube_link', 'option' ) ?>" target="_blank">
-									<?php cws_get_svg( 'social-icons/icon-youtube.svg' ); ?>
-                                </a>
-                            </li>
-						<?php endif; ?>
-
-						<?php if ( get_field( 'yelp_link', 'option' ) ): ?>
-                            <li>
-                                <a href="<?php the_field( 'yelp_link', 'option' ) ?>" target="_blank">
-									<?php cws_get_svg( 'social-icons/icon-yelp.svg' ); ?>
-                                </a>
-                            </li>
-						<?php endif ?>
+						<?php endif; ?>						
 
                     </ul>
 

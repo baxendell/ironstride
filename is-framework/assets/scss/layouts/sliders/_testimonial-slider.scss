@@ -2,16 +2,16 @@
 	padding: 60px 0;
 
 	&__item {
-		background-image: url('../../images/icons/quote.jpg');
+		background-image: url('../../images/big-quote.png');
 		background-position: top left;
 		background-repeat: no-repeat;
-		padding-left: 125px;
+		padding-left: 110px;
 		color: $grey;
 		font-family: $default-font;
 		font-size: 28px;
-		letter-spacing: -0.28px;
 		line-height: 43px;
 		font-style: italic;
+		padding-top: 10px;
 
 		cite {
 			display: block;
@@ -20,6 +20,7 @@
 			color: $alt-blue;
 			font-family: $second-font;
 			font-size: 20px;
+			font-style: normal;
 			font-weight: 400;
 			letter-spacing: 2px;
 			line-height: 44px;

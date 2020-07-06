@@ -4,7 +4,7 @@ ul.social-icon-list {
 
   li {
     @include reset-pm;
-    margin-left: 10px;
+    margin-left: 15px;
     display: inline-block;
 
     &:first-of-type {
@@ -12,12 +12,18 @@ ul.social-icon-list {
     }
 
     a {
-      width: 37px;
-      height: 37px;
-      background-color: $purple;
+      width: 40px;
+      height: 40px;
       display: block;
       text-align: center;
       border-radius: 50%;
+      border: 1px solid $alt-blue;
+
+      &:hover {
+        svg * {
+          fill: $dark-blue;
+        }
+      }
 
       svg {
         display: inline-block;
@@ -27,7 +33,7 @@ ul.social-icon-list {
         display: inline-block;
 
         * {
-          fill: $bg-location;
+          fill: $alt-blue;
         }
 
       }

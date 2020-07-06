@@ -25,3 +25,23 @@
 	padding-bottom: 296px;
 	background-color: $alt-grey;
 }
+
+
+.home {
+	// Only for testimonials section on home
+	.testimonials-section { 
+		padding-bottom: 20px;
+	}
+
+	// Grey background only for home
+	.footer-blue:after {
+	    content:'';
+	    background-color: $alt-grey;
+	    position: absolute;
+		top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 118px;
+	    z-index: 0;
+	}
+}
