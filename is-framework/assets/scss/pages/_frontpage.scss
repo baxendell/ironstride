@@ -21,6 +21,48 @@
 	}
 }
 
+.case-study {
+	background-color: #2cb2bd;
+
+	.arrow-link {
+		margin-top: 20px;
+		color: $white;
+	}
+}
+
+.figure-content {
+	position: absolute;
+	left: 80px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.figure-title {
+	font-family: $second-font;
+	font-size: 40px;
+	letter-spacing: 0.8px;
+	color: $white;
+	margin-bottom: 30px;
+
+	&:after {
+		width: 62px;
+		height: 5px;
+		content: '';
+		display: block;
+		margin-top: 10px;
+		background-color: #bcce56;
+	}
+}
+
+.figure-case-title {
+	color: $white;
+	font-size: 40px;
+	letter-spacing: 2px;
+	line-height: 50px;
+	text-transform: uppercase;
+	font-family: $second-font;
+}	
+
 #principles {
 	padding-bottom: 296px;
 	background-color: $alt-grey;

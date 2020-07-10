@@ -135,9 +135,9 @@ get_header();
 					  	<img src="<?php echo $grid_img1['url'] ?>" alt="<?php echo $grid_img1['alt'] ?>" />
 
 					  	<div class="figure-content">
-						  	<div class="figure-title">case</div>
+						  	<div class="figure-title">case study</div>
 						  	<div class="figure-case-title"><?php the_field('case_grid_title') ?></div>
-						  	<span class="learn-more">learn more</span>
+						  	<div class="arrow-link arrow-link__alt"><span>learn more</span></div>
 				  		</div>
 					</figure>
 				</a>
