@@ -156,7 +156,7 @@ get_header();
 
        <div class="row justify-content-center">
 
-	       	<div class="col-md-9 pl-5 pr-0">
+	       	<div class="col-md-10 pl-5 pr-0 principles-top">
 
 	       		<h2><?php the_field('bottom_subtitle') ?><strong><?php the_field('bottom_title') ?></strong></h2>
 
@@ -168,15 +168,15 @@ get_header();
 
 		<?php if( have_rows('unordered_list') ): ?>
 
-		<div class="row">
+		<div class="row principles-bottom">
 
-			<div class="pl-5 col-lg-5 pr-0">
+			<div class="offset-lg-1 pl-5 col-lg-5 pr-0">
 
 				<ol>
 
 					<?php while ( have_rows('unordered_list') ) : the_row(); ?>
 
-					<li><strong><?php the_sub_field('list_title') ?> </strong>
+					<li><span><?php the_sub_field('list_title') ?> </span>
 						<p><?php the_sub_field('list_excerpt') ?></p>
 					</li>
 
