@@ -69,11 +69,10 @@
 	background-color: $alt-grey;
 
 	.principles {
-		&-top {	
-			//padding-left: 7rem; 
+		&-top {	 
 
 			p { 
-				font-size: 29px;
+				font-size: 28px;
 				font-family: $default-font;
 				line-height: 47px;
 				color: $grey;
@@ -82,13 +81,26 @@
 		}
 
 		&-bottom {			
-			padding-top: 110px;
+			padding-top: 83px;
 
 			ol {
 				li {
+					position: relative;
+					padding-left: 80px;
 
 					& + li {
-						padding-top: 48px;
+						margin-top: 48px;
+					}
+
+					&:before {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						background-image: url("../../images/principles-bkg.png");
+						background-position: 0 0;
+						height: 78px;
+						width: 54px;
 					}
 
 					color: $grey;
