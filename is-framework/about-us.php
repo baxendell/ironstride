@@ -52,7 +52,7 @@ get_header() ?>
 
                     <div class="col-lg-6">
 
-                        <div class="bi-title"><?php the_field('section_2_title_1' ?></div>
+                        <div class="bi-title"><?php the_field('section_2_title_1') ?></div>
 
                         <?php the_field('section_2_content_1') ?>
 
