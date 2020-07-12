@@ -87,9 +87,10 @@
 				li {
 					position: relative;
 					padding-left: 80px;
+					color: $grey;
 
 					& + li {
-						margin-top: 48px;
+						margin-top: 79px;
 					}
 
 					&:before {
@@ -103,7 +104,13 @@
 						width: 54px;
 					}
 
-					color: $grey;
+					&:nth-child(2):before {
+						background-position: 0 161px;
+					}
+
+					&:nth-child(3):before {
+						background-position: 0 79px;
+					}
 
 					span {
 					  font-size: 25px;
@@ -114,6 +121,47 @@
 					  margin-bottom: 22px;
 					}
 				}
+			}
+		}
+
+		&-right {
+			position: relative;
+
+			&:hover {
+				.principles-right-top {
+					bottom: 368px;
+				}
+
+				.principles-right-middle {
+					bottom: 186px;
+				}
+			}
+
+			div {
+				width: 393px;
+				height: 274px;
+				position: absolute;
+				right: 0;
+				transition: 1s;
+				background-image: url("../../images/principles-bkg-big.png");
+			}
+
+			&-top {
+				background-position: 0 -560px;
+				bottom:80px;
+				z-index: 2;
+			}
+
+			&-middle {
+				background-position: 0 -14px;
+				bottom: 40px;
+				z-index: 1;
+			}
+
+			&-bottom {
+				background-position: 0 -285px;
+				bottom: 0px;
+				z-index: 0;
 			}
 		}
 	}
