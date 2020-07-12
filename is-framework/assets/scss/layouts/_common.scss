@@ -130,3 +130,25 @@ ul.slick-dots {
   }
 
 }
+
+// Colors for h2 heading and links
+.green {
+  color: $alt-green;
+}
+
+.blue {
+  color: $light-blue;
+}
+
+.orange {
+  color: $orange;
+
+  &.arrow-link {
+    -webkit-filter: hue-rotate(220deg);
+    filter: hue-rotate(220deg);
+
+    span {
+      color: $orange;
+    }
+  }
+}

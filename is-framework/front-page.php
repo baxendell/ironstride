@@ -23,7 +23,7 @@ get_header();
 
         	<div class="col-md-6">
 
-        		<h2><?php the_field('top_content_subtitle_1') ?> <strong><?php the_field('top_content_title_1') ?></strong></h2>
+        		<h2 class="blue"><?php the_field('top_content_subtitle_1') ?> <strong><?php the_field('top_content_title_1') ?></strong></h2>
 
         		<p><?php the_field('top_content_text_1') ?></p>
 
@@ -37,11 +37,11 @@ get_header();
 
         	<div class="col-md-6">
 
-        		<h2><?php the_field('top_content_subtitle_2') ?> <strong><?php the_field('top_content_title_2') ?></strong></h2>
+        		<h2 class="orange"><?php the_field('top_content_subtitle_2') ?> <strong><?php the_field('top_content_title_2') ?></strong></h2>
 
         		<p><?php the_field('top_content_text_2') ?></p>
 
-        		<a class="arrow-link" href="<?php the_field('top_content_link_2') ?>"><span>Learn More</span></a>
+        		<a class="orange arrow-link" href="<?php the_field('top_content_link_2') ?>"><span>Learn More</span></a>
 
     		</div>
 
@@ -158,7 +158,7 @@ get_header();
 
 	       	<div class="col-md-10 pl-5 pr-0 principles-top">
 
-	       		<h2><?php the_field('bottom_subtitle') ?><strong><?php the_field('bottom_title') ?></strong></h2>
+	       		<h2 class="green"><?php the_field('bottom_subtitle') ?><strong class="d-block"><?php the_field('bottom_title') ?></strong></h2>
 
 	       		<?php the_field('bottom_text') ?>
 
@@ -186,9 +186,11 @@ get_header();
 
 			</div>
 
-			<div class="offset-md-1 col-lg-4">
+			<div class="offset-md-1 col-lg-4 principles-right">
 
-				<!--svg-->
+				<div class="principles-right-top"></div>
+				<div class="principles-right-middle"></div>
+				<div class="principles-right-bottom"></div>
 
 			</div>
 
