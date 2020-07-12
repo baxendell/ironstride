@@ -22,7 +22,7 @@
 
             </div>
 
-            <div class="col-lg-2">
+            <div class="col-lg-3 offset-lg-3 text-md-right">
 
             	<a class="btn btn-1" href="/contact/">Let's Talk</a>
 
