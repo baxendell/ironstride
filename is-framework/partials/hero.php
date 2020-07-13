@@ -34,7 +34,7 @@
 
 </section>
 
-<section class="hero">
+<section class="hero hero-internal">
 
         <div class="container">
 

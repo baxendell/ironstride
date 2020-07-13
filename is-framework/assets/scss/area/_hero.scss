@@ -83,4 +83,11 @@
 	}
 
   }
+  &-internal {
+  	padding: 30px 0;
+  }
+
+  .page-template-about-us & {
+  	background-image: url('../../images/backgrounds/about-ironstride-marketing-banner.jpg');
+  }
 }
