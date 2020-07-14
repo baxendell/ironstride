@@ -44,6 +44,8 @@
 
         			<h1><?php the_title() ?></h1>
 
+                    <span class="hero-subtitle"><?php the_field('banner_title') ?></span>
+
     			</div>
 
 			</div>
