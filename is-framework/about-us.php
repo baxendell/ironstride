@@ -2,15 +2,20 @@
 /**
  * Template Name: About Us
  */
-get_header() ?>
+get_header();
+$tempUrl = get_stylesheet_directory_uri();
+
+ ?>
 
     <section class="main-content">
 
         <div class="container">
 
-            <div class="row">
+            <div class="row bubble-block">
 
                 <article class="col-12 col-xl-6 pl-lg-5 pr-lg-5 entry-content">
+
+                    <h2 class="blue"><?php the_field('section_1_subtitle') ?> <strong><?php the_field('section_1_title') ?></strong></h2>
 
 					<?php if ( have_posts() ) : ?>
 
@@ -28,7 +33,7 @@ get_header() ?>
 
                     <?php if ( has_post_thumbnail() ) : ?>
                         <div class="image-holder">
-                            <?php the_post_thumbnail( 'medium' ) ?>
+                            <?php the_post_thumbnail( 'full' ) ?>
                         </div>
                     <?php endif; ?>
 
@@ -50,7 +55,10 @@ get_header() ?>
 
                     <div class="col-lg-6">
 
-                        <div class="bi-title"><?php the_field('section_2_title_1') ?></div>
+                        <div class="bi-title">
+                            <?php echo file_get_contents($tempUrl.'/assets/images/icons/chess-icon.svg'); ?>
+                            <?php the_field('section_2_title_1') ?>
+                        </div>
 
                         <?php the_field('section_2_content_1') ?>
 
@@ -58,7 +66,10 @@ get_header() ?>
 
                     <div class="col-lg-6">
 
-                        <div class="bi-title"><?php the_field('section_2_title_2') ?></div>
+                        <div class="bi-title">
+                            <?php echo file_get_contents($tempUrl.'/assets/images/icons/basketball-icon.svg'); ?>
+                            <?php the_field('section_2_title_2') ?>
+                        </div>
 
                         <?php the_field('section_2_content_2') ?>
 
