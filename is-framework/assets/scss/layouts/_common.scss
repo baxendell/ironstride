@@ -19,6 +19,10 @@
       display: block;
     }
   }
+
+  .arrow-link:hover {
+    padding-right: 48px;
+  }
 }
 
 .arrow-link {
@@ -32,6 +36,7 @@
   padding-right: 33px;
   background-position: right center;
   display: inline-block;
+  transition: padding 0.15s ease-out;
 
   span {
     text-decoration: underline;
@@ -143,10 +148,9 @@ ul.slick-dots {
   color: $orange;
 
   &.arrow-link {
-    -webkit-filter: hue-rotate(220deg);
-    filter: hue-rotate(220deg);
+    background-image: url("../../images/arrows/arrow-orange.svg");
 
-    span {
+    &:hover {
       color: $orange;
     }
   }

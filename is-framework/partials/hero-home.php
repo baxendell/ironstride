@@ -13,7 +13,7 @@
 
         <div class="header row">
 
-            <div class="col-12 d-flex">
+            <div class="col-12 d-flex header-container">
 
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -29,7 +29,7 @@
 
         <div class="hero-title-wrap row">
 
-            <div class="offset-lg-1 col-lg-4 pr-0">
+            <div class="offset-lg-1 col-lg-5 pr-0">
 
                 <div class="hero-title-top"><?php the_field('banner_title') ?></div>
 
@@ -47,7 +47,7 @@
 
         <div class="hero-services row">
 
-            <div class="col-lg-10 d-flex">
+            <div class="col-lg-8 offset-lg-1 d-flex">
 
             <?php while ( have_rows('banner_services') ) : the_row(); $i++;
                 $img = get_sub_field('banner_service_icon');
@@ -57,7 +57,7 @@
 
                 <div class="col">
 
-                    <a class="hero-services-title hero-services-<?php echo $i ?>" href="<?php the_sub_field('banner_service_link') ?>"><?php the_sub_field('banner_service_title'); ?> <img src="<?php echo $img['url'] ?>" alt="<?php echo $img['alt'] ?>"/></a>
+                    <a class="hero-services-title hero-services-<?php echo $i ?>" href="<?php the_sub_field('banner_service_link') ?>"><span><?php the_sub_field('banner_service_title'); ?></span> <img src="<?php echo $img['url'] ?>" alt="<?php echo $img['alt'] ?>"/></a>
 
                     <p><?php the_sub_field('banner_service_excerpt') ?></p>
 
