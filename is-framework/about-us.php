@@ -145,15 +145,15 @@ $tempUrl = get_stylesheet_directory_uri();
                         </div>
 
                         <div class="col-6">
-                            Founded <strong>2009</strong>
+                            campaigns <strong>over 12,000</strong>
                         </div>
 
                         <div class="col-6">
-                            Founded <strong>2009</strong>
+                            Team Members <strong>Eight</strong>
                         </div>
 
                         <div class="col-6">
-                            Founded <strong>2009</strong>
+                            Cups of Coffee <strong>1,152,923</strong>
                         </div>
 
                     </div>
