@@ -135,14 +135,14 @@
   }
 
   &-internal {
-  	padding: 128px 0;
+  	padding: 104px 0;
 
   	h1 {
   		font-family: $third-font-solid;
   		font-size: 150px;
   		text-transform: lowercase;
   		color: #81F5FF;
-  		margin-bottom: 0;
+  		margin-bottom: 50px;
   		z-index: 2;
   		position: relative;
   	}
@@ -150,5 +150,13 @@
 
   .page-template-about-us & {
   	background-image: url('../../images/backgrounds/about-ironstride-marketing-banner.jpg');
+  }
+
+  .page-template-services & {
+    background-image: url('../../images/backgrounds/ironstride-marketing-services-banner.jpg');
+
+    h1 {
+      color: #FFC453;
+    }
   }
 }

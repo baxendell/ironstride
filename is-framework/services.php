@@ -8,21 +8,23 @@ get_header() ?>
 
         <div class="container">
 
-            <div class="row">
+            <div class="row bubble-block">
 
                 <article class="col-12 col-xl-6 pl-lg-5 pr-lg-5 entry-content">
 
-					<?php if ( have_posts() ) : ?>
+                    <h2 class="orange"><?php the_field('section_1_subtitle') ?> <strong><?php the_field('section_1_title') ?></strong></h2>
 
-						<?php while ( have_posts() ) : the_post() ?>
+                    <?php if ( have_posts() ) : ?>
 
-                            <h1 class="page-title"><?php h1_title(); ?></h1>
+                        <?php while ( have_posts() ) : the_post() ?>
 
-							<?php the_content(); ?>
+                            <?php the_content(); ?>
 
-						<?php endwhile; ?>
+                        <?php endwhile; ?>
 
-					<?php endif; ?>
+                    <?php endif; ?>
+
+                    <a class="orange arrow-link" href="/our-work/"><span>Explore Our Services</span></a>
 
                 </article>
 
@@ -30,7 +32,7 @@ get_header() ?>
 
                     <?php if ( has_post_thumbnail() ) : ?>
                         <div class="image-holder">
-                            <?php the_post_thumbnail( 'medium' ) ?>
+                            <?php the_post_thumbnail( 'full' ) ?>
                         </div>
                     <?php endif; ?>
 
@@ -226,19 +228,25 @@ get_header() ?>
 
         <div class="container">
 
-            <div class="row justify-content-center">
+            <?php foreach( $post_objects as $post): setup_postdata($post); ?>
 
-                <?php foreach( $post_objects as $post): setup_postdata($post); ?>
+                <div class="row bubble-block">
 
-                <div class="col-lg-10 px-0 case-studies-featured">
+                    <div class="col-md-6 text-right">
 
-                    <?php the_post_thumbnail('large') ?>
+                        <?php $img1 = get_field('top_content_image_1') ?>
 
-                    <div class="case-studies-excerpt">
+                        <img src="<?php echo $img1['url'] ?>" alt="<?php echo $img1['alt'] ?>"/>
 
-                        <?php the_excerpt() ?>
+                    </div>
 
-                        <a class="arrow-link" href="<?php the_permalink() ?>">Read More</a>
+                    <div class="col-md-6">
+
+                        <h2 class="blue">Case Study <strong><?php the_title() ?></strong></h2>
+
+                        <p><?php the_excerpt() ?></p>
+
+                        <a class="arrow-link" href="<?php echo get_the_permalink() ?>"><span>Read More</span></a>
 
                     </div>
 
@@ -258,5 +266,6 @@ get_header() ?>
 
 
     <?php get_template_part('partials/cta-bottom') ?>
+
 
 <?php get_footer() ?>
