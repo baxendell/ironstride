@@ -80,4 +80,51 @@ if ( is_front_page( ) ) {
 }
 ?>
 
+<!-- Full Menu -->
+<div class="full-screen-menu">
+
+    <div class="container">
+
+        <div class="row"> 
+        
+            <div class="col">           
+
+                <div class="full-screen-menu-close">
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <div class="full-screen-menu-content mx-auto clearfix">
+
+                    <div class="full-screen-menu-content-box">
+
+                        <img class="logo img-fluid" src="<?php echo esc_url( get_stylesheet_directory_uri() ) ?>/assets/images/ironStrideHeaderLogo.png" alt="ironstride marketing"> 
+
+                        <div class="full-screen-menu-content-menu">
+
+                            <?php wp_nav_menu( array(
+                                'container'      => 'div',
+                                'theme_location' => 'mobile-menu',
+                                'menu_class'     => 'nav navbar-nav',
+                                'walker'         => new Walker_Nav_Primary(),
+
+                            ) ) ?>
+
+                        </div>
+
+                        <?php get_template_part('partials/social') ?>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- /full menu -->
+
 <div class="main-wrapper" id="main-wrapper">
