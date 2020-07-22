@@ -1,6 +1,6 @@
 jQuery(document).ready(function ($) {
 
-    var CW_theme_framework = (function () {
+    var IS_theme_framework = (function () {
 
         var originalJs = function () {
 
@@ -23,6 +23,21 @@ jQuery(document).ready(function ($) {
                     $(this).css("position", "absolute");
                 });
             }
+
+            //Full Screen Menu
+            $(".navbar-toggler").on("click", function () {
+                $(".full-screen-menu").addClass("nav-active");
+                $('.full-screen-menu-close').delay(400).queue(function () {
+                    $(this).addClass("close-active").dequeue();
+                });
+            });
+
+            $(".full-screen-menu-close").on("click", function () {
+                $(this).removeClass("close-active");
+                $(".full-screen-menu").delay(250).queue(function () {
+                    $(this).removeClass("nav-active").dequeue();
+                });
+            });
 
             //No comments
             $("#commentform").addClass("noauto");
@@ -362,6 +377,6 @@ jQuery(document).ready(function ($) {
 
     })();
 
-    CW_theme_framework.init();
+    IS_theme_framework.init();
 
 });

@@ -20,9 +20,10 @@ ul.social-icon-list {
       border: 1px solid $alt-blue;
 
       &:hover {
-        svg * {
+        /*svg * {
           fill: $dark-blue;
-        }
+        }*/
+        transform: scale(1.2);
       }
 
       svg {

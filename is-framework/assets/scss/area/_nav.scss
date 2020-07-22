@@ -1,4 +1,120 @@
-.menu-container {
+/* Full Screen Menu */
+.full-screen-menu {
+  background-color: $blue;
+  width: 100%;
+  height: 0%;
+  z-index: 12;
+  top: 0;
+  position: fixed;
+  overflow-y: hidden;
+  transition: 0.5s;
+  
+  &.nav-active {
+    height: 100%;
+  }
+
+  &-close {
+    height: 38px;
+    width: 38px;
+    position: absolute;
+    top: 55px;
+    left: 23px;
+    cursor: pointer;
+    z-index: 10;
+
+    &.close-active {
+      div:first-of-type {
+        transform: rotate(45deg);
+        opacity: 1;
+      }
+
+      div:last-of-type {
+        transform: rotate(-45deg);
+        opacity: 1;
+      }
+    }
+
+    div {
+      width: 38px;
+      height: 2px;
+      background-color: $white;
+      position: relative;
+      opacity: 0;
+      transition: all .25s ease-in-out;
+
+      &:first-of-type {
+        top: 14px;
+      }
+
+      &:last-of-type {
+        top: 12px;
+      }
+
+    }
+
+  }
+
+  &-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 119px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+
+    @media screen and (min-width: 1350px) {
+      width: 1310px;
+    }
+
+    &-box {
+      height: 100%;
+      padding-top: 50px;
+
+      @include media('>=tablet') {
+        width: 40%;
+        float: left;
+      }
+
+    }
+
+    &-menu {
+      padding-top: 104px;
+
+      .navbar-nav {
+
+        li {
+          margin-bottom: 27px;
+
+          a {
+            color: $white;
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 35px;
+            font-family: $second-font;
+            display: block;
+            padding:0;
+            position: relative;
+            text-transform: uppercase;
+            transition: 0.1s linear;
+
+            &:hover {
+              color: $orange;
+            }
+
+          }
+        }
+      }
+    }
+
+    .social-icon-list {
+      margin-top: 50px;
+    }
+  }
+}
+
+/*.menu-container {
   max-width: 1170px;
   padding: 0 15px;
   width: 100%;
@@ -77,12 +193,12 @@
     max-width: 180px;
     width: 100%;
   }
-}
+}*/
 
 .navbar-toggler {
   margin-right: 50px;
   
-  &.collapsed {
+  /*&.collapsed {
 
     .navbar-toggler-icon {
       display: inline-block;
@@ -91,10 +207,10 @@
       vertical-align: middle;
       content: "";
       background: url("../../images/bgBurger.svg") no-repeat scroll center center $white;
-      background-size: 33px 23px;
+      
     }
 
-  }
+  }*/
 
   .navbar-toggler-icon {
     display: inline-block;
@@ -102,8 +218,8 @@
     height: 23px;
     vertical-align: middle;
     content: "";
-    background: url("../../images/bgBurgerClose.svg") no-repeat scroll center center $black;
+    background: url("../../images/bgBurger.svg") no-repeat scroll center center $white;
     background-size: 33px 23px;
   }
 
-}
+} 
