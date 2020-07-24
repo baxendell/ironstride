@@ -1,7 +1,6 @@
 <?php $args = array(
 	'post_type' => 'staff',
 	'post_per_page' => -1,
-	'orderby'=> 'menu_order',
 	);
 
 $staff_query = new WP_Query($args);
@@ -15,17 +14,20 @@ if($staff_query->have_posts()):
 
 		<div class="row">
 
-			<h2 class="section-title text-center">Meet The Team</h2>
+			<h2 class="col-12 text-center"><strong>Meet The Team</strong></h2>
+
 
 			<?php while($staff_query->have_posts()): $staff_query->the_post() ?>
 
-			<div class="col-lg-3">
+			<div class="col-lg-4 text-center px-5">
 
 				<div class="team-member">
 
-					<h3><?php the_title() ?></h3>
+					<?php the_post_thumbnail('full') ?>
 
-					<?php the_excerpt() ?>
+					<h3><?php the_field('position') ?><strong><?php the_title() ?></strong></h3>
+
+					<?php echo excerpt( 50 ); ?> <a href="<?php echo get_permalink(); ?>"> more</a>
 
 				</div>
 

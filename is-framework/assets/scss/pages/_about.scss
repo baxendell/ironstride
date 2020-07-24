@@ -89,3 +89,34 @@
 		}
 	}
 }
+
+.team {
+	background-color: $alt-grey;
+	padding: 50px 0 0;
+
+	img {
+		margin-bottom: 10px;
+	}
+
+	h3 {
+		color: #1aa8b5;
+		font-family: $third-font-solid;
+		font-size: 40px;
+		font-weight: 400;
+		letter-spacing: 0.8px;
+		margin-bottom: 25px;
+
+		strong {
+			color: $blue;
+			font-family: $second-font;
+			font-weight: 700;
+			line-height: 46px;
+			text-transform: uppercase;
+			display: block;
+		}
+	}
+
+	&-member {
+		margin-bottom: 70px;
+	}
+}
