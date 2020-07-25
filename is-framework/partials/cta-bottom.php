@@ -4,7 +4,7 @@
 
         <div class="row justify-content-center">
 
-            <div class="col-lg-10 col-xl-7">
+            <div class="col-lg-10 col-xl-8">
 
                 <?php the_field('cta_text') ?>
 

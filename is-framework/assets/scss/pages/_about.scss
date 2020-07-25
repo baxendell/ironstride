@@ -122,7 +122,7 @@
 }
 
 .about-cta {
-	padding: 95px 0;
+	padding: 95px 0 0;
 	text-align: center;
 	color: $blue;
 	font-family: $third-font-solid;
@@ -141,6 +141,8 @@
 	}
 
 	.btn {
-		margin-top: 65px;
+		display: block;
+		max-width: 240px;
+		margin: 65px auto 0;
 	}
 }
