@@ -1,9 +1,15 @@
-.awards {
+.awards-part {
+  padding: 90px 0;
+
   h2 {
     text-transform: uppercase;
     color: $blue;
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 35px;
+  }
+
+  img {
+    margin-bottom: 40px;
   }
 }

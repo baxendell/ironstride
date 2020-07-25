@@ -3,8 +3,6 @@
 $awards_args = array(
 	'post_type'      => 'awards',
 	'posts_per_page' => - 1,
-	'orderby'        => 'menu_order',
-	'order'          => 'ASC',
 );
 
 $awards_query = new WP_Query( $awards_args );
@@ -15,7 +13,7 @@ if ( $awards_query->have_posts() ) : ?>
 
         <div class="container">
 
-            <div class="row">
+            <div class="row align-items-center">
 
                 <div class="col-lg-5 pl-lg-5 pr-lg-4">
 
@@ -25,21 +23,25 @@ if ( $awards_query->have_posts() ) : ?>
 
                 </div>
 
-                <div class="col-lg-7 d-flex">
+                <div class="col-lg-7">
 
-                    <?php while ( $awards_query->have_posts() ): $awards_query->the_post(); ?>
+                    <div class="row row-cols-3">
 
-                    <div class="col-lg-4 pl-lg-0">
+                        <?php while ( $awards_query->have_posts() ): $awards_query->the_post(); ?>
 
-                        <?php if ( get_field( 'script' ) ): the_field( 'script' ); else: ?>
-                        <a href="<?php the_field( 'award_link' ) ?>" target="_blank">
-                            <?php the_post_thumbnail( 'full' ); ?>
-                        </a>
-                        <?php endif; ?>
+                        <div class="col-lg-4 pl-lg-0">
+
+                            <?php if ( get_field( 'script' ) ): the_field( 'script' ); else: ?>
+                            <a href="<?php the_field( 'award_link' ) ?>" target="_blank">
+                                <?php the_post_thumbnail( 'full' ); ?>
+                            </a>
+                            <?php endif; ?>
+
+                        </div>
+
+                        <?php endwhile; wp_reset_postdata(); ?>
 
                     </div>
-
-                    <?php endwhile; wp_reset_postdata(); ?>
 
                 </div>
 
