@@ -176,7 +176,7 @@ get_header() ?>
 
                         <div class="ways-work-title"><?php the_sub_field('block_title') ?></div>
 
-                        <?php the_sub_field('block_text') ?>
+                        <p><?php the_sub_field('block_text') ?></p>
 
                         <a class="arrow-link" href="<?php the_sub_field('block_link') ?>"><?php the_sub_field('block_button_text') ?></a>
 
@@ -192,25 +192,24 @@ get_header() ?>
 
     </section>
 
-    <section class="cta-bubble">
+    <section class="bubble-container"> 
 
         <div class="container">
 
-            <div class="row justify-content-center">
+            <div class="row">
 
-                <div class="col-lg-10">
+                <div class="pl-5 col-md-11">
 
-                    <div class="cta-bubble-wrap">
+                    <div class="cta-bubble">
 
                         <div class="cta-bubble-content">
 
-                            <div class="cta-bubble-title"><?php the_field('page_cta_title') ?></div>
-
-                            <div class="cta-bubble-text"><?php the_field('page_cta_subtitle') ?></div>
+                            <div class="cta-bubble-title"><?php the_field('call_out_title') ?></div>
+                            <?php the_field('call_out_text') ?>
 
                         </div>
 
-                        <a class="btn btn-1" href="/contact-us/">Let's Talk</a>
+                        <a class="btn btn-1 btn--alt" href="/contact-us/">Let's Talk</a>
 
                     </div>
 
