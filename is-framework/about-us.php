@@ -170,7 +170,24 @@ $tempUrl = get_stylesheet_directory_uri();
 
 <?php get_template_part('partials/awards') ?>
 
-<?php get_template_part('partials/testimonial-part') ?>
+<div class="footer-top alt-grey">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-md-9">
+
+                <?php get_template_part( 'partials/testimonial-part' ); ?>  
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
 
 <?php get_template_part('partials/cta-bottom') ?>
 
