@@ -34,6 +34,14 @@
 
 </section>
 
+<?php if(is_home()) {
+    $title = 'Ironstride Blog';
+    $bannerTitle = 'the latest industry news & beyond';
+} else {
+    $title = get_the_title();
+    $bannerTitle = get_field('banner_title');
+}
+?>
 <section class="hero hero-internal">
 
         <div class="container">
@@ -42,9 +50,9 @@
 
         		<div class="col text-center">
 
-        			<h1><?php the_title() ?></h1>
+        			<h1><?php echo $title; ?></h1>
 
-                    <span class="hero-subtitle"><?php the_field('banner_title') ?></span>
+                    <span class="hero-subtitle"><?php echo $bannerTitle; ?></span>
 
     			</div>
 
