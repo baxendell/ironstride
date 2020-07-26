@@ -144,6 +144,18 @@ ul.slick-dots {
   color: $light-blue;
 }
 
+.darker-green {
+  color: $darker-green;
+
+  &.arrow-link {
+    background-image: url("../../images/arrows/arrow-green.svg");
+
+    &:hover {
+      color: $darker-green;
+    }
+  }
+}
+
 .orange {
   color: $orange;
 

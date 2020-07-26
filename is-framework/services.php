@@ -176,7 +176,7 @@ get_header() ?>
 
                         <div class="ways-work-title"><?php the_sub_field('block_title') ?></div>
 
-                        <?php the_sub_field('block_text') ?>
+                        <p><?php the_sub_field('block_text') ?></p>
 
                         <a class="arrow-link" href="<?php the_sub_field('block_link') ?>"><?php the_sub_field('block_button_text') ?></a>
 
@@ -192,25 +192,24 @@ get_header() ?>
 
     </section>
 
-    <section class="cta-bubble">
+    <section class="bubble-container"> 
 
         <div class="container">
 
-            <div class="row justify-content-center">
+            <div class="row">
 
-                <div class="col-lg-10">
+                <div class="pl-5 col-md-11">
 
-                    <div class="cta-bubble-wrap">
+                    <div class="cta-bubble">
 
                         <div class="cta-bubble-content">
 
-                            <div class="cta-bubble-title"><?php the_field('page_cta_title') ?></div>
-
-                            <div class="cta-bubble-text"><?php the_field('page_cta_subtitle') ?></div>
+                            <div class="cta-bubble-title"><?php the_field('call_out_title') ?></div>
+                            <?php the_field('call_out_text') ?>
 
                         </div>
 
-                        <a class="btn btn-1" href="/contact-us/">Let's Talk</a>
+                        <a class="btn btn-1 btn--alt" href="/contact-us/">Let's Talk</a>
 
                     </div>
 
@@ -228,33 +227,44 @@ get_header() ?>
 
         <div class="container">
 
-            <?php foreach( $post_objects as $post): setup_postdata($post); ?>
+            <?php $i=0; foreach( $post_objects as $post): setup_postdata($post); 
+
+
+                $class_text = ($i%2==0) ? "blue" : "darker-green";
+
+            ?>
 
                 <div class="row bubble-block">
 
-                    <div class="col-md-6 text-right">
+                    <div class="col-md-6">
 
-                        <?php $img1 = get_field('top_content_image_1') ?>
-
-                        <img src="<?php echo $img1['url'] ?>" alt="<?php echo $img1['alt'] ?>"/>
+                        <?php the_post_thumbnail( 'full' ) ?>
 
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 content">
 
-                        <h2 class="blue">Case Study <strong><?php the_title() ?></strong></h2>
+                        <h2 class="<?php echo $class_text;?>">Case Study <strong><?php the_title() ?></strong></h2>
 
                         <p><?php the_excerpt() ?></p>
 
-                        <a class="arrow-link" href="<?php echo get_the_permalink() ?>"><span>Read More</span></a>
+                        <a class="arrow-link <?php echo $class_text;?>" href="<?php echo get_the_permalink() ?>"><span>Read More</span></a>
 
                     </div>
 
                 </div>
 
-                <?php endforeach; ?>
+                <?php $i++; endforeach; ?>
 
-                <a class="btn btn-1" href="/portfolio/">See Our Work</a>
+                <div class="row">
+
+                    <div class="col text-center">
+
+                        <a class="btn btn-1" href="/portfolio/">See Our Work</a>
+
+                    </div>
+
+                </div>
 
             </div>
 

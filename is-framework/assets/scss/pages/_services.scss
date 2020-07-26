@@ -1,0 +1,55 @@
+.ways-work {
+	padding: 100px 0 80px;
+
+	&-item {
+		margin-top: 33px;
+	}
+
+	&-title {
+		margin: 30px 0;
+		font-weight: 700;
+		font-size: 22px;
+		line-height: 26px;
+		color: #A9BC3F;
+	}
+
+	p {
+		color: $grey;
+	}
+
+	.arrow-link {
+		color: #A9BC3F;
+		background-image: url("../../images/arrows/arrow-green.svg");
+		text-decoration: underline;
+	}
+}
+
+.bubble-container {
+	background-image: linear-gradient($white 55%, $alt-grey 45%);
+}
+
+.case-studies {
+	background-color: $alt-grey;
+	padding: 105px 0 130px;
+
+	.btn {
+		margin-top: 70px;
+	}
+
+	.bubble-block {
+
+		.content {
+			padding-left: 50px;
+		}
+
+		&:nth-child(even){
+			flex-direction: row-reverse;
+
+			.content {
+				text-align: right;
+				padding-left: 0;
+				padding-right: 65px;
+			}
+		}
+	}
+}
