@@ -28,7 +28,28 @@
 	background-image: linear-gradient($white 55%, $alt-grey 45%);
 }
 
-.services-case {
+.case-studies {
 	background-color: $alt-grey;
 	padding: 105px 0 130px;
+
+	.btn {
+		margin-top: 70px;
+	}
+
+	.bubble-block {
+
+		.content {
+			padding-left: 50px;
+		}
+
+		&:nth-child(even){
+			flex-direction: row-reverse;
+
+			.content {
+				text-align: right;
+				padding-left: 0;
+				padding-right: 65px;
+			}
+		}
+	}
 }

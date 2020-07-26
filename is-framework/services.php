@@ -227,33 +227,44 @@ get_header() ?>
 
         <div class="container">
 
-            <?php foreach( $post_objects as $post): setup_postdata($post); ?>
+            <?php $i=0; foreach( $post_objects as $post): setup_postdata($post); 
+
+
+                $class_text = ($i%2==0) ? "blue" : "darker-green";
+
+            ?>
 
                 <div class="row bubble-block">
 
-                    <div class="col-md-6 text-right">
+                    <div class="col-md-6">
 
-                        <?php $img1 = get_field('top_content_image_1') ?>
-
-                        <img src="<?php echo $img1['url'] ?>" alt="<?php echo $img1['alt'] ?>"/>
+                        <?php the_post_thumbnail( 'full' ) ?>
 
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 content">
 
-                        <h2 class="blue">Case Study <strong><?php the_title() ?></strong></h2>
+                        <h2 class="<?php echo $class_text;?>">Case Study <strong><?php the_title() ?></strong></h2>
 
                         <p><?php the_excerpt() ?></p>
 
-                        <a class="arrow-link" href="<?php echo get_the_permalink() ?>"><span>Read More</span></a>
+                        <a class="arrow-link <?php echo $class_text;?>" href="<?php echo get_the_permalink() ?>"><span>Read More</span></a>
 
                     </div>
 
                 </div>
 
-                <?php endforeach; ?>
+                <?php $i++; endforeach; ?>
 
-                <a class="btn btn-1" href="/portfolio/">See Our Work</a>
+                <div class="row">
+
+                    <div class="col text-center">
+
+                        <a class="btn btn-1" href="/portfolio/">See Our Work</a>
+
+                    </div>
+
+                </div>
 
             </div>
 
