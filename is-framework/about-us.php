@@ -188,7 +188,4 @@ $tempUrl = get_stylesheet_directory_uri();
 
 </div>
 
-
-<?php get_template_part('partials/cta-bottom') ?>
-
 <?php get_footer() ?>
