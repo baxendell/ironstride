@@ -44,17 +44,17 @@ get_header();
 
 </section>
 
-<section class="about-values">
+<section class="did-you-know">
 
     <div class="container">
 
-        <div class="row">
+        <div class="row entry-content">
 
-            <div class="col pr-4">
+            <div class="col pl-0 pr-4">
 
-                <div class="about-values-container">
+                <div class="about-values-container row">
 
-                    <div class="col-10">
+                    <div class="col-10 pl-5">
 
                        <h2 class="green"><?php the_field('section_2_subtitle') ?> <strong><?php the_field('section_2_title') ?></strong></h2>
 
