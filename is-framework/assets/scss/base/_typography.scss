@@ -31,6 +31,15 @@ h2,
 
 }
 
+h3 {
+  color: $dark-grey;
+  font-family: $second-font;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  line-height: 45px;
+}
+
 p,
 em {
   color: $text;
@@ -78,23 +87,22 @@ em {
 
     li {
       position: relative;
-      padding-left: 50px;
+      padding-left: 25px;
       color: $text;
       font-family: $default-font;
-      font-size: 16px;
-      font-weight: 400;
+      font-size: 19px;
       line-height: 31px;
       margin-bottom: 13px;
 
       &:after {
         position: absolute;
         content: '';
-        background: url("../../images/icon-arrow-right-light.svg") no-repeat scroll center center transparent;
-        background-size: 20px 15px;
-        left: 15px;
-        top: 8px;
-        width: 20px;
-        height: 15px;
+        left: 0;
+        top: 12px;
+        width: 8px;
+        height: 8px;
+        background-color: $alt-blue;
+        border-radius: 100%;
       }
 
     }

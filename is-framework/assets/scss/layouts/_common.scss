@@ -138,6 +138,10 @@ ul.slick-dots {
 // Colors for h2 heading and links
 .green {
   color: $alt-green;
+
+  strong {
+    display: block;
+  }
 }
 
 .blue {
@@ -167,3 +171,15 @@ ul.slick-dots {
     }
   }
 }
+
+.card {
+  border: none;
+  background-color: transparent;
+  
+  &-header {
+    border-radius: 0;
+    background-color: $alt-grey;
+    border-bottom-color: #bebebe;
+  }
+}
+

@@ -76,9 +76,9 @@ get_header();
 
     <div class="container">
 
-        <div class="row">
+        <div class="row entry-content">
 
-            <div class="col-lg-6 px-5">
+            <div class="col-lg-6 px-5 ">
 
                 <?php the_field('section_3_left') ?>
 
@@ -112,7 +112,13 @@ get_header();
 
                 <div class="accordion" id="accordionGray">
 
-                    <?php while( have_rows('accordions') ) : the_row(); $i++; ?>
+                    <?php while( have_rows('accordions') ) : the_row(); $i++;
+                        if($i==1) {
+                            $show = 'show';
+                        } else {
+                            $show = '';
+                        }
+                     ?>
                     <div class="card">
                         <div class="card-header" id="heading<?php echo $i ?>">
                           <h3 class="mb-0">
@@ -122,7 +128,7 @@ get_header();
                           </h3>
                         </div>
 
-                        <div id="collapse<?php echo $i ?>" class="collapse show" aria-labelledby="heading<?php echo $i ?>" data-parent="#accordionGray">
+                        <div id="collapse<?php echo $i ?>" class="collapse <?php echo $show ?>" aria-labelledby="heading<?php echo $i ?>" data-parent="#accordionGray">
                           <div class="card-body">
                             <?php the_sub_field('accordion_text') ?>
                           </div>

@@ -2,7 +2,6 @@
   h2 {
     strong {
       color: $white;
-      display: block;
     }
   }
 
@@ -21,4 +20,14 @@
     font-weight: 700;
     line-height: 45px;
   }
+
+  ul {
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+  }
+}
+
+.service-note {
+  padding: 60px 0;
 }
