@@ -114,7 +114,7 @@ jQuery(document).ready(function ($) {
 
         var scrollToSection = function () {
 
-            var scroll = new SmoothScroll('a[href*="#"]', {
+            var scroll = new SmoothScroll('a[href*="#"]:not(.nav-link)', {
                 // Selectors
                 ignore: '[data-scroll-ignore]', // Selector for links to ignore (must be a valid CSS selector)
                 header: null, // Selector for fixed headers (must be a valid CSS selector)

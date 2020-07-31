@@ -2,7 +2,9 @@
 /**
  * Template Name: Services
  */
-get_header() ?>
+get_header() ;
+$tempUrl = get_stylesheet_directory_uri();
+?>
 
     <section class="main-content">
 
@@ -48,22 +50,31 @@ get_header() ?>
 
         <nav>
           <div class="nav nav-tabs" id="nav-tab" role="tablist">
-            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">strategy & branding</a>
-            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">creative & design</a>
-            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">media planning</a>
+            <a class="nav-item nav-link active link--strategy" id="nav-strategy-tab" data-toggle="tab" href="#nav-strategy" role="tab" aria-controls="nav-strategy" aria-selected="true">
+                <?php echo file_get_contents($tempUrl.'/assets/images/icons/strategy-icon.svg'); ?>
+                strategy & branding
+            </a>
+            <a class="nav-item nav-link link--creative" id="nav-creative-tab" data-toggle="tab" href="#nav-creative" role="tab" aria-controls="nav-creative" aria-selected="false">
+                <?php echo file_get_contents($tempUrl.'/assets/images/icons/creative-icon.svg'); ?>
+                creative & design
+            </a>
+            <a class="nav-item nav-link link--media" id="nav-media-tab" data-toggle="tab" href="#nav-media" role="tab" aria-controls="nav-media" aria-selected="false">
+                <?php echo file_get_contents($tempUrl.'/assets/images/icons/media-icon.svg'); ?>
+                media planning
+            </a>
           </div>
         </nav>
 
         <div class="tab-content" id="nav-tabContent">
-          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+          <div class="tab-pane fade show active" id="nav-strategy" role="tabpanel" aria-labelledby="nav-strategy-tab">
 
                 <div class="container">
 
                     <div class="row">
 
-                        <div class="col-lg-5 text-center">
+                        <div class="col-lg-5 ">
 
-                            <?php the_field('strategy_tab_title') ?>
+                            <h2><?php the_field('strategy_tab_title') ?></h2>
 
                         </div>
 
@@ -85,15 +96,15 @@ get_header() ?>
 
             </div>
 
-            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <div class="tab-pane fade" id="nav-creative" role="tabpanel" aria-labelledby="nav-creative-tab">
                 
                 <div class="container">
 
                     <div class="row">
 
-                        <div class="col-lg-5 text-center">
+                        <div class="col-lg-5">
 
-                            <?php the_field('creative_tab_title') ?>
+                            <h2><?php the_field('creative_tab_title') ?></h2>
 
                         </div>
 
@@ -115,15 +126,15 @@ get_header() ?>
 
             </div>
 
-            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+            <div class="tab-pane fade" id="nav-media" role="tabpanel" aria-labelledby="nav-media-tab">
                 
                 <div class="container">
 
                     <div class="row">
 
-                        <div class="col-lg-5 text-center">
+                        <div class="col-lg-5">
 
-                            <?php the_field('media_tab_title') ?>
+                            <h2><?php the_field('media_tab_title') ?></h2>
 
                         </div>
 
@@ -273,9 +284,5 @@ get_header() ?>
     </section>
 
     <?php wp_reset_postdata(); endif; ?>
-
-
-    <?php get_template_part('partials/cta-bottom') ?>
-
 
 <?php get_footer() ?>

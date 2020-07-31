@@ -136,8 +136,8 @@
             "sub_fields": [
                 {
                     "key": "field_5ec926e538ea4",
-                    "label": "Strategy List Title",
-                    "name": "strategy_list_title",
+                    "label": "Creative List Title",
+                    "name": "creative_list_title",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -155,8 +155,8 @@
                 },
                 {
                     "key": "field_5ec926e538ea5",
-                    "label": "Strategy List Content",
-                    "name": "strategy_list_content",
+                    "label": "Creative List Content",
+                    "name": "creative_list_content",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -214,8 +214,8 @@
             "sub_fields": [
                 {
                     "key": "field_5ec9270838ea8",
-                    "label": "Strategy List Title",
-                    "name": "strategy_list_title",
+                    "label": "Media List Title",
+                    "name": "media_list_title",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -233,8 +233,8 @@
                 },
                 {
                     "key": "field_5ec9270838ea9",
-                    "label": "Strategy List Content",
-                    "name": "strategy_list_content",
+                    "label": "Media List Content",
+                    "name": "media_list_content",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -464,5 +464,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1595727202
+    "modified": 1596235754
 }
