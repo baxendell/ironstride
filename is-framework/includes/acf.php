@@ -1963,6 +1963,13 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 					'value'    => 'attorney',
 				),
 			),
+			array(
+				array(
+					'param'    => 'post_type',
+					'operator' => '==',
+					'value'    => 'portfolio',
+				),
+			),
 		),
 		'menu_order'            => 0,
 		'position'              => 'normal',
