@@ -82,9 +82,13 @@ $tempUrl = get_stylesheet_directory_uri();
 
                             <?php if( have_rows('strategy_tab_list') ):while ( have_rows('strategy_tab_list') ) : the_row(); ?>
 
-                            <div class="services-title__sm"><?php the_sub_field('strategy_list_title') ?></div>
+                                <div class="service-container">
 
-                            <div class="services-list"><?php the_sub_field('strategy_list_content') ?></div>
+                                    <div class="services-title"><?php the_sub_field('strategy_list_title') ?></div>
+
+                                    <div class="services-list"><?php the_sub_field('strategy_list_content') ?></div>
+
+                                </div>
 
                             <?php endwhile; endif; ?>
 
@@ -108,13 +112,17 @@ $tempUrl = get_stylesheet_directory_uri();
 
                         </div>
 
-                        <div class="offset-lg-1 col-lg-6 d-flex">
+                        <div class="offset-lg-1 col-lg-6">
 
                             <?php if( have_rows('creative_tab_list') ):while ( have_rows('creative_tab_list') ) : the_row(); ?>
 
-                            <div class="services-title__sm"><?php the_sub_field('creative_list_title') ?></div>
+                                <div class="service-container">
 
-                            <div class="services-list"><?php the_sub_field('creative_list_content') ?></div>
+                                    <div class="services-title"><?php the_sub_field('creative_list_title') ?></div>
+
+                                    <div class="services-list"><?php the_sub_field('creative_list_content') ?></div>
+
+                                </div>
 
                             <?php endwhile; endif; ?>
 
@@ -142,9 +150,13 @@ $tempUrl = get_stylesheet_directory_uri();
 
                             <?php if( have_rows('media_tab_list') ):while ( have_rows('media_tab_list') ) : the_row(); ?>
 
-                            <div class="services-title__sm"><?php the_sub_field('media_list_title') ?></div>
+                                <div class="service-container">
 
-                            <div class="services-list"><?php the_sub_field('media_list_content') ?></div>
+                                    <div class="services-title"><?php the_sub_field('media_list_title') ?></div>
+
+                                    <div class="services-list"><?php the_sub_field('media_list_content') ?></div>
+
+                                </div>
 
                             <?php endwhile; endif; ?>
 
