@@ -122,7 +122,8 @@
 					background: url("../../images/backgrounds/strategy-icon.png") no-repeat;
 
 					h2 strong,
-					.services-title {
+					.services-title,
+					.services-title a {
 						color: $alt-blue; 
 					}
 				}
@@ -133,7 +134,8 @@
 					background: url("../../images/backgrounds/creative-icon.png") no-repeat;
 
 					h2 strong,
-					.services-title {
+					.services-title,
+					.services-title a {
 						color: #FD8800; 
 					}
 				}
@@ -144,7 +146,8 @@
 					background: url("../../images/backgrounds/media-icon.png") no-repeat;
 
 					h2 strong,
-					.services-title {
+					.services-title,
+					.services-title a {
 						color: $darker-green; 
 					}
 				}
