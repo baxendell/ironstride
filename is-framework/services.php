@@ -84,7 +84,19 @@ $tempUrl = get_stylesheet_directory_uri();
 
                                 <div class="service-container">
 
-                                    <div class="services-title"><?php the_sub_field('strategy_list_title') ?></div>
+                                    <div class="services-title">
+                                        <?php if(get_sub_field('strategy_list_link')) : ?>
+
+                                            <a href="<?php echo  get_sub_field('strategy_list_link') ?>"><?php echo get_sub_field('strategy_list_title') ?>            
+                                            </a>
+
+                                        <?php else: 
+
+                                         the_sub_field('strategy_list_title') ?>
+
+                                        <?php endif; ?>
+
+                                     </div>
 
                                     <div class="services-list"><?php the_sub_field('strategy_list_content') ?></div>
 
@@ -118,7 +130,20 @@ $tempUrl = get_stylesheet_directory_uri();
 
                                 <div class="service-container">
 
-                                    <div class="services-title"><?php the_sub_field('creative_list_title') ?></div>
+                                    <div class="services-title">
+
+                                        <?php if(get_sub_field('creative_list_link')) : ?>
+
+                                            <a href="<?php echo  get_sub_field('creative_list_link') ?>"><?php echo get_sub_field('creative_list_title') ?>            
+                                            </a>
+
+                                        <?php else: 
+
+                                         the_sub_field('creative_list_title') ?>
+
+                                        <?php endif; ?>
+
+                                    </div>
 
                                     <div class="services-list"><?php the_sub_field('creative_list_content') ?></div>
 
@@ -152,7 +177,20 @@ $tempUrl = get_stylesheet_directory_uri();
 
                                 <div class="service-container">
 
-                                    <div class="services-title"><?php the_sub_field('media_list_title') ?></div>
+                                    <div class="services-title">
+
+                                        <?php if(get_sub_field('media_list_link')) : ?>
+
+                                            <a href="<?php echo  get_sub_field('media_list_link') ?>"><?php echo get_sub_field('media_list_title') ?>            
+                                            </a>
+
+                                        <?php else: 
+
+                                         the_sub_field('media_list_title') ?>
+
+                                        <?php endif; ?>
+
+                                    </div>
 
                                     <div class="services-list"><?php the_sub_field('media_list_content') ?></div>
 
