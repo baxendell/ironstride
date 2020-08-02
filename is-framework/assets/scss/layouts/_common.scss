@@ -7,7 +7,7 @@
   padding-bottom: 50px;
 
   .page-template-portfolio & {
-    background-color: 
+    background-color: #f5f6fa;
   }
 }
 
@@ -45,6 +45,11 @@
   span {
     text-decoration: underline;
     text-transform: uppercase;
+  }
+
+  &.green {
+    background-image: url('../../images/arrows/arrow-green.svg');
+    color: $green;
   }
 
   &__alt {

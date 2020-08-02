@@ -22,7 +22,7 @@ get_header();
 
                         <?php the_content(); ?>
 
-                        <a class="arrow-link" href="/contact-us/"><span class="green">get your free consultation</span></a>
+                        <a class="arrow-link green" href="/contact-us/"><span>get your free consultation</span></a>
 
                     <?php endwhile; ?>
 
