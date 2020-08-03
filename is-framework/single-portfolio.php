@@ -4,28 +4,81 @@
  */
 get_header(); ?>
 
-<!-- Portfolio Details -->
-<section id="portfolio-details">
+<section class="main-content alt-grey">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-10 mx-auto text-center">
+
+                <h2 class="darker-green"><?php the_field('section_1_subtitle') ?> <strong><?php the_field('section_1_title') ?></strong></h2>
+
+				<?php if ( have_posts() ) : ?>
+
+					<?php while ( have_posts() ) : the_post() ?>
+
+						<?php the_content(); ?>
+
+					<?php endwhile; ?>
+
+				<?php endif; ?>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+
+<!-- Featured Image -->
+<section class="portfolio-image">
 
 	<div class="container">
 
 		<div class="row">
 
-			<div class="col-lg-8 mx-auto">
+			<div class="col-lg-11 mx-auto">
+
+				<?php $blockImg = get_field('portfolio_featured_image') ?>
+
+				<img src="<?php echo $blockImg['url'] ?>" alt="<?php echo $blockImg['url'] ?>"/>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+
+<!-- Portfolio Details -->
+<section class="portfolio-details">
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-lg-10 mx-auto">
 
 				<?php if( have_rows('portfolio_details_repeater') ):while ( have_rows('portfolio_details_repeater') ) : the_row(); 
 
 					$blockImg = get_sub_field('portfolio_details_icon') ?>
 
-					<div>
+					<div class="portfolio-details__item">
+						
+						<div class="text-center">
 
-						<img src="<?php echo $blockImg['url'] ?>" alt="<?php echo $blockImg['url'] ?>"/>
+							<img src="<?php echo $blockImg['url'] ?>" alt="<?php echo $blockImg['url'] ?>"/>
 
-                    	<div class="details-title"><?php the_sub_field('portfolio_details_title') ?></div>
+	                    	<div class="details-title"><?php the_sub_field('portfolio_details_title') ?></div>
+
+						</div>
+
+						<?php the_sub_field('portfolio_details_content') ?>
 
 					</div>
-
-					<?php the_field('portfolio_details_content') ?>
 
 				<?php endwhile; endif; ?>
 				
@@ -46,9 +99,9 @@ get_header(); ?>
 
 		<div class="row">
 
-			<?php while ( have_rows('additional_repeater') ) : the_row(); ?>
+			<?php while ( have_rows('stats_repeater') ) : the_row(); ?>
 
-				<div class="col-lg-3 stats-item">
+				<div class="col-lg-3 stats-item text-center">
 
 					<div class="stats-item__title">
 						<?php the_sub_field('stats_repeater_title') ?>
@@ -60,11 +113,11 @@ get_header(); ?>
 						<?php endif; ?>
 					</div>
 
-					<?php the_sub_field('stats_repeater_content') ?>
+					<div class="stats-item__content"><?php the_sub_field('stats_repeater_content') ?></div>
 
 				</div>
 
-			<?php endif; ?>
+			<?php endwhile; ?>
 			
 		</div>
 

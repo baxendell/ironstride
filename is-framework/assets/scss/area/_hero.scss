@@ -160,7 +160,8 @@
     }
   }
 
-  .page-template-portfolio & {
+  .page-template-portfolio &,
+  .single-portfolio & {
     background-image: url('../../images/backgrounds/ironstride-marketing-portfolio-banner.jpg');
 
     h1 {
