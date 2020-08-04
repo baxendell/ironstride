@@ -160,6 +160,10 @@ ul.slick-dots {
 .darker-green {
   color: $darker-green;
 
+  strong {
+    display: block;
+  }
+
   &.arrow-link {
     background-image: url("../../images/arrows/arrow-green.svg");
 
