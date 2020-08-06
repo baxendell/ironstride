@@ -36,4 +36,77 @@ get_header();
 
 </section>
 
+<?php $args = array(
+    'post_type' => 'portfolio',
+    'posts_per_page' => '5',
+    );
+
+$port_query = new WP_Query($args);
+
+if($port_query->have_posts()):
+
+?>
+
+<section class="work">
+
+    <div class="container-fluid">
+
+        <?php while($port_query->have_posts()): $port_query->the_post(); ?>
+
+        <div class="work-row row">
+
+            <div class="col-lg-6 work-item">
+
+                <?php $portImg = get_field('archive_image'); ?>
+
+                <img src="<?php echo $portImg['url'] ?>" alt="<?php echo $portImg['alt'] ?>"/>
+
+                <div class="work-details">
+
+                    <?php the_title() ?>
+
+                    <a class="arrow-link" href="<?php the_permalink() ?>"><span>Learn More</span></a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6 work-testimonial">
+
+                <?php $client_test = get_field('client_testimonial'); if( $client_test ): ?>
+
+                <?php the_excerpt() ?>
+
+                <cite><?php the_title() ?>, <?php the_field('client_name') ?></cite>
+
+                <?php endif ?>
+
+            </div>
+
+        </div>
+
+        <?php endwhile ?>
+
+    </div>
+
+</section>
+
+<?php endif; wp_reset_postdata(); ?>
+
+<section class="alt-grey">
+
+    <div class="container">
+
+        <div class="row text-center">
+
+            <div class="blog-pagination col-12">
+                <?php do_action( 'cws_pagination' ) ?>
+            </div><!--.blog-pagination-->
+
+        </div>
+
+    </div>
+
+</section>
+
 <?php get_footer() ?>

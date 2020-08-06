@@ -93,3 +93,36 @@
 		}
 	}
 }
+
+.work {
+	&-item {
+		background: #003c54;
+		img {
+			float: left;
+			margin-right: 70px;
+
+			@media screen and (min-width: 992px) {
+				margin-left: -15px;
+			}
+		}
+	}
+
+	&-details {
+		color: #f3f3ef;
+		font-family: $second-font;
+		font-size: 40px;
+		font-weight: 300;
+		letter-spacing: 2px;
+		line-height: 50px;
+		text-transform: uppercase;
+
+		&:before {
+			display: block;
+			margin-bottom: 15px;
+			height: 2px;
+			width: 62px;
+			content: '';
+			background: #bcce56;
+		}
+	}
+}
