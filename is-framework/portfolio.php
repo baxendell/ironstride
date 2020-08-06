@@ -63,9 +63,9 @@ if($port_query->have_posts()):
 
                 <div class="work-details">
 
-                    <?php the_title() ?>
+                    <div><?php the_title() ?></div>
 
-                    <a class="arrow-link" href="<?php the_permalink() ?>"><span>Learn More</span></a>
+                    <a class="arrow-link arrow-link__alt" href="<?php the_permalink() ?>"><span>Learn More</span></a>
 
                 </div>
 
@@ -73,25 +73,25 @@ if($port_query->have_posts()):
 
             <div class="col-lg-6 work-testimonial">
 
-                <?php $client_test = get_field('client_testimonial'); if( $client_test ): ?>
+                <?php $client_test = get_field('client_testimonial'); if( $client_test ):  ?>
 
                 <?php the_excerpt() ?>
 
-                <cite><?php the_title() ?>, <?php the_field('client_name') ?></cite>
+                <cite><?php echo esc_html( $client_test->post_title ); ?>, <?php the_field('client_type',$client_test->ID) ?></cite>
 
-                <?php endif ?>
+                <?php endif; ?>
 
             </div>
 
         </div>
 
-        <?php endwhile ?>
+        <?php endwhile; wp_reset_postdata(); ?>
 
     </div>
 
 </section>
 
-<?php endif; wp_reset_postdata(); ?>
+<?php endif; ?>
 
 <section class="alt-grey">
 

@@ -95,10 +95,19 @@
 }
 
 .work {
+	&-row {
+		align-items: center;
+
+		&:nth-of-type(even) {
+			flex-direction: row-reverse;
+		}
+	}
+
 	&-item {
 		background: #003c54;
+		display: flex;
+		align-items: center;
 		img {
-			float: left;
 			margin-right: 70px;
 
 			@media screen and (min-width: 992px) {
@@ -123,6 +132,30 @@
 			width: 62px;
 			content: '';
 			background: #bcce56;
+		}
+
+		>div {
+			display: block;
+		}
+	}
+
+	&-testimonial {
+		padding-left: 70px;
+
+		p {
+			padding-left: 110px;
+			position: relative;
+			background-image: url("../../images/big-quote.png");
+			background-repeat: no-repeat;
+			background-position: top left;
+			font-style: italic;
+		}
+
+		cite {
+			text-align: right;
+			color: $alt-blue;
+			font-size: 20px;
+			display: block;
 		}
 	}
 }
