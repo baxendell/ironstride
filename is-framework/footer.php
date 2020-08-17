@@ -1,5 +1,5 @@
 <?php 
-if(!is_front_page()) {
+if(!is_front_page() && !is_page_template('contact.php')) {
     get_template_part('partials/cta-bottom');
 } ?>
 
@@ -43,7 +43,7 @@ if(!is_front_page()) {
 
                 </div>
 
-                <div class="offset-md-1 col-md-5 text-right">
+                <div class="col-md-6 text-right">
 
                     <nav class="footer-nav-wrap">
                         <?php wp_nav_menu( array(
@@ -73,7 +73,7 @@ if(!is_front_page()) {
                                 
                                 <div class="wpseo-address__bottom">   
 
-                                    <span><?php echo get_field('location_phone', $post_objects->ID); ?></span>
+                                    <span><?php echo get_field('location_phone', $post_objects->ID); ?></span><br/>
 
                                     <span><a href="mailto:support@ironstridemarketing.com">SUPPORT@IRONSTRIDEMARKETING.COM</a></span>
 

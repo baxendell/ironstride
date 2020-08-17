@@ -2,6 +2,17 @@
 
   &-home {
   	background-color: #004e65;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      width: 35%;
+      height: 100%;
+      background-color: $white;
+      top: 0;
+      left: 0;
+    }
   	>.container {
 	  	background-image: url('../../images/backgrounds/banner-wave.png');
   		background-position: left top;
@@ -150,6 +161,10 @@
 
   .page-template-about-us & {
   	background-image: url('../../images/backgrounds/about-ironstride-marketing-banner.jpg');
+  }
+
+  .page-template-contact & {
+    background-image: url('../../images/backgrounds/contact-ironstride-marketing-banner.jpg');
   }
 
   .page-template-services & {

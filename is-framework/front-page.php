@@ -76,6 +76,12 @@ get_header();
 							<figure>
 							<?php $grid_img1 = get_field('grid_1_image') ?>
 							  <img src="<?php echo $grid_img1['url'] ?>" alt="<?php echo $grid_img1['alt'] ?>" />
+							
+						  		<div class="figure-content">
+								  	<div class="figure-title">case study</div>
+								  	<div class="figure-case-title"><?php the_field('grid_1_text') ?></div>
+								  	<div class="arrow-link arrow-link__alt"><span>learn more</span></div>
+						  		</div>
 							</figure>
 						</a>
 
@@ -88,6 +94,12 @@ get_header();
 							<figure>
 							  <?php $grid_img1 = get_field('grid_2_image') ?>
 							  <img src="<?php echo $grid_img1['url'] ?>" alt="<?php echo $grid_img1['alt'] ?>" />
+							
+						  		<div class="figure-content">
+								  	<div class="figure-title">case study</div>
+								  	<div class="figure-case-title"><?php the_field('grid_2_text') ?></div>
+								  	<div class="arrow-link arrow-link__alt"><span>learn more</span></div>
+						  		</div>
 							</figure>
 
 						</a>
@@ -104,8 +116,13 @@ get_header();
 							<figure>
 						  		<?php $grid_img1 = get_field('grid_3_image') ?>
 						  		<img src="<?php echo $grid_img1['url'] ?>" alt="<?php echo $grid_img1['alt'] ?>" />
+					  		
+						  		<div class="figure-content">
+								  	<div class="figure-title">case study</div>
+								  	<div class="figure-case-title"><?php the_field('grid_3_text') ?></div>
+								  	<div class="arrow-link arrow-link__alt"><span>learn more</span></div>
+						  		</div>
 					  		</figure>
-						  	<span>Our Services</span>
 						</a>
 
 					</div>
@@ -117,6 +134,12 @@ get_header();
 							<figure>
 							  <?php $grid_img1 = get_field('grid_4_image') ?>
 						  		<img src="<?php echo $grid_img1['url'] ?>" alt="<?php echo $grid_img1['alt'] ?>" />
+							
+						  		<div class="figure-content">
+								  	<div class="figure-title">case study</div>
+								  	<div class="figure-case-title"><?php the_field('grid_4_text') ?></div>
+								  	<div class="arrow-link arrow-link__alt"><span>learn more</span></div>
+						  		</div>
 							</figure>
 
 						</a>

@@ -29,7 +29,7 @@
 
         <div class="hero-title-wrap row">
 
-            <div class="offset-lg-1 col-lg-5 pr-0">
+            <div class="offset-lg-1 col-lg-6 pr-0">
 
                 <div class="hero-title-top"><?php the_field('banner_title') ?></div>
 

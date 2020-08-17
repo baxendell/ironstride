@@ -276,6 +276,7 @@ jQuery(document).ready(function ($) {
             testimonials.slick({
                 dots: true,
                 arrows: false,
+                autoplay: true,
                 infinite: false,
                 appendArrows: '.custom-nav-test',
             });

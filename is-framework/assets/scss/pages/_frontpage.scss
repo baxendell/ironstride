@@ -1,25 +1,3 @@
-.grid {
-	&-services {
-		a {
-			position: relative;
-			display: block;
-			text-align: center;
-
-			span {
-				position: absolute;
-				top: 50%;
-				color: #f3f3ef;
-				font-family: $second-font;
-				font-size: 40px;
-				letter-spacing: 2px;
-				text-transform: uppercase;
-				display: block;
-				transform: translateY(-50%);
-				width: 100%;
-			}
-		}
-	}
-}
 
 .case-study {
 	background-color: #2cb2bd;
@@ -32,17 +10,20 @@
 
 .figure-content {
 	position: absolute;
-	left: 80px;
+	left: 30px;
 	top: 50%;
 	transform: translateY(-50%);
+
+	.case-study & {
+		left: 80px;
+	}
 }
 
 .figure-title {
 	font-family: $second-font;
-	font-size: 40px;
-	letter-spacing: 0.8px;
+	font-size: 24px;
 	color: $white;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 
 	&:after {
 		width: 62px;
@@ -52,15 +33,25 @@
 		margin-top: 10px;
 		background-color: #bcce56;
 	}
+
+	.case-study & {
+		font-size: 40px;
+		letter-spacing: 0.8px;	
+		margin-bottom: 30px;
+	}
 }
 
 .figure-case-title {
 	color: $white;
-	font-size: 40px;
-	letter-spacing: 2px;
-	line-height: 50px;
+	font-size: 22px;
 	text-transform: uppercase;
 	font-family: $second-font;
+
+	.case-study & {
+		font-size: 40px;
+		letter-spacing: 2px;
+		line-height: 50px;
+	}
 }	
 
 #principles {
@@ -164,6 +155,12 @@
 				z-index: 0;
 			}
 		}
+	}
+}
+
+.image-grid {
+	.container-fluid {
+		max-width: 1860px;
 	}
 }
 
