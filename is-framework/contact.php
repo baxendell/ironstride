@@ -39,18 +39,6 @@ $formatted_number = preg_replace( '/(\W*)/', '', $number );;
 
         </div>
 
-        <div class="row justify-content-center">
-
-            <div class="col-lg-6 text-center">
-
-                <div class="subtitle">Careers</div>
-                <h2 class="section-title">Want To Join Our Team?</h2>
-                <p>We’re always seeking motivated and talented folks. If you have something we need to hear about, send us a message and get our attention.</p>
-                <a class="arrow-link blue"><span>Email Us</span></a>
-            </div>
-
-        </div>
-
     </div>
 
 </section>

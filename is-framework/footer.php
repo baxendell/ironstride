@@ -1,5 +1,5 @@
 <?php 
-if(!is_front_page() && !is_page_template('contact.php')) {
+if(!is_front_page()) {
     get_template_part('partials/cta-bottom');
 } ?>
 
