@@ -34,7 +34,7 @@
 
 </section>
 
-<?php if(is_home()) {
+<?php if(is_home() || is_singular()) {
     $title = 'Ironstride Blog';
     $bannerTitle = 'the latest industry news & beyond';
 } else {

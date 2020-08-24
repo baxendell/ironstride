@@ -1,32 +1,35 @@
 .share-wrap {
-  margin-top: 25px;
-  padding-top: 30px;
-  border-top: 1px solid $border-color;
+  margin-top: 52px;
 
   .social-icons {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-flow: column;
 
     span {
-      background: $black;
-      color: $white;
-      padding: 11px 27px;
-      display: inline-block;
-      margin-right: 7px;
-      font-weight: 600;
+      color: $black;
+      display: block;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 22px;
+      font-family: $second-font;
     }
 
     a {
       color: $black;
-      margin-left: 15px;
+      margin-bottom: 15px;
+      width: 60px;
+      height: 60px;
+      border: 1px solid $black;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       &:hover {
-        color: $blue;
-      }
-
-      svg {
-        margin-right: 5px;
+        background-color: $light-blue;
       }
 
       &.e-url {

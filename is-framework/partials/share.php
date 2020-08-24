@@ -20,22 +20,22 @@
         </li>
         <li>
             <a class="e-url" href="<?php echo esc_url( $email_url ); ?>">
-		        <?php cws_get_svg( 'social-icons/icon-email.svg' ); ?>Email
+		        <?php cws_get_svg( 'social-icons/icon-email.svg' ); ?>
             </a>
         </li>
         <li>
             <a class="f-url" href="<?php echo esc_url( $facebook_url ); ?>" target="_blank">
-		        <?php cws_get_svg( 'social-icons/icon-facebook.svg' ); ?>Facebook
+		        <?php cws_get_svg( 'social-icons/icon-facebook.svg' ); ?>
             </a>
         </li>
         <li>
             <a class="t-url" href="<?php echo esc_url( $twitter_url ); ?>" target="_blank">
-		        <?php cws_get_svg( 'social-icons/icon-twitter.svg' ); ?>Twitter
+		        <?php cws_get_svg( 'social-icons/icon-twitter.svg' ); ?>
             </a>
         </li>
        <li>
            <a class="p-url" href="<?php echo esc_url( $pinterest_url ); ?>" target="_blank">
-		       <?php cws_get_svg( 'social-icons/icon-pinterest.svg' ); ?>Pinterest
+		       <?php cws_get_svg( 'social-icons/icon-pinterest.svg' ); ?>
            </a>
        </li>
 
