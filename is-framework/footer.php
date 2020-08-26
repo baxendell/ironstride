@@ -13,7 +13,7 @@ if(!is_front_page()) {
 
             <div class="row justify-content-center">
 
-                <div class="col-md-9">
+                <div class="col-xl-9">
 
                     <?php get_template_part( 'partials/testimonial-part' ); ?>  
 
@@ -33,7 +33,7 @@ if(!is_front_page()) {
 
             <div class="row" itemscope itemtype="http://schema.org/Organization">
 
-                <div class="col-md-6">
+                <div class="col-xl-6 text-center">
 
                     <div class="footer-logo-wrap">
                         <a href="/" itemprop="url">
@@ -43,7 +43,7 @@ if(!is_front_page()) {
 
                 </div>
 
-                <div class="col-md-6 text-right">
+                <div class="col-xl-6 text-center text-xl-right">
 
                     <nav class="footer-nav-wrap">
                         <?php wp_nav_menu( array(

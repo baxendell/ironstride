@@ -29,7 +29,7 @@
 
         <div class="hero-title-wrap row">
 
-            <div class="offset-lg-1 col-lg-6 pr-0">
+            <div class="offset-xl-1 col-xl-6 pr-xl-0">
 
                 <div class="hero-title-top"><?php the_field('banner_title') ?></div>
 
@@ -47,7 +47,7 @@
 
         <div class="hero-services row">
 
-            <div class="col-lg-8 offset-lg-1 d-flex">
+            <div class="col-xl-8 offset-xl-1 d-flex">
 
             <?php while ( have_rows('banner_services') ) : the_row(); $i++;
                 $img = get_sub_field('banner_service_icon');

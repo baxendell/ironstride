@@ -1,23 +1,27 @@
 .hero {
 
   &-home {
-  	background-color: #004e65;
+  	background-color: $white;
     position: relative;
 
-    &:before {
-      position: absolute;
-      content: '';
-      width: 35%;
-      height: 100%;
-      background-color: $white;
-      top: 0;
-      left: 0;
+    @media screen and (min-width: 1200px) {
+      background-color: #004e65;
+
+      &:before {
+        position: absolute;
+        content: '';
+        width: 35%;
+        height: 100%;
+        background-color: $white;
+        top: 0;
+        left: 0;
+      }
+      >.container {
+        background-image: url('../../images/backgrounds/banner-wave.png');
+        background-position: left top;
+        background-repeat: no-repeat;
+      }
     }
-  	>.container {
-	  	background-image: url('../../images/backgrounds/banner-wave.png');
-  		background-position: left top;
-  		background-repeat: no-repeat;
-  	}
   }
 
   &-title {
