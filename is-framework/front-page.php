@@ -66,11 +66,11 @@ get_header();
 
 		<div class="row">
 
-			<div class="col-md-6 p-0">
+			<div class="col-lg-6 p-0">
 
 				<div class="row">
 
-					<div class="col-md-6 p-0">
+					<div class="col-md-6 p-lg-0">
 
 						<a href="<?php the_field('grid_1_link') ?>">
 							<figure>
@@ -87,7 +87,7 @@ get_header();
 
 					</div>
 
-					<div class="col-md-6 p-0">
+					<div class="col-md-6 p-lg-0">
 
 						<a href="<?php the_field('grid_2_link') ?>">
 
@@ -110,7 +110,7 @@ get_header();
 
 				<div class="row">
 
-					<div class="col-md-6 p-0 grid-services">
+					<div class="col-md-6 p-lg-0 grid-services">
 
 						<a href="/services/">
 							<figure>
@@ -127,7 +127,7 @@ get_header();
 
 					</div>
 
-					<div class="col-md-6 p-0">
+					<div class="col-md-6 p-lg-0">
 
 						<a href="#">
 
@@ -150,7 +150,7 @@ get_header();
 
 			</div>
 
-			<div class="col-md-6 p-0 case-study">
+			<div class="col-lg-6 p-0 case-study">
 
 				<a href="<?php the_field('case_grid_link') ?>">
 					<figure>
@@ -209,7 +209,7 @@ get_header();
 
 			</div>
 
-			<div class="offset-md-1 col-lg-4 principles-right">
+			<div class="offset-md-1 col-lg-4 principles-right d-none d-lg-block">
 
 				<div class="principles-right-top"></div>
 				<div class="principles-right-middle"></div>
@@ -231,7 +231,7 @@ get_header();
 
 		<div class="row cta-neg">
 
-			<div class="pl-5 col-md-11">
+			<div class="pl-lg-5 col-lg-11">
 
 				<div class="cta-bubble">
 

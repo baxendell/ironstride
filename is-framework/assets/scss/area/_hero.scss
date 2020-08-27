@@ -35,10 +35,15 @@
 
   	color: $light-blue;
   	font-family: $headings-font;
-  	font-size: 100px;
+  	font-size: 56px;
   	font-weight: 700;
-  	line-height: 100px;
+  	line-height: 64px;
   	text-transform: uppercase;
+
+    @media screen and (min-width; 768px) {
+      font-size: 100px;
+      line-height: 100px;
+    }
 
   	&-top {
   		font-size: 22px;
