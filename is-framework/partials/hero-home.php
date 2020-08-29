@@ -47,7 +47,7 @@
 
         <div class="hero-services row">
 
-            <div class="col-xl-8 offset-xl-1 d-flex">
+            <div class="col-xl-8 offset-xl-1 d-md-flex">
 
             <?php while ( have_rows('banner_services') ) : the_row(); $i++;
                 $img = get_sub_field('banner_service_icon');
@@ -55,7 +55,7 @@
 
             ?>
 
-                <div class="col">
+                <div class="col-md-3">
 
                     <a class="hero-services-title hero-services-<?php echo $i ?>" href="<?php the_sub_field('banner_service_link') ?>"><span><?php the_sub_field('banner_service_title'); ?></span> <img src="<?php echo $img['url'] ?>" alt="<?php echo $img['alt'] ?>"/></a>
 
