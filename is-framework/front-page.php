@@ -179,7 +179,7 @@ get_header();
 
        <div class="row justify-content-center">
 
-	       	<div class="col-md-10 pl-5 pr-0 principles-top">
+	       	<div class="col-md-10 pl-md-5 pr-md-0 principles-top">
 
 	       		<h2 class="green"><?php the_field('bottom_subtitle') ?><strong class="d-block"><?php the_field('bottom_title') ?></strong></h2>
 
@@ -193,7 +193,7 @@ get_header();
 
 		<div class="row principles-bottom">
 
-			<div class="offset-lg-1 pl-5 col-lg-5 pr-0">
+			<div class="offset-lg-1 pl-md-5 col-lg-5 pr-md-0">
 
 				<ol>
 

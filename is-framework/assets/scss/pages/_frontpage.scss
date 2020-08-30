@@ -48,31 +48,50 @@
 	font-family: $second-font;
 
 	.case-study & {
-		font-size: 40px;
+		font-size: 24px;
 		letter-spacing: 2px;
-		line-height: 50px;
+		line-height: 36px;
+
+		@media screen and (min-width: 768px) {
+			font-size: 40px;
+			line-height: 50px;
+		}
 	}
 }	
 
 #principles {
-	padding-bottom: 296px;
-	padding-top: 123px;
+	padding-bottom: 30px;
+	padding-top: 30px;
 	background-color: $alt-grey;
+
+	@media screen and (min-width: 768px) {
+		padding-top: 123px;
+		padding-bottom: 296px;
+	}
 
 	.principles {
 		&-top {	 
 
 			p { 
-				font-size: 28px;
+				font-size: 20px;
 				font-family: $default-font;
-				line-height: 47px;
+				line-height: 32px;
 				color: $grey;
 				letter-spacing: -0.29px;
+
+				@media screen and (min-width: 768px) {
+					font-size: 28px;
+					line-height: 47px;
+				}
 			}
 		}
 
 		&-bottom {			
-			padding-top: 83px;
+			padding-top: 20px;
+
+			@media screen and (min-width: 768px) {
+				padding-top: 83px;
+			}
 
 			ol {
 				li {
