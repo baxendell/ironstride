@@ -127,7 +127,7 @@ $tempUrl = get_stylesheet_directory_uri();
 
             <div class="row bubble-block">
 
-                <article class="col-lg-7 pr-lg-4 pl-lg-5">
+                <article class="col-lg-5 col-xl-7 pr-xl-4 pl-xl-5">
 
                     <h2 class="orange"><?php the_field('section_3_subtitle') ?> <strong><?php the_field('section_3_title') ?></strong></h2>
 
@@ -137,7 +137,7 @@ $tempUrl = get_stylesheet_directory_uri();
 
                 </article>
 
-                <aside class="col-lg-5">
+                <aside class="col-lg-7 col-xl-5">
 
                     <div class="bubble-text row row-cols-2">
                         <div class="col-6">
