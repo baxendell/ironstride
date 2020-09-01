@@ -13,7 +13,7 @@ $tempUrl = get_stylesheet_directory_uri();
 
             <div class="row bubble-block">
 
-                <article class="col-12 col-xl-6 pl-lg-5 pr-lg-5 entry-content">
+                <article class="col-12 col-lg-7 col-xl-6 pl-xl-5 pr-xl-5 entry-content">
 
                     <h2 class="blue"><?php the_field('section_1_subtitle') ?> <strong><?php the_field('section_1_title') ?></strong></h2>
 
@@ -29,7 +29,7 @@ $tempUrl = get_stylesheet_directory_uri();
 
                 </article>
 
-                <aside class="col-12 col-lg-5 col-xl-6 pl-lg-4 sidebar">
+                <aside class="col-12 col-lg-5 col-xl-6 pl-xl-4 sidebar">
 
                     <?php if ( has_post_thumbnail() ) : ?>
                         <div class="image-holder">
@@ -43,7 +43,7 @@ $tempUrl = get_stylesheet_directory_uri();
 
             <div id="about-section-2" class="row">
 
-                <aside class="col-12 col-xl-6 pl-lg-5 pr-lg-5">
+                <aside class="col-12 col-lg-6 pl-xl-5 pr-xl-5">
 
                     <?php $img = get_field('section_2_image'); ?>
 
@@ -51,7 +51,7 @@ $tempUrl = get_stylesheet_directory_uri();
 
                 </aside>
 
-                <article class="col-12 col-lg-5 col-xl-6 pl-lg-4 d-md-flex">
+                <article class="col-12 col-lg-6 pl-xl-4 d-md-flex">
 
                     <div class="col-lg-6">
 
