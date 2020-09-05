@@ -19,7 +19,7 @@ if ( $awards_query->have_posts() ) : ?>
 
                     <h2 class="section-title">Awards &amp; Recognition</h2>
 
-                    <?php the_field('awards_text') ?>
+                    <p><?php the_field('awards_text') ?></p>
 
                 </div>
 
@@ -29,7 +29,7 @@ if ( $awards_query->have_posts() ) : ?>
 
                         <?php while ( $awards_query->have_posts() ): $awards_query->the_post(); ?>
 
-                        <div class="col-lg-4 pl-lg-0">
+                        <div class="col-md-4 pl-lg-0">
 
                             <?php if ( get_field( 'script' ) ): the_field( 'script' ); else: ?>
                             <a href="<?php the_field( 'award_link' ) ?>" target="_blank">
