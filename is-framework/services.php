@@ -12,7 +12,7 @@ $tempUrl = get_stylesheet_directory_uri();
 
             <div class="row bubble-block">
 
-                <article class="col-12 col-xl-6 pl-lg-5 pr-lg-5 entry-content">
+                <article class="col-12 col-lg-7 col-xl-6 pl-lg-5 pr-lg-5 entry-content">
 
                     <h2 class="orange"><?php the_field('section_1_subtitle') ?> <strong><?php the_field('section_1_title') ?></strong></h2>
 
@@ -72,13 +72,13 @@ $tempUrl = get_stylesheet_directory_uri();
 
                     <div class="row">
 
-                        <div class="col-lg-5 ">
+                        <div class="col-xl-5 ">
 
                             <h2><?php the_field('strategy_tab_title') ?></h2>
 
                         </div>
 
-                        <div class="offset-lg-1 col-lg-6">
+                        <div class="offset-lg-1 col-lg-11 col-xl-6">
 
                             <?php if( have_rows('strategy_tab_list') ):while ( have_rows('strategy_tab_list') ) : the_row(); ?>
 
@@ -118,13 +118,13 @@ $tempUrl = get_stylesheet_directory_uri();
 
                     <div class="row">
 
-                        <div class="col-lg-5">
+                        <div class="col-xl-5">
 
                             <h2><?php the_field('creative_tab_title') ?></h2>
 
                         </div>
 
-                        <div class="offset-lg-1 col-lg-6">
+                        <div class="offset-lg-1 col-lg-11 col-xl-6">
 
                             <?php if( have_rows('creative_tab_list') ):while ( have_rows('creative_tab_list') ) : the_row(); ?>
 
@@ -165,13 +165,13 @@ $tempUrl = get_stylesheet_directory_uri();
 
                     <div class="row">
 
-                        <div class="col-lg-5">
+                        <div class="col-xl-5">
 
                             <h2><?php the_field('media_tab_title') ?></h2>
 
                         </div>
 
-                        <div class="offset-lg-1 col-lg-6">
+                        <div class="offset-lg-1 col-lg-11 col-xl-6">
 
                             <?php if( have_rows('media_tab_list') ):while ( have_rows('media_tab_list') ) : the_row(); ?>
 
