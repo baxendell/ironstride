@@ -171,12 +171,16 @@
   }
 
   &-subtitle {
-  	font-size: 50px;
+  	font-size: 36px;
   	font-weight: 700;
   	color: $white;
   	font-family: $second-font;
   	line-height: 24px;
   	text-transform: uppercase;
+
+    @media screen and (min-width: 768px) {
+      font-size: 50px;
+    }
   }
 
   &-internal {

@@ -60,7 +60,7 @@ $tempUrl = get_stylesheet_directory_uri();
                             <?php the_field('section_2_title_1') ?>
                         </div>
 
-                        <?php the_field('section_2_content_1') ?>
+                        <p><?php the_field('section_2_content_1') ?></p>
 
                     </div>
 
@@ -71,7 +71,7 @@ $tempUrl = get_stylesheet_directory_uri();
                             <?php the_field('section_2_title_2') ?>
                         </div>
 
-                        <?php the_field('section_2_content_2') ?>
+                        <p><?php the_field('section_2_content_2') ?></p>
 
                     </div>
 
@@ -137,7 +137,7 @@ $tempUrl = get_stylesheet_directory_uri();
 
                 </article>
 
-                <aside class="col-lg-7 col-xl-5">
+                <aside class="d-none d-md-block col-lg-7 col-xl-5">
 
                     <div class="bubble-text row row-cols-2">
                         <div class="col-6">
