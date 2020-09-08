@@ -30,7 +30,7 @@ $tempUrl = get_stylesheet_directory_uri();
 
                 </article>
 
-                <aside class="col-12 col-lg-5 col-xl-6 pl-lg-4 sidebar">
+                <aside class="col-12 col-lg-5 col-xl-6 pl-lg-4 sidebar d-none d-lg-block">
 
                     <?php if ( has_post_thumbnail() ) : ?>
                         <div class="image-holder">
@@ -259,7 +259,7 @@ $tempUrl = get_stylesheet_directory_uri();
 
             <div class="row">
 
-                <div class="pl-5 col-md-11">
+                <div class="pl-lg-5 col-lg-11">
 
                     <div class="cta-bubble">
 
