@@ -225,7 +225,7 @@ $tempUrl = get_stylesheet_directory_uri();
 
             <div class="row">
 
-                <div class="col-12 d-flex">
+                <div class="col-12 d-md-flex">
 
                     <?php if( have_rows('3_ways_blocks') ):while ( have_rows('3_ways_blocks') ) : the_row(); ?>
 

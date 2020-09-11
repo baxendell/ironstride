@@ -184,11 +184,15 @@
   }
 
   &-internal {
-  	padding: 70px 0;
+  	padding: 60px 0;
     background-image: url('../../images/backgrounds/about-ironstride-marketing-banner.jpg');
 
+    @media screen and (min-width: 768px) {
+      padding: 70px 0;
+    }
+
     @media screen and (min-width: 992px) {
-      padding: 104px 0;
+      padding: 96px 0;
     }
     
   	h1 {
