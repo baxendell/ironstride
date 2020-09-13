@@ -32,13 +32,22 @@
 	}
 
 	&__item {
-		display: flex;
-		padding-top: 100px;
-		align-items: center;
+		padding-top: 50px;
+
+		@media screen and (min-width: 768px) {
+			display: flex;
+			align-items: center;
+			padding-top: 100px;
+		}
 
 		div.text-center {
-			margin-right: 60px;
 			min-width: 177px;
+			margin-bottom: 30px;
+
+			@media screen and (min-width: 768px) {
+				margin-right: 60px;
+				margin-bottom: 0;
+			}
 
 			.details-title {
 				margin-top: 20px;
@@ -56,7 +65,6 @@
 	padding: 120px 0;
 
 	.stats-item {
-		border-right: 1px solid #EBEBEB;
 		font-family: $third-font-solid;
 		font-size: 40px;
 		font-weight: 400;
@@ -64,6 +72,10 @@
 		letter-spacing: 0.8px;
 		color: $white;
 		padding: 30px;
+
+		@media screen and (min-width: 992px) {
+			border-right: 1px solid #EBEBEB;
+		}
 
 		&:last-of-type {
 			border-right: none;

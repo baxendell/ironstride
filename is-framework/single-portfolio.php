@@ -148,7 +148,7 @@ get_header(); ?>
 
         <div class="row">
 
-            <div class="col-12 d-flex">
+            <div class="col-12 d-md-flex">
 
                 <?php if( have_rows('additional_repeater') ):while ( have_rows('additional_repeater') ) : the_row(); ?>
 
