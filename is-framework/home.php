@@ -2,7 +2,10 @@
 /*
  * Blog page "Home"
  */
-get_header() ?>
+get_header();
+
+$post_blog = get_post(7); 
+ ?>
 
     <section id="blog" class="main-content category-archive-view">
 
@@ -10,9 +13,19 @@ get_header() ?>
 
             <div class="row">
 
-                <div class="content col-12 col-lg-7 col-xl-8">
+                <div class="content col-12">
 
-                    <h1 class="page-title">Blog</h1>
+                    <?php echo $post_blog->post_content; ?>
+
+                </div>
+
+                <aside class="col-12 col-lg-5 offset-xl-1 col-xl-3 sidebar">
+
+                    <!--filter-->
+
+                </aside>
+
+                <div class="content col-lg-7 col-xl-6">
 
                     <div class="inner-content">
 						<?php get_template_part( 'partials/excerpt-loop' ) ?>
@@ -22,11 +35,7 @@ get_header() ?>
 						<?php do_action( 'cws_pagination' ) ?>
                     </div><!--.blog-pagination-->
 
-                </div><!--.content-->
-
-                <div class="col-12 col-lg-5 col-xl-4 sidebar">
-					<?php get_template_part( 'sidebars/blog-sidebar' ) ?>
-                </div><!--.sidebar-->
+                </div>
 
                 <div class="clearfix"></div>
 
