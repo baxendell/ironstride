@@ -31,10 +31,6 @@ $post_blog = get_post(7);
 						<?php get_template_part( 'partials/excerpt-loop' ) ?>
                     </div><!--.inner-content-->
 
-                    <div class="blog-pagination">
-						<?php do_action( 'cws_pagination' ) ?>
-                    </div><!--.blog-pagination-->
-
                 </div>
 
                 <div class="clearfix"></div>
@@ -44,5 +40,26 @@ $post_blog = get_post(7);
         </div>
 
     </section><!--.container-->
+
+    <section id="blog-pagination-wrapper">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <div class="blog-pagination">
+                        <?php do_action( 'cws_pagination' ) ?>
+                    </div><!--.blog-pagination-->
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
 
 <?php get_footer() ?>
