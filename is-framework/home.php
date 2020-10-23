@@ -4,7 +4,8 @@
  */
 get_header();
 
-$post_blog = get_post(7); 
+global $wp_query;
+$post_blog = get_post(15); 
  ?>
 
     <section id="blog" class="main-content category-archive-view">
@@ -13,15 +14,29 @@ $post_blog = get_post(7);
 
             <div class="row">
 
-                <div class="content col-12">
+                <div class="content text-center col-12 col-xl-11 mx-auto">
 
-                    <?php echo $post_blog->post_content; ?>
+                    <div class="entry-content"><p><?php echo $post_blog->post_excerpt; ?></p></div>
 
                 </div>
+
+            </div>
+
+            <div class="row">
 
                 <aside class="col-12 col-lg-5 offset-xl-1 col-xl-3 sidebar">
 
                     <!--filter-->
+                    <?php $categories = get_categories(); ?>
+                    <ul class="cat-list">
+                      <li><input type="checkbox" id="all" name="all" value=""><label for="all"> All</label></li>
+
+                      <?php foreach($categories as $category) : ?>
+                        <li>
+                          <input type="checkbox" id="<?php $category->slug; ?>" name="<?php $category->slug; ?>" value="<?php echo $category->name; ?>"><label for="<?php $category->slug; ?>"> <?php echo $category->name; ?></label>
+                        </li>
+                      <?php endforeach; ?>
+                    </ul>
 
                 </aside>
 
@@ -41,25 +56,29 @@ $post_blog = get_post(7);
 
     </section><!--.container-->
 
-    <section id="blog-pagination-wrapper">
 
-        <div class="container">
+    <?php if ( $wp_query->max_num_pages > 1 ) : ?>
 
-            <div class="row">
+        <section id="blog-pagination-wrapper">
 
-                <div class="col">
+            <div class="container">
 
-                    <div class="blog-pagination">
-                        <?php do_action( 'cws_pagination' ) ?>
-                    </div><!--.blog-pagination-->
+                <div class="row">
+
+                    <div class="col">
+
+                        <div class="blog-pagination">
+                            <?php do_action( 'cws_pagination' ) ?>
+                        </div><!--.blog-pagination-->
+
+                    </div>
 
                 </div>
 
             </div>
 
-        </div>
-
-    </section>
-
+        </section>
+    
+    <?php endif; ?>
 
 <?php get_footer() ?>

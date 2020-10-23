@@ -4,9 +4,9 @@
 
   .blog-pagination {
     text-align: center;
-    padding: 47px 0;
-
+    
     .blog-navigation {
+      padding: 47px 0;
 
       @include media('<tablet') {
         padding-bottom: 35px;
@@ -23,10 +23,8 @@
 
       li {
         float: left;
-        margin: 0 4px;
-        border-radius: 4px;
-        background: #f8f9f9;
-        border: 1px solid #d8d9d9;
+        margin: 0 5px;
+        border-radius: 0;
         overflow: hidden;
 
         &.page-li {
@@ -44,40 +42,38 @@
           color: black;
           display: inline-block;
           float: left;
-          height: 33px;
-          min-width: 33px;
+          height: 24px;
+          min-width: 19px;
           padding: 0;
-          padding-left: 12px;
-          padding-right: 12px;
+          padding-left: 7px;
+          padding-right: 7px;
           transition: all 0.1s linear;
           text-shadow: 0 1px 0 #ffffff;
-          color: $text;
-          font-size: 16px;
-          font-weight: 600;
-          line-height: 35px;
-          background: #f8f9f9;
+          color: $black;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 22px;
+          background: none;
+          font-family: $second-font;
 
           &:hover {
-            text-shadow: 0 1px 0 #ffffff;
-            color: $text;
-            font-size: 16px;
-            font-weight: 600;
+            color: $white;
+            font-size: 15px;
+            font-weight: 400;
             box-shadow: none;
-            background: #e9eaea;
+            background: $darker-green;
           }
 
         }
 
         &.active {
-          border-color: $black;
+          border-color: none;
 
           a {
-            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.13);
             color: $white;
-            font-size: 16px;
-            font-weight: 600;
-            box-shadow: 0 1px 0 #ffffff, inset 0 1px 5px rgba(0, 0, 0, 0.4);
-            background: $black;
+            font-size: 15px;
+            font-weight: 400;
+            background: $darker-green;
             pointer-events: none;
           }
 
@@ -92,15 +88,15 @@
       }
 
       li.dots {
-        line-height: 35px;
+        line-height: 22px;
         min-width: 33px;
         box-shadow: none;
         background: none;
         border: none;
         text-shadow: 0 1px 0 #ffffff;
-        color: $text;
-        font-size: 16px;
-        font-weight: 600;
+        color: $black;
+        font-size: 15px;
+        font-weight: 400;
       }
 
       li.prev-link,
