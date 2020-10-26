@@ -222,6 +222,25 @@ jQuery(document).ready(function ($) {
 
         };
 
+        var postFilter = function() {
+            $(".cat-list__item input[type='checkbox']").on('change', function() {
+
+              $.ajax({
+                type: 'POST',
+                url: '/wp-admin/admin-ajax.php',
+                dataType: 'html',
+                data: {
+                  action: 'filter_post',
+                  category: $(this).attr('id')
+                },
+                success: function(res) {
+                   console.log(res);
+                  //$('.project-tiles').html(res);
+                }
+              })
+            });
+        };
+
         var videoFixes = function () {
             if ($(".cw_video_single").length > 0) {
                 $(".cw_video_single").attr("src", $(".cw_video_single").attr("src").replace("rel=", "rel=0"));
@@ -372,6 +391,7 @@ jQuery(document).ready(function ($) {
                 hoverMenu();
                 videoFixes();
                 carousels();
+                postFilter();
             }
 
         }

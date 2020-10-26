@@ -233,3 +233,32 @@ function prepare_rest( $data, $post, $request ) {
 }
 
 add_filter( 'rest_prepare_post', 'prepare_rest', 10, 3 );
+
+function filter_post() {
+  $catSlug = $_POST['category'];
+
+  $ajaxposts = new WP_Query([
+    'post_type' => 'post',
+    'post_status' => 'publish',
+    'posts_per_page' => 10, 
+    'category_name' => $catSlug,
+    'orderby' => 'post_date', 
+    'order' => 'desc',
+  ]);
+  $response = '';
+
+  if($ajaxposts->have_posts()) {
+    while($ajaxposts->have_posts()) : $ajaxposts->the_post();
+      //$response .= get_template_part('templates/_components/project-list-item');
+
+    	$response = "not empty";
+    endwhile;
+  } else {
+    $response = 'empty';
+  }
+
+  echo $response;
+  exit;
+}
+add_action('wp_ajax_filter_post', 'filter_post');
+add_action('wp_ajax_nopriv_filter_post', 'filter_post');

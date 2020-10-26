@@ -35,8 +35,8 @@ $post_blog = get_post(15);
                           <li><input type="checkbox" id="all" name="all" value=""><label for="all"> All</label></li>
 
                           <?php foreach($categories as $category) : ?>
-                            <li>
-                              <input type="checkbox" id="<?php $category->slug; ?>" name="<?php $category->slug; ?>" value="<?php echo $category->name; ?>"><label for="<?php $category->slug; ?>"> <?php echo $category->name; ?></label>
+                            <li class="cat-list__item">
+                              <input type="checkbox" id="<?php echo $category->slug; ?>" name="<?php echo $category->slug; ?>" value="<?php echo $category->name; ?>"><label for="<?php echo $category->slug; ?>"> <?php echo $category->name; ?></label>
                             </li>
                           <?php endforeach; ?>
                         </ul>
