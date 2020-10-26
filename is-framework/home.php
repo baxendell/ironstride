@@ -27,16 +27,21 @@ $post_blog = get_post(15);
                 <aside class="col-12 col-lg-5 offset-xl-1 col-xl-3 sidebar">
 
                     <!--filter-->
-                    <?php $categories = get_categories(); ?>
-                    <ul class="cat-list">
-                      <li><input type="checkbox" id="all" name="all" value=""><label for="all"> All</label></li>
+                    <div class="blog-filter">
+                    
+                        <?php $categories = get_categories(); ?>
+                        <div class="filter-name">Filter:</div>
+                        <ul class="cat-list">
+                          <li><input type="checkbox" id="all" name="all" value=""><label for="all"> All</label></li>
 
-                      <?php foreach($categories as $category) : ?>
-                        <li>
-                          <input type="checkbox" id="<?php $category->slug; ?>" name="<?php $category->slug; ?>" value="<?php echo $category->name; ?>"><label for="<?php $category->slug; ?>"> <?php echo $category->name; ?></label>
-                        </li>
-                      <?php endforeach; ?>
-                    </ul>
+                          <?php foreach($categories as $category) : ?>
+                            <li>
+                              <input type="checkbox" id="<?php $category->slug; ?>" name="<?php $category->slug; ?>" value="<?php echo $category->name; ?>"><label for="<?php $category->slug; ?>"> <?php echo $category->name; ?></label>
+                            </li>
+                          <?php endforeach; ?>
+                        </ul>
+
+                    </div>
 
                 </aside>
 

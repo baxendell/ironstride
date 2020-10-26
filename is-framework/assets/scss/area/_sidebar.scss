@@ -1,5 +1,38 @@
 .sidebar {
 
+  .blog-filter {
+    .filter-name {
+      font-family: $second-font;
+      font-size: 22px;
+      font-weight: 700;
+      text-align: left;
+      color: $darker-green;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+
+    .cat-list {
+      li {
+        margin-bottom: 30px;
+
+        input {
+          margin-right: 20px;
+          width: 32px;
+          height: 32px;
+          border: solid 1px #aaadae;
+        }
+
+        label {
+          font-family: $default-font;
+          font-size: 22px;
+          line-height: 1;
+          color: $black;
+          vertical-align: top;
+        }
+      }
+    }
+  }
+
   &-widgets {
     max-width: 450px;
 
