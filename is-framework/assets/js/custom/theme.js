@@ -224,18 +224,30 @@ jQuery(document).ready(function ($) {
 
         var postFilter = function() {
             $(".cat-list__item input[type='checkbox']").on('change', function() {
+                $(this).parent().siblings().find('input:checkbox').prop('checked', false);
 
-              $.ajax({
+                var category;
+
+                if($(this).prop("checked") == true){
+                    category = $(this).attr('id');
+                }
+                else if($(this).prop("checked") == false){
+                    category = "all";
+                }
+
+                $.ajax({
                 type: 'POST',
                 url: '/wp-admin/admin-ajax.php',
                 dataType: 'html',
                 data: {
                   action: 'filter_post',
-                  category: $(this).attr('id')
+                  category: category
+                },
+                beforeSend: function() {
+                  $(".inner-content").html("<div class='loader'></div>");
                 },
                 success: function(res) {
-                   console.log(res);
-                  //$('.project-tiles').html(res);
+                  $('.inner-content').html(res);
                 }
               })
             });

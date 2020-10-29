@@ -237,21 +237,59 @@ add_filter( 'rest_prepare_post', 'prepare_rest', 10, 3 );
 function filter_post() {
   $catSlug = $_POST['category'];
 
-  $ajaxposts = new WP_Query([
-    'post_type' => 'post',
-    'post_status' => 'publish',
-    'posts_per_page' => 10, 
-    'category_name' => $catSlug,
-    'orderby' => 'post_date', 
-    'order' => 'desc',
-  ]);
+  if($catSlug == "all") {
+  	$ajaxposts = new WP_Query([
+	    'post_type' => 'post',
+	    'post_status' => 'publish',
+	    'posts_per_page' => 10, 
+	    'orderby' => 'post_date', 
+	    'order' => 'desc',
+	]);
+  } else {
+	$ajaxposts = new WP_Query([
+	    'post_type' => 'post',
+	    'post_status' => 'publish',
+	    'posts_per_page' => 10, 
+	    'category_name' => $catSlug,
+	    'orderby' => 'post_date', 
+	    'order' => 'desc',
+	]);
+  }
+
   $response = '';
 
   if($ajaxposts->have_posts()) {
     while($ajaxposts->have_posts()) : $ajaxposts->the_post();
-      //$response .= get_template_part('templates/_components/project-list-item');
+    	$response .= "<article class='post-excerpt'>
+            <div class='blog-post clearfix' itemprop='blogPost' itemscope itemtype='https://schema.org/BlogPosting'>";
 
-    	$response = "not empty";
+				$category      = get_the_category_list( ', ', $post->ID );
+				$category      = get_the_category( $post->ID );
+				$category_name = $category[0]->name;
+				$category_id   = $category[0]->term_id;
+				$link          = get_category_link( $category_id );			
+
+				$response .= "<div class='post-wrap'>
+                        <div class='blog-excerpt' itemprop='articleBody'>";
+
+				if ( has_post_thumbnail( $post->ID ) ) {
+                    $response .="<div class='image-holder'>
+                        <div itemprop='image' itemscope itemtype='https://schema.org/ImageObject'>
+                                <meta itemprop='url' content='".get_the_post_thumbnail_url()."'>
+                                <meta itemprop='width' content='335'>
+                                <meta itemprop='height' content='246'>
+								<a href='".get_the_permalink()."'><img src='".get_the_post_thumbnail_url($post->ID,'medium')."'/></a>
+                            </div>
+                        </div>";				
+                }
+
+                if($category_name) {
+                    $response .="<div class='post-meta' itemprop='author'><a href='".$link."'>".$category_name."</a></div>";
+                }
+
+                $response .="<div class='title-wrap'>
+                        <h2 itemprop='name headline' class='page-title'><a href='".get_the_permalink()."'>".get_the_title()."</a></h2>
+                    </div><div class='excerpt-content' itemprop='mainEntityOfPage'>".get_the_excerpt()."</div></div></div></div></article>";
     endwhile;
   } else {
     $response = 'empty';

@@ -11,6 +11,19 @@
     margin-bottom: 125px;
   }
 
+  .loader {
+    background: url("../../images/loader.svg");
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .svg-loader{
+    height: 20vmin;
+    padding: 3vmin 20vmin;
+    vertical-align: top;
+  }
+
   .post-excerpt {
     margin-bottom: 40px;
 

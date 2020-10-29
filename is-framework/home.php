@@ -32,7 +32,7 @@ $post_blog = get_post(15);
                         <?php $categories = get_categories(); ?>
                         <div class="filter-name">Filter:</div>
                         <ul class="cat-list">
-                          <li><input type="checkbox" id="all" name="all" value=""><label for="all"> All</label></li>
+                          <li class="cat-list__item"><input type="checkbox" id="all" name="all" value="all"><label for="all"> All</label></li>
 
                           <?php foreach($categories as $category) : ?>
                             <li class="cat-list__item">
