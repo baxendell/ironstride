@@ -241,18 +241,20 @@ function filter_post() {
   	$ajaxposts = new WP_Query([
 	    'post_type' => 'post',
 	    'post_status' => 'publish',
-	    'posts_per_page' => 10, 
+	    'posts_per_page' => 1, 
 	    'orderby' => 'post_date', 
 	    'order' => 'desc',
+	    'paged' => $_POST['page']
 	]);
   } else {
 	$ajaxposts = new WP_Query([
 	    'post_type' => 'post',
 	    'post_status' => 'publish',
-	    'posts_per_page' => 10, 
+	    'posts_per_page' => 1, 
 	    'category_name' => $catSlug,
 	    'orderby' => 'post_date', 
 	    'order' => 'desc',
+	    'paged' => $_POST['page']
 	]);
   }
 

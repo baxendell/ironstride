@@ -223,6 +223,41 @@ jQuery(document).ready(function ($) {
         };
 
         var postFilter = function() {
+            // Infinite Scrolling
+            if ( $( "#blog" ).length ) {
+                var canBeLoaded = true, // this param allows to initiate the AJAX call only if necessary
+                current_page = 1,
+                bottomOffset = 2000; // the distance (in px) from the page bottom when you want to load more posts
+     
+                $(window).scroll(function(){
+
+                    if( $(document).scrollTop() > ( $(document).height() - bottomOffset ) && canBeLoaded == true ){
+                        $.ajax({
+                            type: 'POST',
+                            url: '/wp-admin/admin-ajax.php',
+                            dataType: 'html',
+                            data: {
+                              action: 'filter_post',
+                              category: $("#category-info").attr("data-category"),
+                              page: current_page
+                            },
+                            beforeSend: function( xhr ){
+                                canBeLoaded = false; 
+                                $('.inner-content').find('article:last-of-type').after( "<div class='loader'></div>" );
+                            },
+                            success:function(res){
+                                if( res ) {
+                                    $('.inner-content').find('.loader').remove();
+                                    $('.inner-content').find('article:last-of-type').after( res ); // where to insert posts
+                                    canBeLoaded = true; // the ajax is completed, now we can run it again
+                                    current_page += 1;
+                                }
+                            }
+                        });
+                    }
+                });
+            }
+
             $(".cat-list__item input[type='checkbox']").on('change', function() {
                 $(this).parent().siblings().find('input:checkbox').prop('checked', false);
 
@@ -235,21 +270,23 @@ jQuery(document).ready(function ($) {
                     category = "all";
                 }
 
+                $("#category-info").attr("data-category", category);
+
                 $.ajax({
-                type: 'POST',
-                url: '/wp-admin/admin-ajax.php',
-                dataType: 'html',
-                data: {
-                  action: 'filter_post',
-                  category: category
-                },
-                beforeSend: function() {
-                  $(".inner-content").html("<div class='loader'></div>");
-                },
-                success: function(res) {
-                  $('.inner-content').html(res);
-                }
-              })
+                    type: 'POST',
+                    url: '/wp-admin/admin-ajax.php',
+                    dataType: 'html',
+                    data: {
+                      action: 'filter_post',
+                      category: category
+                    },
+                    beforeSend: function() {
+                      $(".inner-content").html("<div class='loader'></div>");
+                    },
+                    success: function(res) {
+                      $('.inner-content').html(res);
+                    }
+                })
             });
         };
 
