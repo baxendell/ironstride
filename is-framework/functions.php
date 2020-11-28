@@ -238,16 +238,16 @@ function filter_post() {
   $catSlug = $_POST['category'];
 
   if($catSlug == "all") {
-  	$ajaxposts = new WP_Query([
+  	$ajaxposts = new WP_Query(array(
 	    'post_type' => 'post',
 	    'post_status' => 'publish',
 	    'posts_per_page' => 1, 
 	    'orderby' => 'post_date', 
 	    'order' => 'desc',
 	    'paged' => $_POST['page']
-	]);
+	));
   } else {
-	$ajaxposts = new WP_Query([
+	$ajaxposts = new WP_Query(array(
 	    'post_type' => 'post',
 	    'post_status' => 'publish',
 	    'posts_per_page' => 1, 
@@ -255,7 +255,7 @@ function filter_post() {
 	    'orderby' => 'post_date', 
 	    'order' => 'desc',
 	    'paged' => $_POST['page']
-	]);
+	));
   }
 
   $response = '';
@@ -294,7 +294,7 @@ function filter_post() {
                     </div><div class='excerpt-content' itemprop='mainEntityOfPage'>".get_the_excerpt()."</div></div></div></div></article>";
     endwhile;
   } else {
-    $response = 'empty';
+    $response = 'There are no more posts to show.';
   }
 
   echo $response;

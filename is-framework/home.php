@@ -58,33 +58,22 @@ $post_blog = get_post(15);
 
             </div><!--.row-->
 
-        </div>
-
-    </section><!--.container-->
-
-
-    <?php if ( $wp_query->max_num_pages > 1 ) : ?>
-
-        <section id="blog-pagination-wrapper">
-
-            <div class="container">
+            <?php if ( $wp_query->max_num_pages > 1 ) : ?>
 
                 <div class="row">
 
                     <div class="col text-center">
 
-                        <div class="blog-pagination">
-                            <?php //do_action( 'cws_pagination' ) ?>
-                        </div><!--.blog-pagination-->
+                        <a href="javascript:void(0);" class="btn btn-1 load-more">Load More</a>
 
                     </div>
 
                 </div>
 
-            </div>
+            <?php endif; ?>
 
-        </section>
-    
-    <?php endif; ?>
+        </div>
+
+    </section><!--.container-->   
 
 <?php get_footer() ?>
