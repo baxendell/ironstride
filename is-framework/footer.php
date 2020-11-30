@@ -75,7 +75,7 @@ if(!is_front_page()) {
 
                                     <span><?php echo get_field('location_phone', $post_objects->ID); ?></span><br/>
 
-                                    <span><a href="mailto:support@ironstridemarketing.com">SUPPORT@IRONSTRIDEMARKETING.COM</a></span>
+                                    <span><?php echo do_shortcode("[email]SUPPORT@IRONSTRIDEMARKETING.COM[/email]"); ?></span>
 
                                 </div>
 

@@ -28,6 +28,10 @@
           line-height: 1;
           color: $black;
           vertical-align: top;
+
+          @include media('>=widescreen','<1440px') {
+           font-size: 20px; 
+          }
         }
       }
     }
