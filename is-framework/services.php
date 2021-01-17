@@ -26,8 +26,6 @@ $tempUrl = get_stylesheet_directory_uri();
 
                     <?php endif; ?>
 
-                    <a class="orange arrow-link" href="/our-work/"><span>Explore Our Services</span></a>
-
                 </article>
 
                 <aside class="col-12 col-lg-5 col-xl-6 pl-lg-4 sidebar d-none d-lg-block">

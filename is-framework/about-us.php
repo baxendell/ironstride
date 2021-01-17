@@ -133,7 +133,7 @@ $tempUrl = get_stylesheet_directory_uri();
 
                     <?php the_field('section_3_content') ?>
 
-                    <a class="link" href="/services/">Explore Our Services</a>
+                    <a class="orange arrow-link" href="/services/"><span>Explore Our Services</span></a>
 
                 </article>
 
@@ -141,19 +141,19 @@ $tempUrl = get_stylesheet_directory_uri();
 
                     <div class="bubble-text row row-cols-2">
                         <div class="col-6">
-                            Founded <strong>2009</strong>
+                            Average number of advertisements people consume/day <strong>10,000</strong>
                         </div>
 
                         <div class="col-6">
-                            campaigns <strong>over 12,000</strong>
+                            Campaigns <strong>Over 10,000</strong>
                         </div>
 
                         <div class="col-6">
-                            Team Members <strong>Eight</strong>
-                        </div>
+                            Years of combined experience <strong>100+</strong>
+                        </div>                        
 
                         <div class="col-6">
-                            Cups of Coffee <strong>1,152,923</strong>
+                            Team Members <strong>8</strong>
                         </div>
 
                     </div>

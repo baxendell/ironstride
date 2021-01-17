@@ -14,16 +14,6 @@ $post_blog = get_post(15);
 
             <div class="row">
 
-                <div class="content text-center col-12 col-xl-11 mx-auto">
-
-                    <div class="entry-content"><p><?php echo $post_blog->post_excerpt; ?></p></div>
-
-                </div>
-
-            </div>
-
-            <div class="row">
-
                 <aside class="col-12 col-lg-5 offset-xl-1 col-xl-3 sidebar">
 
                     <!--filter-->
