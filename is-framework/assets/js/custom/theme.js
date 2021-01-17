@@ -223,10 +223,47 @@ jQuery(document).ready(function ($) {
         };
 
         var postFilter = function() {
+            // Infinite Scrolling
+            if ( $( "#blog" ).length ) {
+                var current_page = 1;
+
+                $('.load-more').on('click', function () {
+                    
+                    $.ajax({
+                        type: 'POST',
+                        url: '/wp-admin/admin-ajax.php',
+                        dataType: 'html',
+                        data: {
+                          action: 'filter_post',
+                          category: $("#category-info").attr("data-category"),
+                          page: current_page + 1
+                        },
+                        beforeSend: function( xhr ){
+                            canBeLoaded = false; 
+                            $('.inner-content').find('article:last-of-type').after( "<div class='loader'></div>" );
+                        },
+                        success:function(res){
+                            
+
+                            if( res == "There are no more posts to show." ) {
+                                $(".load-more").fadeTo( 100, 0 );
+                                res = "<div class='text-center no-posts'>"+ res +"</div>";
+                            } 
+
+                            $('.inner-content').find('.loader').remove();
+                             $('.inner-content').find('article:last-of-type').after( res );
+                            current_page += 1;
+                        }
+                    });
+                });
+            }
+
             $(".cat-list__item input[type='checkbox']").on('change', function() {
                 $(this).parent().siblings().find('input:checkbox').prop('checked', false);
 
                 var category;
+                current_page = 1;
+                $(".load-more").fadeTo( 400, 1 );
 
                 if($(this).prop("checked") == true){
                     category = $(this).attr('id');
@@ -235,21 +272,24 @@ jQuery(document).ready(function ($) {
                     category = "all";
                 }
 
+                $("#category-info").attr("data-category", category);
+
                 $.ajax({
-                type: 'POST',
-                url: '/wp-admin/admin-ajax.php',
-                dataType: 'html',
-                data: {
-                  action: 'filter_post',
-                  category: category
-                },
-                beforeSend: function() {
-                  $(".inner-content").html("<div class='loader'></div>");
-                },
-                success: function(res) {
-                  $('.inner-content').html(res);
-                }
-              })
+                    type: 'POST',
+                    url: '/wp-admin/admin-ajax.php',
+                    dataType: 'html',
+                    data: {
+                      action: 'filter_post',
+                      category: category,
+                      page: 1
+                    },
+                    beforeSend: function() {
+                      $(".inner-content").html("<div class='loader'></div>");
+                    },
+                    success: function(res) {
+                      $('.inner-content').html(res);
+                    }
+                })
             });
         };
 

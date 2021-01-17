@@ -1,6 +1,17 @@
 .blog {
   .about-cta {
     padding-top: 68px;
+    
+      @include media('<tablet') {
+        padding-top: 0;
+      }
+  }
+
+  .no-posts {
+    color: $blue;
+    font-family: $third-font-solid;
+    font-size: 40px;
+    letter-spacing: 0.8px;
   }
 }
 
@@ -9,6 +20,10 @@
 
   .row:first-of-type {
     margin-bottom: 125px;
+
+    @include media('<widescreen') {
+      margin-bottom: 80px;
+    }
   }
 
   .loader {
@@ -68,7 +83,7 @@
         .blog-excerpt {
 
           .image-holder {
-            margin-bottom: 13px;
+            margin-bottom: 16px;
             margin-right: 50px;
             float: left;
             max-width: 474px;
@@ -76,6 +91,7 @@
             @include media('<widescreen') {
               margin: 0 auto 20px;
               float: none;
+              text-align: center;
             }
 
             img {

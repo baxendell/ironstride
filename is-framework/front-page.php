@@ -242,7 +242,7 @@ get_header();
 
 					</div>
 
-					<a class="btn btn-1 btn--alt" href="/contact-us/">Let's Talk</a>
+					<a class="btn btn-1 btn--alt" href="/contact/">Let's Talk</a>
 
 				</div>
 

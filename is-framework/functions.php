@@ -238,22 +238,24 @@ function filter_post() {
   $catSlug = $_POST['category'];
 
   if($catSlug == "all") {
-  	$ajaxposts = new WP_Query([
+  	$ajaxposts = new WP_Query(array(
 	    'post_type' => 'post',
 	    'post_status' => 'publish',
 	    'posts_per_page' => 10, 
 	    'orderby' => 'post_date', 
 	    'order' => 'desc',
-	]);
+	    'paged' => $_POST['page']
+	));
   } else {
-	$ajaxposts = new WP_Query([
+	$ajaxposts = new WP_Query(array(
 	    'post_type' => 'post',
 	    'post_status' => 'publish',
 	    'posts_per_page' => 10, 
 	    'category_name' => $catSlug,
 	    'orderby' => 'post_date', 
 	    'order' => 'desc',
-	]);
+	    'paged' => $_POST['page']
+	));
   }
 
   $response = '';
@@ -292,7 +294,7 @@ function filter_post() {
                     </div><div class='excerpt-content' itemprop='mainEntityOfPage'>".get_the_excerpt()."</div></div></div></div></article>";
     endwhile;
   } else {
-    $response = 'empty';
+    $response = 'There are no more posts to show.';
   }
 
   echo $response;
@@ -300,3 +302,19 @@ function filter_post() {
 }
 add_action('wp_ajax_filter_post', 'filter_post');
 add_action('wp_ajax_nopriv_filter_post', 'filter_post');
+
+/**
+ * Hide email from Spam Bots using a shortcode.
+ *
+ * @param array  $atts    Shortcode attributes. Not used.
+ * @param string $content The shortcode content. Should be an email address.
+ * @return string The obfuscated email address.
+ */
+function wpdocs_hide_email_shortcode( $atts, $content = null ) {
+	if ( ! is_email( $content ) ) {
+		return;
+	}
+
+	return '<a href="mailto:' . esc_html( antispambot( $content, 1 ) ) . '">' . esc_html( antispambot( $content ) ) . '</a>';
+}
+add_shortcode( 'email', 'wpdocs_hide_email_shortcode' );

@@ -166,12 +166,31 @@
 		line-height: 90px;
 		text-transform: uppercase;
 		display: block;
+
+		@include media('<tablet') {
+			font-size: 51px;
+			line-height: 51px;
+		}
+
+		@include media('>=tablet','<widescreen') {
+			font-size: 69px;
+			line-height: 79px;
+		}
+
+		@include media('>=widescreen','<1440px') {
+			font-size: 78px;
+			line-height: 88px;
+		}
 	}
 
 	.btn {
 		display: block;
 		max-width: 240px;
 		margin: 65px auto 0;
+
+		@include media('<tablet') {
+			margin-top: 35px;
+		}
 	}
 
 	p {

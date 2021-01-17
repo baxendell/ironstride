@@ -18,7 +18,7 @@ $amount = get_field('single_or_multiple_location', 'option');
 
       <div class="contact-map mb-5">
 
-        <a href="<?php the_field('location_direction')?>" target="_blank">
+        <a href="<?php the_field('location_direction', $post->ID)?>" target="_blank">
 
             <img src="<?php bloginfo('template_url') ?>/assets/images/iron-stride-map.jpg" alt="ironstride marking"/>
 
@@ -34,9 +34,7 @@ $amount = get_field('single_or_multiple_location', 'option');
       </address>
 
       <span itemprop="telephone"><?php the_field('location_phone') ?></span>
-      <br/><span itemprop="email"><a href="mailto:support@ironstridemarketing.com">support@ironstridemarketing.com</a></span>
-
-
+      <br/><span itemprop="email"><?php echo do_shortcode("[email]support@ironstridemarketing.com[/email]"); ?></span>
     </div>
 
     <?php endif; wp_reset_postdata(); endif; ?>

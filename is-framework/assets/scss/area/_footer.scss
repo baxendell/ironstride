@@ -56,6 +56,11 @@
           margin-bottom: 0;
         }
 
+        @include media('>=widescreen','<1440px') {
+          margin-right: 22px;
+          font-size: 17px;
+        }
+
         &:last-of-type {
           margin-right: 0px;
         }

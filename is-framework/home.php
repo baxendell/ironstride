@@ -21,6 +21,7 @@ $post_blog = get_post(15);
                     
                         <?php $categories = get_categories(); ?>
                         <div class="filter-name">Filter:</div>
+                        <span id="category-info" class="d-none" data-category="all"></span>
                         <ul class="cat-list">
                           <li class="cat-list__item"><input type="checkbox" id="all" name="all" value="all"><label for="all"> All</label></li>
 
@@ -47,33 +48,22 @@ $post_blog = get_post(15);
 
             </div><!--.row-->
 
-        </div>
-
-    </section><!--.container-->
-
-
-    <?php if ( $wp_query->max_num_pages > 1 ) : ?>
-
-        <section id="blog-pagination-wrapper">
-
-            <div class="container">
+            <?php if ( $wp_query->max_num_pages > 1 ) : ?>
 
                 <div class="row">
 
-                    <div class="col">
+                    <div class="col text-center">
 
-                        <div class="blog-pagination">
-                            <?php do_action( 'cws_pagination' ) ?>
-                        </div><!--.blog-pagination-->
+                        <a href="javascript:void(0);" class="btn btn-1 load-more">Load More</a>
 
                     </div>
 
                 </div>
 
-            </div>
+            <?php endif; ?>
 
-        </section>
-    
-    <?php endif; ?>
+        </div>
+
+    </section><!--.container-->   
 
 <?php get_footer() ?>
