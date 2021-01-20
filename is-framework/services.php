@@ -319,7 +319,7 @@ $tempUrl = get_stylesheet_directory_uri();
 
                     <div class="col text-center">
 
-                        <a class="btn btn-1" href="/portfolio/">See Our Work</a>
+                        <a class="btn btn-1" href="/our-work/">See Our Work</a>
 
                     </div>
 

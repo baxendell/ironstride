@@ -29,8 +29,6 @@
 
         <li class="sidebar-item"><?php do_action( 'cws_popular_post' ) ?></li>
 
-        <li class="sidebar-item"><?php get_template_part( 'sidebars/parts/cta-sidebar' ); ?></li>
-
     </ul>
 
 </div>

@@ -79,6 +79,10 @@ if($port_query->have_posts()):
 
                 <cite><?php echo esc_html( $client_test->post_title ); ?>, <?php the_field('client_type',$client_test->ID) ?></cite>
 
+                <?php else: ?>
+
+                    <?php the_excerpt() ?>
+                    
                 <?php endif; ?>
 
             </div>
