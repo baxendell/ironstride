@@ -8,10 +8,28 @@
   p {
     color: $white;
   }
+
+  a {
+    color: $alt-green;
+  }
+
+  @media screen and (max-width: 767px) {
+    background-color: #003c54;
+  }
+
+  ul {
+    li {
+      color: $white !important;
+    }
+  }
 }
 
 .service-split {
-  padding: 100px 0;
+  padding: 40px 0;
+
+  @media screen and (max-width: 767px) {
+    padding: 100px 0;
+  }
 
   h2 {
     color: $blue;

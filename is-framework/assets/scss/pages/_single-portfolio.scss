@@ -158,7 +158,10 @@
 			padding-left: 70px;
 			margin: 0;
 		}
-
+		strong {
+			color: $alt-blue;
+		}
+		/*
 		p {
 			padding-left: 110px;
 			position: relative;
@@ -167,12 +170,13 @@
 			background-position: top left;
 			font-style: italic;
 		}
-
+		
 		cite {
 			text-align: right;
 			color: $alt-blue;
 			font-size: 20px;
 			display: block;
 		}
+		*/
 	}
 }

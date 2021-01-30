@@ -14,7 +14,11 @@ get_header();
 
             <article class="col-12 col-xl-6 pl-lg-5 pr-lg-5 entry-content">
 
+                <?php if(get_field('section_1_title')): ?>
+
                 <h2 class="orange"><?php the_field('section_1_subtitle') ?> <strong><?php the_field('section_1_title') ?></strong></h2>
+
+                <?php endif ?>
 
                 <?php if ( have_posts() ) : ?>
 
@@ -28,7 +32,7 @@ get_header();
 
             </article>
 
-            <aside class="col-12 col-lg-5 col-xl-6 pl-lg-4 sidebar">
+            <aside class="col-12 col-xl-6 pl-lg-4 sidebar text-center">
 
                 <?php if ( has_post_thumbnail() ) : ?>
                     <div class="image-holder">
@@ -44,6 +48,8 @@ get_header();
 
 </section>
 
+<?php if(get_field('section_2_text')): ?>
+
 <section class="did-you-know">
 
     <div class="container">
@@ -54,7 +60,7 @@ get_header();
 
                 <div class="about-values-container row">
 
-                    <div class="col-10 pl-5">
+                    <div class="col-12 col-sm-10 pl-5">
 
                        <h2 class="green"><?php the_field('section_2_subtitle') ?> <strong><?php the_field('section_2_title') ?></strong></h2>
 
@@ -72,7 +78,16 @@ get_header();
 
 </section>
 
+<?php endif ?>
+
+<?php if(get_field('section_3_left')): ?>
+
 <section class="service-split">
+
+    <?php if(get_field('section_3_title')): ?>
+     <h2 class="green"><?php if(get_field('section_3_subtitle')) { the_field('section_3_subtitle');} ?> <strong><?php the_field('section_3_title') ?></strong></h2>
+
+    <?php endif ?>
 
     <div class="container">
 
@@ -95,6 +110,10 @@ get_header();
     </div>
 
 </section>
+
+<?php endif ?>
+
+<?php if(get_field('section_4_content')): ?>
 
 <section class="service-note alt-grey">
 
@@ -147,6 +166,8 @@ get_header();
     </div>
 
 </section>
+
+<?php endif ?>
 
 <?php get_template_part( 'partials/news' ); ?>
 

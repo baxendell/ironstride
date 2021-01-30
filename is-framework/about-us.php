@@ -83,6 +83,8 @@ $tempUrl = get_stylesheet_directory_uri();
 
     </section>
 
+    <?php if(get_field('value_column_1')): ?>
+
     <section class="about-values">
 
         <div class="container">
@@ -121,6 +123,10 @@ $tempUrl = get_stylesheet_directory_uri();
 
     </section>
 
+    <?php endif ?>
+
+    <?php if (get_field('section_3_content')): ?>
+
     <section class="about-section-2">
 
         <div class="container">
@@ -141,7 +147,7 @@ $tempUrl = get_stylesheet_directory_uri();
 
                     <div class="bubble-text row row-cols-2">
                         <div class="col-6">
-                            Average number of advertisements people consume/day <strong>10,000</strong>
+                            Avg # of ads seen per day <strong>10,000</strong>
                         </div>
 
                         <div class="col-6">
@@ -165,6 +171,8 @@ $tempUrl = get_stylesheet_directory_uri();
         </div>
 
     </section>
+
+<?php endif ?>
 
 <?php get_template_part('partials/team') ?>
 

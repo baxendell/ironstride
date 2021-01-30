@@ -19,13 +19,28 @@
             </li>
 		<?php endif; ?>
 
-        <li class="sidebar-item"><?php get_template_part( 'sidebars/parts/contact-form-sidebar' ); ?></li>
+        <li class="sidebar-item">
+            <div class="sidebar-holder contact-form-holder">
+
+                <div class="sidebar-title">Ready For A Change</div>
+
+                <div class="inner-holder">
+
+                    <div class="form-wrap">
+
+                        <?php get_template_part( 'partials/form' ) ?>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </li>
 
         <li class="sidebar-item"><?php do_action( 'cws_related_info' ) ?></li>
 
         <li class="sidebar-item"><?php do_action( 'cws_custom_sidebar' ) ?></li>
-
-        <li class="sidebar-item"><?php do_action( 'cws_testimony_hook' ) ?></li>
 
         <li class="sidebar-item"><?php do_action( 'cws_popular_post' ) ?></li>
 

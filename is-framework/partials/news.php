@@ -78,7 +78,7 @@
 
 			<div class="col text-center">
 
-				<a class="btn btn-1" href="/news/">See All News</a>
+				<a class="btn btn-1" href="/blogs/">See All News</a>
 
 			</div>
 

@@ -141,6 +141,10 @@
 
 	&-member {
 		margin-bottom: 70px;
+
+		> a {
+			color: $orange
+		}
 	}
 }
 

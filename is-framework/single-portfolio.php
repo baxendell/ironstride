@@ -39,7 +39,7 @@ get_header(); ?>
 
 		<div class="row">
 
-			<div class="col-lg-11 mx-auto">
+			<div class="col-lg-11 text-center">
 
 				<?php $blockImg = get_field('portfolio_featured_image') ?>
 

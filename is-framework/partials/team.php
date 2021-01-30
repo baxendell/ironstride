@@ -23,9 +23,9 @@ if($staff_query->have_posts()):
 
 				<div class="team-member">
 
-					<?php the_post_thumbnail('full') ?>
+					<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('full') ?></a>
 
-					<h3><?php the_field('position') ?><strong><?php the_title() ?></strong></h3>
+					<h3><?php the_field('position') ?><a href="<?php the_permalink() ?>"><strong><?php the_title() ?></strong></a></h3>
 
 					<?php echo excerpt( 50 ); ?> <a href="<?php echo get_permalink(); ?>"> more</a>
 

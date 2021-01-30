@@ -22,7 +22,7 @@ get_header();
 
                         <?php the_content(); ?>
 
-                        <a class="arrow-link green" href="/contact-us/"><span>get your free consultation</span></a>
+                        <a class="arrow-link green" href="/contact/"><span>get your free consultation</span></a>
 
                     <?php endwhile; ?>
 
@@ -38,7 +38,7 @@ get_header();
 
 <?php $args = array(
     'post_type' => 'portfolio',
-    'posts_per_page' => '5',
+    'posts_per_page' => '10',
     );
 
 $port_query = new WP_Query($args);
@@ -76,8 +76,6 @@ if($port_query->have_posts()):
                 <?php $client_test = get_field('client_testimonial'); if( $client_test ):  ?>
 
                 <?php the_excerpt() ?>
-
-                <cite><?php echo esc_html( $client_test->post_title ); ?>, <?php the_field('client_type',$client_test->ID) ?></cite>
 
                 <?php else: ?>
 

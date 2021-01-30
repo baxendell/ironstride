@@ -73,7 +73,7 @@ if(!is_front_page()) {
                                 
                                 <div class="wpseo-address__bottom">   
 
-                                    <span><?php echo get_field('location_phone', $post_objects->ID); ?></span><br/>
+                                    <span><a href="tel:<?php echo get_field('location_phone', $post_objects->ID); ?>"><?php echo get_field('location_phone', $post_objects->ID); ?></a></span><br/>
 
                                     <span><?php echo do_shortcode("[email]SUPPORT@IRONSTRIDEMARKETING.COM[/email]"); ?></span>
 

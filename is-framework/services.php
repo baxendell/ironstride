@@ -203,6 +203,40 @@ $tempUrl = get_stylesheet_directory_uri();
                 </div>
 
             </div>
+
+        </div>
+
+    </section>
+
+    <section class="services-2 mt-5">
+
+        <div class="container">
+
+            <h2 class="text-center"><strong><?php the_field('services_title') ?></strong></h2>
+
+            <div class="row entry-content">
+
+                <div class="col-lg-4 offset-xl-1 col-xl-3">
+
+                    <?php the_field('services_area_1') ?>
+
+                </div>
+
+                <div class="col-lg-4 col-xl-5">
+
+                    <?php the_field('services_area_2') ?>
+
+                </div>
+
+
+                <div class="col-lg-4 col-xl-3">
+
+                    <?php the_field('services_area_3') ?>
+
+                </div>
+
+            </div>
+
         </div>
 
     </section>
@@ -268,7 +302,7 @@ $tempUrl = get_stylesheet_directory_uri();
 
                         </div>
 
-                        <a class="btn btn-1 btn--alt" href="/contact-us/">Let's Talk</a>
+                        <a class="btn btn-1 btn--alt" href="/contact/">Let's Talk</a>
 
                     </div>
 

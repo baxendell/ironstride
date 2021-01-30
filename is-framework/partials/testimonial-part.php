@@ -13,7 +13,7 @@ if( $post_objects ): ?>
 
 	    <div class="testimonials-section__item">
 
-	       <?php echo get_the_excerpt() ?>
+	       <?php echo get_the_content() ?>
 
 	        <cite><?php the_title() ?></cite>
 

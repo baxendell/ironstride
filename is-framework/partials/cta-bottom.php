@@ -8,6 +8,10 @@
 
                 <?php if(get_field('cta_text')) {
                     the_field('cta_text');
+                ?>
+                <a class="btn btn-1" href="/contact/">Let's Talk</a>
+                
+                <?php
                 } elseif(is_page_template('contact.php')) {
                 ?>
 
@@ -21,7 +25,7 @@
                 ?>
 
                 <strong>ready for a change?</strong> lets talk results.
-                <a class="btn btn-1" href="/contact-us/">Let's Talk</a>
+                <a class="btn btn-1" href="/contact/">Let's Talk</a>
                 <?php
                 }
                 ?>
