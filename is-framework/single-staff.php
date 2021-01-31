@@ -13,20 +13,19 @@ get_header();
         <div class="row">
 
             <div class="entry-content col-12 col-lg-7 col-xl-8">
-				<?php if ( have_posts() ) : while ( have_posts() ) :
-				the_post(); ?>
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
                 <header>
                     <h1 class="page-title"><?php h1_title() ?></h1>
                 </header>
+
+                <?php the_post_thumbnail('medium', ['class' => 'alignleft']); ?>
 
 				<?php the_content(); ?>
 
             </div>
 
             <div class="col-12 col-lg-5 col-xl-4 sidebar">
-
-				<?php the_post_thumbnail('medium', ['class' => 'img-responsive mb-4']) ?>
 
                 <?php get_template_part( 'sidebars/generic-sidebar' ); ?>
 

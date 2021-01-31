@@ -39,7 +39,7 @@ get_header(); ?>
 
                 <div class="col-12 col-lg-5 col-xl-4 sidebar">
 					<?php
-					get_template_part( 'sidebars/error404-sidebar' );
+					get_template_part( 'sidebars/generic-sidebar' );
 					?>
                 </div>
 

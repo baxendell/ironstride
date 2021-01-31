@@ -141,6 +141,12 @@
   			border:none;
   		}
   	}
+    
+    .col-md-3 {
+      @media screen and (max-width: 767px) {
+        margin-bottom: 20px;
+      }
+    }
 
   	&-1 {
   		color: $light-blue;

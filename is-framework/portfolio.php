@@ -55,7 +55,7 @@ if($port_query->have_posts()):
 
         <div class="work-row row">
 
-            <div class="col-lg-6 work-item">
+            <a href="<?php the_permalink() ?>" class="col-lg-6 work-item">
 
                 <?php $portImg = get_field('archive_image'); ?>
 
@@ -65,11 +65,11 @@ if($port_query->have_posts()):
 
                     <div><?php the_title() ?></div>
 
-                    <a class="arrow-link arrow-link__alt" href="<?php the_permalink() ?>"><span>Learn More</span></a>
+                    <div class="arrow-link arrow-link__alt"><span>Learn More</span></div>
 
                 </div>
 
-            </div>
+            </a>
 
             <div class="col-lg-6 work-testimonial">
 

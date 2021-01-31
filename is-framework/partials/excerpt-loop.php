@@ -23,9 +23,11 @@ $home = esc_attr( home_url() );
 				$author_name   = get_the_author_meta( 'display_name' );
 				$category      = get_the_category_list( ', ', $post->ID );
 				$category      = get_the_category( $post->ID );
-				$category_name = $category[0]->name;
-				$category_id   = $category[0]->term_id;
-				$link          = get_category_link( $category_id );
+                if(!is_search()){
+				    $category_name = $category[0]->name;
+				    $category_id   = $category[0]->term_id;
+                    $link          = get_category_link( $category_id );
+                }
 				?>
 
                 <?php if (is_single()): ?>

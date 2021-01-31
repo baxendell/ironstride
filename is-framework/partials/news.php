@@ -56,9 +56,11 @@
 
 			<div class="offset-md-1 col-md-3">
 
-				<div class="news-block">
+				<div class="news-block text-center">
 
 					<a class="news-category" href="<?php echo $link ?>"><?php echo $category_name ?>
+
+					<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('thumb', array('class'=>'mt-2')) ?></a>
 
 					<a class="news-title" href="<?php the_permalink() ?>"><?php the_title() ?></a>
 
