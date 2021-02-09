@@ -29,7 +29,7 @@ mix.scripts(
         './assets/js/vendors/slick.js',
         './assets/js/vendors/jquery.waypoints.js',
         './assets/js/vendors/sticky.js',
-        // './assets/js/vendors/vue.min.js'
+         './assets/js/vendors/aos.js'
     ],
     'assets/dist/js/vendor.js'
 );

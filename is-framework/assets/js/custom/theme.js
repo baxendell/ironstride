@@ -301,47 +301,6 @@ jQuery(document).ready(function ($) {
 
         var carousels = function () {
 
-            /*var awards = $(".awards-wrap");
-
-            awards.slick({
-                dots: false,
-                infinite: false,
-                speed: 300,
-                slidesToShow: 5,
-                slidesToScroll: 1,
-                appendArrows: '.custom-nav-awards',
-                responsive: [
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 3,
-                            infinite: true,
-                        }
-                    },
-                    {
-                        breakpoint: 600,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 2
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
-                        }
-                    }
-                    // You can unslick at a given breakpoint now by adding:
-                    // settings: "unslick"
-                    // instead of a settings object
-                ]
-            });
-
-            $('.awards-part .item').matchHeight();
-            $('.awards-part .sameHeight').matchHeight();*/
-
             var testimonials = $('.testimonials-section-slider');
 
             testimonials.slick({
@@ -351,84 +310,6 @@ jQuery(document).ready(function ($) {
                 infinite: false,
                 appendArrows: '.custom-nav-test',
             });
-
-            /*var sidebar_results = $('.results-slider__sidebar .grid-results');
-
-            sidebar_results.slick({
-                dots: false,
-                infinite: false,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                appendArrows: '.custom-nav-results',
-            });
-
-
-            enquire.register("screen and (max-width: 767px)", {
-                setup: function () {
-                    // Load in content via AJAX (just the once)
-                },
-                match: function () {
-
-                    var results = $(".grid-results");
-
-                    results.slick({
-                        dots: false,
-                        arrows: true,
-                        infinite: false,
-                        speed: 300,
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        appendArrows: '.custom-nav-results',
-                        responsive: [
-                            {
-                                breakpoint: 768,
-                                settings: {
-                                    slidesToShow: 1,
-                                    slidesToScroll: 1
-                                }
-                            }
-                            // You can unslick at a given breakpoint now by adding:
-                            // settings: "unslick"
-                            // instead of a settings object
-                        ]
-                    });
-
-                    var videos = $(".grid-videos");
-                    videos.slick({
-                        dots: true,
-                        arrows: false,
-                        infinite: false,
-                        speed: 300,
-                        slidesToShow: 6,
-                        slidesToScroll: 6,
-                        responsive: [
-                            {
-                                breakpoint: 1024,
-                                settings: {
-                                    slidesToShow: 3,
-                                    slidesToScroll: 3,
-                                    infinite: true,
-                                }
-                            },
-                            {
-                                breakpoint: 768,
-                                settings: {
-                                    slidesToShow: 1,
-                                    slidesToScroll: 1
-                                }
-                            }
-                            // You can unslick at a given breakpoint now by adding:
-                            // settings: "unslick"
-                            // instead of a settings object
-                        ]
-                    });
-
-                },
-                unmatch: function () {
-
-                }
-
-            }); */
 
         };
 
