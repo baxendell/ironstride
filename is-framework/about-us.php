@@ -13,7 +13,7 @@ $tempUrl = get_stylesheet_directory_uri();
 
             <div class="row bubble-block">
 
-                <article class="order-2 order-lg-1 col-12 col-lg-7 col-xl-6 pl-xl-5 pr-xl-5 entry-content">
+                <article data-aos="fade-right" class="order-2 order-lg-1 col-12 col-lg-7 col-xl-6 pl-xl-5 pr-xl-5 entry-content">
 
                     <h2 class="blue"><?php the_field('section_1_subtitle') ?> <strong><?php the_field('section_1_title') ?></strong></h2>
 
@@ -29,7 +29,7 @@ $tempUrl = get_stylesheet_directory_uri();
 
                 </article>
 
-                <aside class="order-1 order-lg-2 col-12 col-lg-5 col-xl-6 pl-xl-4 sidebar">
+                <aside data-aos="fade-left" class="order-1 order-lg-2 col-12 col-lg-5 col-xl-6 pl-xl-4 sidebar">
 
                     <?php if ( has_post_thumbnail() ) : ?>
                         <div class="image-holder">
@@ -43,7 +43,7 @@ $tempUrl = get_stylesheet_directory_uri();
 
             <div id="about-section-2" class="row">
 
-                <aside class="col-12 col-lg-6 pl-xl-5 pr-xl-5">
+                <aside data-aos="fade-right" class="col-12 col-lg-6 pl-xl-5 pr-xl-5">
 
                     <?php $img = get_field('section_2_image'); ?>
 
@@ -53,7 +53,7 @@ $tempUrl = get_stylesheet_directory_uri();
 
                 <article class="col-12 col-lg-6 pl-xl-4 d-md-flex">
 
-                    <div class="col-lg-6">
+                    <div data-aos="fade-up" class="col-lg-6">
 
                         <div class="bi-title">
                             <?php echo file_get_contents($tempUrl.'/assets/images/icons/chess-icon.svg'); ?>
@@ -64,7 +64,7 @@ $tempUrl = get_stylesheet_directory_uri();
 
                     </div>
 
-                    <div class="col-lg-6">
+                    <div data-aos="fade-up" class="col-lg-6">
 
                         <div class="bi-title">
                             <?php echo file_get_contents($tempUrl.'/assets/images/icons/basketball-icon.svg'); ?>
@@ -87,7 +87,7 @@ $tempUrl = get_stylesheet_directory_uri();
 
     <section class="about-values">
 
-        <div class="container">
+        <div data-aos="fade-right" class="container">
 
             <div class="row">
 
@@ -133,7 +133,7 @@ $tempUrl = get_stylesheet_directory_uri();
 
             <div class="row bubble-block">
 
-                <article class="col-lg-5 col-xl-7 pr-xl-4 pl-xl-5">
+                <article data-aos="fade-right" class="col-lg-5 col-xl-7 pr-xl-4 pl-xl-5">
 
                     <h2 class="orange"><?php the_field('section_3_subtitle') ?> <strong><?php the_field('section_3_title') ?></strong></h2>
 
@@ -143,7 +143,7 @@ $tempUrl = get_stylesheet_directory_uri();
 
                 </article>
 
-                <aside class="d-none d-md-block col-lg-7 col-xl-5">
+                <aside data-aos="fade-left" class="d-none d-md-block col-lg-7 col-xl-5">
 
                     <div class="bubble-text row row-cols-2">
                         <div class="col-6">

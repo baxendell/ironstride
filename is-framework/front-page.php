@@ -13,7 +13,7 @@ get_header();
 
         <div class="row bubble-block">
 
-            <div class="col-md-6 text-right">
+            <div data-aos="fade-right" class="col-md-6 text-right">
 
             	<?php $img1 = get_field('top_content_image_1') ?>
 
@@ -21,7 +21,7 @@ get_header();
 
         	</div>
 
-        	<div class="col-md-6">
+        	<div data-aos="fade-left" class="col-md-6">
 
         		<h2 class="blue"><?php the_field('top_content_subtitle_1') ?> <strong><?php the_field('top_content_title_1') ?></strong></h2>
 
@@ -35,7 +35,7 @@ get_header();
 
         <div class="row bubble-block bubble-block_alt">
 
-        	<div class="col-md-6">
+        	<div data-aos="fade-right" class="col-md-6">
 
         		<h2 class="orange"><?php the_field('top_content_subtitle_2') ?> <strong><?php the_field('top_content_title_2') ?></strong></h2>
 
@@ -46,7 +46,7 @@ get_header();
     		</div>
 
 
-            <div class="col-md-6">
+            <div data-aos="fade-left" class="col-md-6">
 
             	<?php $img2 = get_field('top_content_image_2') ?>
 
@@ -70,7 +70,7 @@ get_header();
 
 				<div class="row">
 
-					<div class="col-md-6 p-lg-0">
+					<div data-aos="zoom-in" class="col-md-6 p-lg-0">
 
 						<a href="<?php the_field('grid_1_link') ?>">
 							<figure>
@@ -87,7 +87,7 @@ get_header();
 
 					</div>
 
-					<div class="col-md-6 p-lg-0">
+					<div data-aos="zoom-in" class="col-md-6 p-lg-0">
 
 						<a href="<?php the_field('grid_2_link') ?>">
 
@@ -110,7 +110,7 @@ get_header();
 
 				<div class="row">
 
-					<div class="col-md-6 p-lg-0 grid-services">
+					<div data-aos="zoom-in" class="col-md-6 p-lg-0 grid-services">
 
 						<a href="/services/">
 							<figure>
@@ -127,7 +127,7 @@ get_header();
 
 					</div>
 
-					<div class="col-md-6 p-lg-0">
+					<div data-aos="zoom-in" class="col-md-6 p-lg-0">
 
 						<a href="#">
 
@@ -150,7 +150,7 @@ get_header();
 
 			</div>
 
-			<div class="col-lg-6 p-0 case-study">
+			<div data-aos="zoom-in" class="col-lg-6 p-0 case-study">
 
 				<a href="<?php the_field('case_grid_link') ?>">
 					<figure>
@@ -179,7 +179,7 @@ get_header();
 
        <div class="row justify-content-center">
 
-	       	<div class="col-md-10 pl-md-5 pr-md-0 principles-top">
+	       	<div data-aos="fade-up-right" class="col-md-10 pl-md-5 pr-md-0 principles-top">
 
 	       		<h2 class="green"><?php the_field('bottom_subtitle') ?><strong class="d-block"><?php the_field('bottom_title') ?></strong></h2>
 

@@ -54,6 +54,8 @@ function mix_scripts() {
 		wp_enqueue_script( 'mix-theme-js', get_template_directory_uri() . '/assets/dist/js/theme.js', array( 'jquery' ), filemtime( get_template_directory() . '/assets/dist/js/theme.js' ), true );
 	}
 
+	wp_enqueue_style( 'aos-css', 'https://unpkg.com/aos@next/dist/aos.css', null);
+
 	wp_localize_script( 'mix-theme-js',
 		'WPsettings',
 		array(

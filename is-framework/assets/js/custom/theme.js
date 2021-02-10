@@ -332,5 +332,5 @@ jQuery(document).ready(function ($) {
     })();
 
     IS_theme_framework.init();
-
+    AOS.init();
 });

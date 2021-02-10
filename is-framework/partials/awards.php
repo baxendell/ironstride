@@ -15,7 +15,7 @@ if ( $awards_query->have_posts() ) : ?>
 
             <div class="row align-items-center">
 
-                <div class="col-lg-5 pl-lg-5 pr-lg-4">
+                <div data-aos="fade-right" class="col-lg-5 pl-lg-5 pr-lg-4">
 
                     <h2 class="section-title">Awards &amp; Recognition</h2>
 
@@ -32,7 +32,7 @@ if ( $awards_query->have_posts() ) : ?>
                         <div class="col-md-4 pl-lg-0">
 
                             <?php if ( get_field( 'script' ) ): the_field( 'script' ); else: ?>
-                            <a href="<?php the_field( 'award_link' ) ?>" target="_blank">
+                            <a data-aos="zoom-in" href="<?php the_field( 'award_link' ) ?>" target="_blank">
                                 <?php the_post_thumbnail( 'full' ); ?>
                             </a>
                             <?php endif; ?>

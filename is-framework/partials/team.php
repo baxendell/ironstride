@@ -21,7 +21,7 @@ if($staff_query->have_posts()):
 
 			<div class="col-lg-4 text-center px-5">
 
-				<div class="team-member">
+				<div data-aos="zoom-in" class="team-member">
 
 					<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('full') ?></a>
 

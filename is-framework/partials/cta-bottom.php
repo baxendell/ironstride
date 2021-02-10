@@ -4,7 +4,7 @@
 
         <div class="row justify-content-center">
 
-            <div class="col-lg-10 col-xl-8">
+            <div data-aos="fade-up" class="col-lg-10 col-xl-8">
 
                 <?php if(get_field('cta_text')) {
                     the_field('cta_text');

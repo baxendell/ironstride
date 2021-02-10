@@ -54,7 +54,7 @@
 					$link          = get_category_link( $category_id );
 			?>
 
-			<div class="offset-md-1 col-md-3">
+			<div data-aos="flip-up" class="offset-md-1 col-md-3">
 
 				<div class="news-block text-center">
 
