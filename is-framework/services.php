@@ -12,7 +12,7 @@ $tempUrl = get_stylesheet_directory_uri();
 
             <div class="row bubble-block">
 
-                <article class="col-12 col-lg-7 col-xl-6 pl-lg-5 pr-lg-5 entry-content">
+                <article data-aos="fade-right" class="col-12 col-lg-7 col-xl-6 pl-lg-5 pr-lg-5 entry-content">
 
                     <h2 class="orange"><?php the_field('section_1_subtitle') ?> <strong><?php the_field('section_1_title') ?></strong></h2>
 
@@ -28,7 +28,7 @@ $tempUrl = get_stylesheet_directory_uri();
 
                 </article>
 
-                <aside class="col-12 col-lg-5 col-xl-6 pl-lg-4 sidebar d-none d-lg-block">
+                <aside data-aos="fade-left" class="col-12 col-lg-5 col-xl-6 pl-lg-4 sidebar d-none d-lg-block">
 
                     <?php if ( has_post_thumbnail() ) : ?>
                         <div class="image-holder">
@@ -210,7 +210,7 @@ $tempUrl = get_stylesheet_directory_uri();
 
     <section class="services-2 mt-5">
 
-        <div class="container">
+        <div data-aos="fade-up" class="container">
 
             <h2 class="text-center"><strong><?php the_field('services_title') ?></strong></h2>
 
@@ -261,7 +261,7 @@ $tempUrl = get_stylesheet_directory_uri();
 
                     <?php if( have_rows('3_ways_blocks') ):while ( have_rows('3_ways_blocks') ) : the_row(); ?>
 
-                    <div class="col-lg-4 ways-work-item">
+                    <div data-aos="zoom-in" class="col-lg-4 ways-work-item">
 
                         <?php $blockImg = get_sub_field('block_image') ?>
 
@@ -329,13 +329,13 @@ $tempUrl = get_stylesheet_directory_uri();
 
                 <div class="row bubble-block">
 
-                    <div class="col-md-6">
+                    <div data-aos="fade-right" class="col-md-6">
 
                         <?php the_post_thumbnail( 'full' ) ?>
 
                     </div>
 
-                    <div class="col-md-6 content">
+                    <div data-aos="fade-left" class="col-md-6 content">
 
                         <h2 class="<?php echo $class_text;?>">Case Study <strong><?php the_title() ?></strong></h2>
 

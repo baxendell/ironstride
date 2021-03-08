@@ -21,7 +21,7 @@ get_header();
 
         	</div>
 
-        	<div data-aos="fade-left" class="col-md-6">
+        	<div data-aos="fade-left" class="col-md-6 mb-5">
 
         		<h2 class="blue"><?php the_field('top_content_subtitle_1') ?> <strong><?php the_field('top_content_title_1') ?></strong></h2>
 
@@ -35,7 +35,7 @@ get_header();
 
         <div class="row bubble-block bubble-block_alt">
 
-        	<div data-aos="fade-right" class="col-md-6">
+        	<div data-aos="fade-right" class="col-md-6 mb-4">
 
         		<h2 class="orange"><?php the_field('top_content_subtitle_2') ?> <strong><?php the_field('top_content_title_2') ?></strong></h2>
 
@@ -112,7 +112,7 @@ get_header();
 
 					<div data-aos="zoom-in" class="col-md-6 p-lg-0 grid-services">
 
-						<a href="/services/">
+						<a href="<?php the_field('grid_3_link') ?>">
 							<figure>
 						  		<?php $grid_img1 = get_field('grid_3_image') ?>
 						  		<img src="<?php echo $grid_img1['url'] ?>" alt="<?php echo $grid_img1['alt'] ?>" />
@@ -129,7 +129,7 @@ get_header();
 
 					<div data-aos="zoom-in" class="col-md-6 p-lg-0">
 
-						<a href="#">
+						<a href="<?php the_field('grid_4_link') ?>">
 
 							<figure>
 							  <?php $grid_img1 = get_field('grid_4_image') ?>

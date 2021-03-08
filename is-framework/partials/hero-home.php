@@ -50,11 +50,10 @@
 
         <div class="hero-services row">
 
-            <div class="col-xl-8 offset-xl-1 d-md-flex">
+            <div class="col-xl-8 d-md-flex">
 
             <?php while ( have_rows('banner_services') ) : the_row(); $i++;
                 $img = get_sub_field('banner_service_icon');
-
 
             ?>
 

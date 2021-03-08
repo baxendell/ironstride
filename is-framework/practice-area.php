@@ -84,16 +84,16 @@ get_header();
 
 <section class="service-split">
 
-    <?php if(get_field('section_3_title')): ?>
-     <h2 class="green"><?php if(get_field('section_3_subtitle')) { the_field('section_3_subtitle');} ?> <strong><?php the_field('section_3_title') ?></strong></h2>
-
-    <?php endif ?>
-
     <div class="container">
 
         <div class="row entry-content">
 
             <div class="col-lg-6 px-5 ">
+
+                <?php if(get_field('section_3_title')): ?>
+                 <h2 class="green"><?php if(get_field('section_3_subtitle')) { the_field('section_3_subtitle');} ?> <strong><?php the_field('section_3_title') ?></strong></h2>
+
+                <?php endif ?>            
 
                 <?php the_field('section_3_left') ?>
 

@@ -7,7 +7,9 @@
   }
 
   .home &  { // no padding-top on home
-    padding-top: 0;
+    @media screen and (min-width: 768px) {
+      padding-top: 0;
+    }
   }
 
   .news-block {
@@ -22,6 +24,7 @@
         font-size: 40px;
         font-weight: 400;
         letter-spacing: 0.8px;
+        display: block;
       }
 
       &-title {

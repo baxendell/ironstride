@@ -37,7 +37,7 @@
 
 		<div class="row">
 
-			<h2 class="col text-center"><strong>The Latest</strong></h2>
+			<h2 class="col text-center"><strong>The Latest Industry News</strong></h2>
 
 		</div>
 

@@ -15,9 +15,9 @@ $formatted_number = preg_replace( '/(\W*)/', '', $number );;
 
         <div class="row">
 
-            <div class="col-lg-6">
+            <div data-aos="fade-right" class="col-lg-6">
 
-                <div class="pl-4">
+                <div class="pl-md-4">
                     
                     <?php get_template_part( 'sidebars/parts/locations' ) ?>
 
@@ -25,9 +25,9 @@ $formatted_number = preg_replace( '/(\W*)/', '', $number );;
 
             </div>
 
-            <div class="col-lg-6">
+            <div data-aos="fade-left" class="col-lg-6">
 
-                <div class="pr-4">
+                <div class="pr-md-4">
 
                     <?php the_content() ?>
 

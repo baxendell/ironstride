@@ -2,8 +2,7 @@
 <html <?php language_attributes() ?>>
 <head>
     <meta charset="<?php echo esc_attr( get_bloginfo( 'charset' ) ) ?>">
-    <title><?php wp_title( '-', true, 'right' );
-		echo esc_html( get_bloginfo( 'name' ) ) ?></title>
+    <title><?php wp_title( '-', true, 'right' ); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2"/>
     <meta name="format-detection" content="telephone=no">
     <link rel="pingback" href="<?php echo esc_url( get_bloginfo( 'pingback_url' ) ) ?>">
@@ -15,7 +14,7 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@300;400;700&display=swap" rel="stylesheet preload">
 
     <?php wp_head(); ?>
 

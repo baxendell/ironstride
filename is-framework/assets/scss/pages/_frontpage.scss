@@ -50,9 +50,6 @@
 	font-family: $second-font;
 
 	.case-study & {
-		font-size: 24px;
-		letter-spacing: 2px;
-		line-height: 36px;
 
 		@media screen and (min-width: 768px) {
 			font-size: 40px;
