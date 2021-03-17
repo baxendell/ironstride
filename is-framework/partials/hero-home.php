@@ -57,7 +57,7 @@
 
             ?>
 
-                <div class="col-md-3">
+                <div class="px-3">
 
                     <a class="hero-services-title hero-services-<?php echo $i ?>" href="<?php the_sub_field('banner_service_link') ?>"><span><?php the_sub_field('banner_service_title'); ?></span> <img src="<?php echo $img['url'] ?>" alt="<?php echo $img['alt'] ?>"/></a>
 

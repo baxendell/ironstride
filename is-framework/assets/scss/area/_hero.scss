@@ -1,13 +1,13 @@
 .hero {
   video {
     position: absolute; 
-    top: 0; 
-    right:0;
-    height: 100%;
+    top: 50%;
+    transform: translateY(-50%); 
   }
   &-home {
   	background-color: $white;
     position: relative;
+    overflow: hidden;
 
     @media screen and (min-width: 1200px) {
       background-color: #004e65;
@@ -23,7 +23,7 @@
       }
       >.container-fluid {
         background-image: url('../../images/backgrounds/banner-wave.png');
-        background-position: 0 -320px;
+        background-position: 0 -220px;
         background-repeat: no-repeat;
       }
     }
@@ -47,8 +47,8 @@
     text-align: center;
 
     @media screen and (min-width: 768px) {
-      font-size: 66px;
-      line-height: 72px;
+      font-size: 78px;
+      line-height: 86px;
       text-align: left;
     }
 
@@ -76,14 +76,14 @@
       @media screen and (min-width: 768px) {
         margin-top: -50px;
         margin-left: 92px;
-        font-size: 110px;
+        font-size: 128px;
         text-align: left;
       }
     }
   }
 
   .btn {
-    margin: 36px 0 52px;
+    margin: 25px 0 47px;
 
     @media screen and (max-width: 767px) {
       display: block;
@@ -141,7 +141,7 @@
   		}
   	}
     
-    .col-md-3 {
+    .px-3 {
       @media screen and (max-width: 767px) {
         margin-bottom: 20px;
       }
@@ -202,7 +202,7 @@
     }
 
     @media screen and (min-width: 992px) {
-      padding: 96px 0;
+      padding: 85px 0;
     }
     
   	h1 {

@@ -1,11 +1,11 @@
 <?php 
-if(!is_front_page()) {
+if(!is_front_page() && !is_page_template('page-home.php')) {
     get_template_part('partials/cta-bottom');
 } ?>
 
 <div class="footer">
 
-    <?php if(is_front_page()): ?>
+    <?php if(is_front_page() || is_page_template('page-home.php')): ?>
 
     <div class="footer-top alt-grey">
 

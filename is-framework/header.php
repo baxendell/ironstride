@@ -72,7 +72,7 @@
 </nav>
 
 <?php
-if ( is_front_page( ) ) {
+if ( is_front_page() || is_page_template('page-home.php') ) {
 	get_template_part( 'partials/hero-home' );
 } else {
 	get_template_part( 'partials/hero' );

@@ -34,8 +34,8 @@ $amount = get_field('single_or_multiple_location', 'option');
         </address>
       </a>
 
-      <span itemprop="telephone"><a href="tel:<?php the_field('location_phone') ?>"><?php the_field('location_phone') ?></a></span>
-      <span itemprop="email"><?php echo do_shortcode("[email]support@ironstridemarketing.com[/email]"); ?></span>
+      <span class="d-block" itemprop="telephone"><a href="tel:<?php the_field('location_phone') ?>"><?php the_field('location_phone') ?></a></span>
+      <span class="d-block" itemprop="email"><?php echo do_shortcode("[email]support@ironstridemarketing.com[/email]"); ?></span>
     </div>
 
     <?php endif; wp_reset_postdata(); endif; ?>
