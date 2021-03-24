@@ -169,6 +169,62 @@ get_header();
 
 <?php endif ?>
 
+<?php 
+
+if(is_page('594')):
+
+$args = array(
+    'post_type' => 'portfolio',
+    'posts_per_page' => -1,
+    'meta_key' => 'website_image',
+    );
+
+$port_query = new WP_Query($args);
+
+if($port_query->have_posts()):
+
+?>
+
+<section class="work">
+
+    <div class="container-fluid">
+
+        <?php while($port_query->have_posts()): $port_query->the_post(); ?>
+
+        <div class="work-row row work-row__web">
+
+            <a href="<?php the_permalink() ?>" class="col-lg-6 work-item">
+
+                <?php $webImg = get_field('website_image'); ?>
+
+                <img src="<?php echo $webImg['url'] ?>" alt="<?php echo $webImg['alt'] ?>" width="<?php echo $webImg['width'] ?>" height="<?php echo $webImg['height'] ?>"/>
+
+            </a>
+
+            <div class="col-lg-6 work-testimonial">
+
+                <div class="work-details">
+
+                    <div><?php the_title() ?></div>
+
+                    <?php if(get_field('website_excerpt')){ the_field('website_excerpt'); } ?>
+
+                    <a href="<?php the_field('website_url') ?>" class="arrow-link arrow-link__alt" target="_blank" rel="noreferrer"><span>Visit Site</span></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <?php endwhile; wp_reset_postdata(); ?>
+
+    </div>
+
+</section>
+
+<?php endif; endif; ?>
+
 <?php get_template_part( 'partials/news' ); ?>
 
 

@@ -311,6 +311,18 @@ jQuery(document).ready(function ($) {
                 appendArrows: '.custom-nav-test',
             });
 
+            var websites = $('.webport-slider');
+
+            websites.slick({
+                dots: true,
+                arrows: false,
+                centerMode: true,
+                autoplay: true,
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                appendArrows: '.custom-nav-website',
+            });
         };
 
         return {

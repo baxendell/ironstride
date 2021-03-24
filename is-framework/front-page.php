@@ -173,6 +173,51 @@ get_header();
 
 </section>
 
+<!--website slider-->
+
+<?php 
+$posts = get_posts(array(
+	'numberposts'	=> -1,
+	'post_type'		=> 'portfolio',
+	'meta_key'		=> 'website_image',
+));
+if( $posts ):
+?>
+
+<section class="webport pt-5 pb-5">
+
+	<div class="container">
+
+		<div class="row">
+
+			<h2 class="col-12 text-center">Websites We've Done.</h2>
+
+			<div class="col-12 webport-slider">
+
+				<?php foreach( $posts as $post ): setup_postdata( $post );
+					$webImg =  get_field('website_image');
+				?>
+
+				<a href="<?php the_permalink() ?>">
+					<img src="<?php echo $webImg['url'] ?>" alt="<?php echo $webImg['alt'] ?>" width="<?php echo $webImg['width'] ?>" height="<?php echo $webImg['height'] ?>"/>
+				</a>
+
+        		<?php endforeach; wp_reset_postdata(); ?>
+
+			</div>
+
+			<div class="custom-nav-website"></div>
+
+		</div>
+
+	</div>
+
+</section>
+
+<?php endif ?>
+
+<!--end of slider-->
+
 <section id="principles" class="main-content main-content__alt">
 
     <div class="container">

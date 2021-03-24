@@ -33,6 +33,7 @@ function awards_post_type() {
 	);
 	$args   = array(
 		'label'               => __( 'Acknowledgement', 'text_domain' ),
+		'with_front'         => false,
 		'description'         => __( 'Post Type Description', 'text_domain' ),
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'thumbnail', 'revisions', 'page-attributes' ),
@@ -49,6 +50,8 @@ function awards_post_type() {
 		'exclude_from_search' => true,
 		'publicly_queryable'  => true,
 		'capability_type'     => 'page',
+		'rewrite'            => array( 'slug' => 'awards', 'with_front' => false, ),
+
 	);
 	register_post_type( 'awards', $args );
 
@@ -209,6 +212,7 @@ function is_portfolio() {
 
 	$args = array(
 		'labels'             => $labels,
+		'with_front'         => false,
 		'public'             => true,
 		'publicly_queryable' => true,
 		'show_ui'            => true,
