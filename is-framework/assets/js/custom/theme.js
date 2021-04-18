@@ -322,6 +322,18 @@ jQuery(document).ready(function ($) {
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 appendArrows: '.custom-nav-website',
+                responsive: [
+                    {
+                        breakpoint: 991,
+                        settings: {
+                            slidesToShow: 1,
+                            centerMode: false,
+                        }
+                    },
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ],
             });
         };
 

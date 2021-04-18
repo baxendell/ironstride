@@ -199,7 +199,7 @@ if( $posts ):
 				?>
 
 				<a href="<?php the_permalink() ?>">
-					<img src="<?php echo $webImg['url'] ?>" alt="<?php echo $webImg['alt'] ?>" width="<?php echo $webImg['width'] ?>" height="<?php echo $webImg['height'] ?>"/>
+					<img src="<?php echo $webImg['url'] ?>" alt="<?php echo $webImg['alt'] ?>" width="<?php echo $webImg['width'] ?>" height="<?php echo $webImg['height'] ?>" class="mx-auto"/>
 				</a>
 
         		<?php endforeach; wp_reset_postdata(); ?>

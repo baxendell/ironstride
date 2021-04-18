@@ -53,6 +53,8 @@ if($port_query->have_posts()):
 
         <?php while($port_query->have_posts()): $port_query->the_post(); ?>
 
+        <?php if(get_field('archive_image')): ?>
+
         <div class="work-row row">
 
             <a href="<?php the_permalink() ?>" class="col-lg-6 work-item">
@@ -87,7 +89,7 @@ if($port_query->have_posts()):
 
         </div>
 
-        <?php endwhile; wp_reset_postdata(); ?>
+        <?php endif; endwhile; wp_reset_postdata(); ?>
 
     </div>
 

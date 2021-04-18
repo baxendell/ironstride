@@ -8,10 +8,10 @@
 <section class="hero hero-home">
 
     <video autoplay="true" muted="muted" loop="" class="fillWidth fadeIn animated d-none d-xl-block" poster="<?php echo esc_url( get_stylesheet_directory_uri() ) ?>/assets/images/banner-video.png" id="video-background">
-        <source src="<?php echo esc_url( get_stylesheet_directory_uri() ) ?>/assets/images/video/is-header-clip.mp4" type="video/mp4">
+        <source src="<?php echo esc_url( get_stylesheet_directory_uri() ) ?>/assets/images/video/is-header-slide.mp4" type="video/mp4">
         Your browser does not support the video tag. Please upgrade your browser.
     </video> 
-
+    <div class="video-overlay"></div>
     <div class="container-fluid">
 
         <div class="header row">
