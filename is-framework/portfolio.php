@@ -38,7 +38,7 @@ get_header();
 
 <?php $args = array(
     'post_type' => 'portfolio',
-    'posts_per_page' => '10',
+    'posts_per_page' => -1,
     );
 
 $port_query = new WP_Query($args);
