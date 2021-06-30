@@ -30,6 +30,14 @@
 				<?php cws_get_svg( 'social-icons/icon-linkedin.svg' ); ?>
             </a>
         </li>
-	<?php endif; ?>						
+	<?php endif; ?>	
+
+    <?php if ( get_field( 'youtube_link', 'option' ) ): ?>
+        <li>
+            <a href="<?php the_field( 'youtube_link', 'option' ) ?>" target="_blank">
+                <?php cws_get_svg( 'social-icons/icon-youtube.svg' ); ?>
+            </a>
+        </li>
+    <?php endif; ?>     					
 
 </ul>
