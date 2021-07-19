@@ -13,8 +13,6 @@ get_header();
 
             <div class="content col-12 col-lg-7 col-xl-8">
 
-                <h1 class="page-title"><?php the_archive_title() ?></h1>
-
                 <div class="inner-content">
 					<?php get_template_part( 'partials/excerpt-loop' ) ?>
                 </div>

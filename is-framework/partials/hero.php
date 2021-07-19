@@ -50,7 +50,19 @@
 
         		<div class="col text-center">
 
+                    <?php if(is_singular('post')): ?>
+
+                    <div class="hero-blog-title"><?php echo $title ?></div>
+
+                    <?php elseif(is_category()): ?>
+
+                    <h1><?php the_archive_title() ?></h1>
+
+                    <?php else: ?>
+
         			<h1><?php echo $title; ?></h1>
+
+                    <?php endif ?>
 
                     <span class="hero-subtitle"><?php echo $bannerTitle; ?></span>
 

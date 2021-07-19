@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /wp-admin/
+
+Sitemap: https://www.ironstridemarketing.com/sitemap_index.xml

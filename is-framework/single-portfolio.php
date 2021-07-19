@@ -108,7 +108,7 @@ get_header(); ?>
 
 						<?php if(get_sub_field('stats_repeater_icon')) : ?>
 
-							<img src="<?php echo get_sub_field('stats_repeater_icon') ?>"/>
+							<img src="<?php echo get_sub_field('stats_repeater_icon') ?>" alt="stats icon"/>
 
 						<?php endif; ?>
 					</div>

@@ -16,8 +16,6 @@
 
 					<?php while ( have_posts() ) : the_post() ?>
 
-                        <h1 class="page-title"><?php h1_title(); ?></h1>
-
 						<?php if ( has_post_thumbnail() ) : ?>
                             <div class="image-holder">
 								<?php the_post_thumbnail( 'medium' ) ?>
